@@ -30,6 +30,11 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.groupDataEmployee = new System.Windows.Forms.GroupBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
@@ -59,19 +64,14 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.txtSearch = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.groupDataEmployee.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox6.SuspendLayout();
-            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -84,6 +84,69 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(900, 290);
             this.panel1.TabIndex = 0;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.panel7);
+            this.groupBox6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox6.Font = new System.Drawing.Font("Khmer SN Kampot", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox6.Location = new System.Drawing.Point(474, 0);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(420, 290);
+            this.groupBox6.TabIndex = 5;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "ស្វែងរក";
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.button7);
+            this.panel7.Controls.Add(this.button6);
+            this.panel7.Controls.Add(this.txtSearch);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(3, 33);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(414, 36);
+            this.panel7.TabIndex = 1;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button7.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Location = new System.Drawing.Point(333, 0);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(78, 36);
+            this.button7.TabIndex = 7;
+            this.button7.Text = "Cancel";
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Fuchsia;
+            this.button6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(253, 0);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(80, 36);
+            this.button6.TabIndex = 6;
+            this.button6.Text = "Search";
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Dock = System.Windows.Forms.DockStyle.Left;
+            this.txtSearch.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.ForeColor = System.Drawing.Color.Silver;
+            this.txtSearch.Location = new System.Drawing.Point(0, 0);
+            this.txtSearch.Multiline = true;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(253, 36);
+            this.txtSearch.TabIndex = 0;
+            this.txtSearch.Text = "Search by Supplier Name or Telephone";
             // 
             // groupDataEmployee
             // 
@@ -393,69 +456,6 @@
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
             // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.panel7);
-            this.groupBox6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox6.Font = new System.Drawing.Font("Khmer SN Kampot", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox6.Location = new System.Drawing.Point(474, 0);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(420, 290);
-            this.groupBox6.TabIndex = 5;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "ស្វែងរក";
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.button7);
-            this.panel7.Controls.Add(this.button6);
-            this.panel7.Controls.Add(this.txtSearch);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(3, 33);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(414, 36);
-            this.panel7.TabIndex = 1;
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(333, 0);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(78, 36);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "Cancel";
-            this.button7.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Fuchsia;
-            this.button6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(253, 0);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(80, 36);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "Search";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.Dock = System.Windows.Forms.DockStyle.Left;
-            this.txtSearch.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.ForeColor = System.Drawing.Color.Silver;
-            this.txtSearch.Location = new System.Drawing.Point(0, 0);
-            this.txtSearch.Multiline = true;
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(253, 36);
-            this.txtSearch.TabIndex = 0;
-            this.txtSearch.Text = "Search by Supplier Name or Telephone";
-            // 
             // supplyer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -469,16 +469,17 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "supplyer";
             this.Text = "Supplier";
+            this.Load += new System.EventHandler(this.supplyer_Load);
             this.panel1.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.groupDataEmployee.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox6.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
             this.ResumeLayout(false);
 
         }

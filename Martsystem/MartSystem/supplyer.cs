@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MartSystem;
+using 
 
 namespace MartSystem
 {
@@ -15,6 +17,19 @@ namespace MartSystem
         public supplyer()
         {
             InitializeComponent();
+        }
+
+        private void supplyer_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                dataCon;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

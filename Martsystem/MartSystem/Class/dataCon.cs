@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Data;
+using MartSystem;
 
-namespace GuestHouse
+
+namespace MartSystem
 {
     public class dataCon
     {
@@ -16,7 +18,7 @@ namespace GuestHouse
             set { con = value; }
         }
 
-        static SqlConnection con = new SqlConnection("Server=localhost;Database=gh;Trusted_Connection=true;");
+        static SqlConnection con = new SqlConnection("Server=localhost;Database=mart;Trusted_Connection=true;");
 
         public static string FormatDateTime(DateTime dt)
         {

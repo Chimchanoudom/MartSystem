@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Data;
 
-namespace GuestHouse
+namespace MartSystem
 {
 class Dom_SqlClass:UserLoginDetail
     {
