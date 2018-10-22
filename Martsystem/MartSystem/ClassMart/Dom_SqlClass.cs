@@ -9,47 +9,47 @@ using System.Data;
 
 namespace MartSystem
 {
-class Dom_SqlClass:UserLoginDetail
+    class Dom_SqlClass
     {
-    
-      static  SqlCommand SC = new SqlCommand();
-       static SqlCommandBuilder SCB = new SqlCommandBuilder();
+
+        static SqlCommand SC = new SqlCommand();
+        static SqlCommandBuilder SCB = new SqlCommandBuilder();
         static SqlDataAdapter SDA = new SqlDataAdapter();
         static DataTable DT = new DataTable();
-        public static string GetIDFromDB(String column,string seperater,String TableName)
+        public static string GetIDFromDB(String column, string seperater, String TableName)
         {
-            object ID="";
+            object ID = "";
             try
             {
                 dataCon.Con.Open();
                 SC = new SqlCommand();
                 SC.CommandText = @"getAutoID  " + " '" + column + "'," + " '" + seperater + "'," + " '" + TableName + "'";
                 SC.Connection = dataCon.Con;
-                ID=SC.ExecuteScalar().ToString();
+                ID = SC.ExecuteScalar().ToString();
             }
             catch (Exception e)
             {
-               MessageBox.Show(e.Message);
+                MessageBox.Show(e.Message);
             }
             finally
             {
                 dataCon.Con.Close();
             }
-            if (ID==null||ID.Equals(""))
+            if (ID == null || ID.Equals(""))
             {
-                ID ="";
+                ID = "";
             }
             else
             {
-                int num = int.Parse(ID+"") -1;
+                int num = int.Parse(ID + "") - 1;
                 ID = num + "";
             }
-            return ID+"";
-           
+            return ID + "";
+
         }
         public static void UpdateDate(DataTable Datatable)
         {
-            DT=new DataTable();
+            DT = new DataTable();
             DT = Datatable;
             try
             {
@@ -61,9 +61,9 @@ class Dom_SqlClass:UserLoginDetail
                 MessageBox.Show("Update Fails !" + e.Message);
             }
         }
-        public static DataTable retriveData(String TableName,String Condition,String[]ColumnName)
+        public static DataTable retriveData(String TableName, String Condition, String[] ColumnName)
         {
-             DT = new DataTable();
+            DT = new DataTable();
             try
             {
                 String Select = "SELECT ";
@@ -74,15 +74,15 @@ class Dom_SqlClass:UserLoginDetail
                 Select = Select.TrimEnd(',') + " From ";
                 //MessageBox.Show(Select);
                 dataCon.Con.Open();
-                SC = new SqlCommand(Select+TableName+" "+Condition+" ;", dataCon.Con);
+                SC = new SqlCommand(Select + TableName + " " + Condition + " ;", dataCon.Con);
                 SDA = new SqlDataAdapter(SC);
                 SCB = new SqlCommandBuilder(SDA);
                 SDA.Fill(DT);
             }
-            catch (Exception e )
+            catch (Exception e)
             {
                 if (DT.Rows.Count <= 0)
-                    MessageBox.Show("NO Data "+ e.Message);
+                    MessageBox.Show("NO Data " + e.Message);
             }
             finally
             {
@@ -90,19 +90,19 @@ class Dom_SqlClass:UserLoginDetail
             }
             return DT;
         }
-        public static Boolean InsertData(String TableName,object[]Value)
+        public static Boolean InsertData(String TableName, object[] Value)
         {
             bool insert = false;
             try
             {
-                String commandInsert = @"INSERT INTO "+TableName+" ";
+                String commandInsert = @"INSERT INTO " + TableName + " ";
                 String Values = " Values(";
                 for (int i = 0; i < Value.Length; i++)
                 {
                     Values += "N'" + Value[i] + "'COLLATE Latin1_General_100_CI_AI,";
                 }
                 Values = Values.Substring(0, Values.Length - 1) + ");";
-                string sqlCmd = commandInsert+ Values;
+                string sqlCmd = commandInsert + Values;
                 dataCon.Con.Open();
                 SC = new SqlCommand(sqlCmd, dataCon.Con);
                 SC.ExecuteNonQuery();
@@ -120,7 +120,7 @@ class Dom_SqlClass:UserLoginDetail
             return insert;
         }
 
-        public static void  FillItemToCombobox(String StatemenSelect ,String Valuemember,String DisplayMember,ComboBox cm)
+        public static void FillItemToCombobox(String StatemenSelect, String Valuemember, String DisplayMember, ComboBox cm)
         {
             try
             {
@@ -180,7 +180,7 @@ class Dom_SqlClass:UserLoginDetail
             {
                 dataCon.Con.Open();
                 SC = new SqlCommand(SelectStatement, dataCon.Con);
-                 SDA = new SqlDataAdapter(SC);
+                SDA = new SqlDataAdapter(SC);
                 SCB = new SqlCommandBuilder(SDA);
                 SDA.Fill(DT);
             }
@@ -194,7 +194,7 @@ class Dom_SqlClass:UserLoginDetail
             }
             return DT;
         }
-        public static bool SQLMultiTable(String[]Statement)
+        public static bool SQLMultiTable(String[] Statement)
         {
             bool success = false;
             dataCon.Con.Open();
@@ -230,21 +230,6 @@ class Dom_SqlClass:UserLoginDetail
             SCB = new SqlCommandBuilder(SDA);
             SDA.Fill(DT);
             return DT;
-        }
-        public static String GetIDcustomer(String search)
-        {
-            string result = "";
-
-            try
-            {
-
-            }
-            catch (Exception)
-            {
-
-                
-            }
-            return "";
         }
     }
 }

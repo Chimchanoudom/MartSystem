@@ -13,7 +13,8 @@ namespace MartSystem
 {
     public class dataCon
     {
-        public static SqlConnection Con {
+        public static SqlConnection Con
+        {
             get { return con; }
             set { con = value; }
         }
@@ -60,7 +61,8 @@ namespace MartSystem
                 sql.ExecuteNonQuery();
                 trans.Commit();
                 error = false;
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 trans.Rollback();
                 MessageBox.Show(ex.Message);
@@ -158,125 +160,5 @@ namespace MartSystem
 
 
         }
-
-
-        public static Dictionary<string, DataTable> Price = new Dictionary<string, DataTable>();
-
-
-        public static void GetSpecificPrice(string roomTypeDesc,int hour,ref double roomPrice,ref double fan,ref double ac)
-        {
-            DataRow[] row = Price[roomTypeDesc].Select("HourType="+hour+"");
-            roomPrice = (double)row[0][1];
-            fan = (double)row[0][2];
-            ac = (double)row[0][3];
-        }
-
-
-        public static void GetPrice()
-        {
-            Price = new Dictionary<string, DataTable>();
-            string sql = "select roomTypeDesc,HourType,RoomPrice,Fan,ac from roomType r join price p on r.roomTypeID=p.roomTypeID;";
-
-            con.Open();
-            SqlDataReader dataReader = ExecuteQry(sql);
-            while (dataReader.Read())
-            {
-                String roomTypeDesc = dataReader.GetString(0);
-
-                if (Price.Keys.Contains(roomTypeDesc))
-                {
-                    Price[roomTypeDesc].Rows.Add(dataReader.GetInt32(1), Convert.ToDouble(dataReader.GetValue(2)), Convert.ToDouble(dataReader.GetValue(3)), Convert.ToDouble(dataReader.GetValue(4)));
-                }
-                else
-                {
-                    DataTable dt = new DataTable();
-                    dt.Columns.Add("HourType", typeof(int));
-                    dt.Columns.Add("RoomPrice", typeof(double));
-                    dt.Columns.Add("Fan", typeof(double));
-                    dt.Columns.Add("AC", typeof(double));
-
-                    dt.Rows.Add(dataReader.GetInt32(1),Convert.ToDouble(dataReader.GetValue(2)), Convert.ToDouble(dataReader.GetValue(3)), Convert.ToDouble(dataReader.GetValue(4)));
-
-                    Price.Add(roomTypeDesc, dt);
-                }
-            }
-
-            con.Close();
-        }
-
-
-
-
-        public static bool CalculatePrice(DateTime dtStart, DateTime dtEnd,ref int hour,string roomTypeDesc, ref double roomPrice, bool pickAc, ref double electricity, ref double subTotal)
-
-        {
-            TimeSpan dif = dtEnd - dtStart;
-
-            if (dif.TotalHours <= 0)
-                return false;
-
-            double overRoomPrice = 0, overElectricity = 0, overSubTotal = 0;
-
-            if (dif.TotalHours > 24)
-            {
-                int overHour;
-                
-                overHour = (int)dif.TotalHours % 24;
-
-                GetSubTotal(overHour, roomTypeDesc,ref  overRoomPrice, pickAc,ref overElectricity, ref overSubTotal,1);
-
-                int multiply = (int)dif.TotalHours / 24;
-
-                GetSubTotal(24, roomTypeDesc, ref roomPrice, pickAc, ref electricity, ref subTotal, multiply);
-
-
-            }
-            else
-            {
-                GetSubTotal((int)dif.TotalHours, roomTypeDesc, ref roomPrice, pickAc, ref electricity, ref subTotal,1);
-            }
-
-            
-
-            roomPrice += overRoomPrice;
-            electricity += overElectricity;
-            subTotal += overSubTotal;
-            if(hour>24) hour = (int)dif.TotalHours;
-
-            return true;
-
-        }
-
-        static void GetSubTotal(int hour,string roomTypeDesc, ref double roomPrice,bool pickAc, ref double electricity, ref double subTotal,int multiply)
-        {
-            if (hour == 0) return;
-            if (hour <= 3)
-            {
-                hour = 3;
-            }else if(hour <= 6)
-            {
-                hour = 6;
-            }else if (hour <= 12)
-            {
-                hour = 12;
-            }else if (hour <= 24)
-            {
-                hour = 24;
-            }
-
-
-            DataRow[] dr = Price[roomTypeDesc].Select("HourType="+hour);
-
-            roomPrice = (double)dr[0][1]*multiply;
-
-            if(!pickAc)
-                electricity = (double)dr[0][2]*multiply;
-            else
-                electricity = (double)dr[0][3]*multiply;
-
-            subTotal = roomPrice + electricity;
-
-        }
-    }
-
+    }      
 }

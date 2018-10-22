@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace MartSystem
 {
-  class dom_Design:Desing
+  class dom_Design
     {
         public static void NumberOnly(KeyPressEventArgs e)
         {

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MartSystem;
-using 
+
 
 namespace MartSystem
 {
@@ -23,13 +23,23 @@ namespace MartSystem
         {
             try
             {
-                dataCon;
+                dataCon.Con.Open();
+                MessageBox.Show("Connected");
             }
             catch (Exception)
             {
-
-                throw;
+                MessageBox.Show("Fails");
             }
+        }
+
+        private void txtFirstName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            dom_Design.CharaterOnly(e);
+        }
+
+        private void txtPhoneNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            dom_Design.NumberOnly(e);
         }
     }
 }
