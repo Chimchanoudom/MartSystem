@@ -18,18 +18,13 @@ namespace MartSystem
         {
             InitializeComponent();
         }
-
+        DataTable dt;
         private void supplyer_Load(object sender, EventArgs e)
         {
-            try
-            {
-                dataCon.Con.Open();
-                MessageBox.Show("Connected");
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Fails");
-            }
+            dt = Dom_SqlClass.retriveData("Supplier", "where 1=1", new string[] { "*"});
+            datasupplier.DataSource = dt;
+            dom_Design.GenerateColumHeader(new string[] { "ID", "Supplier Name", "Phone", "Email", "Address" }, 5, datasupplier);
+
         }
 
         private void txtFirstName_KeyPress(object sender, KeyPressEventArgs e)
