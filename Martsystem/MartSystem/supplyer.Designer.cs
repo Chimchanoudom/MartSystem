@@ -47,8 +47,8 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.RichTextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -116,6 +116,7 @@
             this.button7.TabIndex = 7;
             this.button7.Text = "Cancel";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -130,6 +131,7 @@
             this.button6.TabIndex = 6;
             this.button6.Text = "Search";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // txtSearch
             // 
@@ -142,6 +144,8 @@
             this.txtSearch.Size = new System.Drawing.Size(253, 36);
             this.txtSearch.TabIndex = 0;
             this.txtSearch.Text = "Search by Supplier Name or Telephone";
+            this.txtSearch.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtSearch_MouseClick);
+            this.txtSearch.MouseLeave += new System.EventHandler(this.txtSearch_MouseLeave);
             // 
             // groupDataEmployee
             // 
@@ -185,6 +189,7 @@
             this.btnSave.TabIndex = 12;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btndelete
             // 
@@ -198,6 +203,7 @@
             this.btndelete.TabIndex = 11;
             this.btndelete.Text = "Delete";
             this.btndelete.UseVisualStyleBackColor = false;
+            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
             // 
             // btnedit
             // 
@@ -211,6 +217,7 @@
             this.btnedit.TabIndex = 10;
             this.btnedit.Text = "Edit";
             this.btnedit.UseVisualStyleBackColor = false;
+            this.btnedit.Click += new System.EventHandler(this.btnedit_Click);
             // 
             // btnadd
             // 
@@ -224,6 +231,7 @@
             this.btnadd.TabIndex = 9;
             this.btnadd.Text = "Add";
             this.btnadd.UseVisualStyleBackColor = false;
+            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
             // panel3
             // 
@@ -232,8 +240,8 @@
             this.panel3.Controls.Add(this.label16);
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.richTextBox1);
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.txtAddress);
+            this.panel3.Controls.Add(this.txtEmail);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.txtPhoneNumber);
             this.panel3.Controls.Add(this.label3);
@@ -293,22 +301,22 @@
             this.label10.TabIndex = 15;
             this.label10.Text = ":";
             // 
-            // richTextBox1
+            // txtAddress
             // 
-            this.richTextBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(159, 143);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(234, 62);
-            this.richTextBox1.TabIndex = 18;
-            this.richTextBox1.Text = "";
+            this.txtAddress.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.Location = new System.Drawing.Point(159, 143);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(234, 62);
+            this.txtAddress.TabIndex = 18;
+            this.txtAddress.Text = "";
             // 
-            // textBox1
+            // txtEmail
             // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(159, 108);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(234, 27);
-            this.textBox1.TabIndex = 16;
+            this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(159, 108);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(234, 27);
+            this.txtEmail.TabIndex = 16;
             // 
             // label5
             // 
@@ -399,10 +407,10 @@
             this.datasupplier.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
             this.datasupplier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Green;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.datasupplier.DefaultCellStyle = dataGridViewCellStyle1;
@@ -413,6 +421,7 @@
             this.datasupplier.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.datasupplier.Size = new System.Drawing.Size(830, 251);
             this.datasupplier.TabIndex = 1;
+            this.datasupplier.SelectionChanged += new System.EventHandler(this.datasupplier_SelectionChanged);
             // 
             // supplyer
             // 
@@ -427,6 +436,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "supplyer";
             this.Text = "Supplier";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.supplyer_FormClosing);
             this.Load += new System.EventHandler(this.supplyer_Load);
             this.panel1.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
@@ -454,8 +464,8 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.RichTextBox txtAddress;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtPhoneNumber;
         private System.Windows.Forms.Label label3;
@@ -468,11 +478,11 @@
         private System.Windows.Forms.Button btndelete;
         private System.Windows.Forms.Button btnedit;
         private System.Windows.Forms.Button btnadd;
-        private System.Windows.Forms.DataGridView datasupplier;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.DataGridView datasupplier;
     }
 }

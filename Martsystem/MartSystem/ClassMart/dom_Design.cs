@@ -12,7 +12,8 @@ namespace MartSystem
         public static void NumberOnly(KeyPressEventArgs e)
         {
             int num = e.KeyChar;
-            if (!(num>=48&&num<=57))
+            //MessageBox.Show(num + "");
+            if (!(num>=48&&num<=57)&&num!=8)
             {
                 e.KeyChar='\0';
             }

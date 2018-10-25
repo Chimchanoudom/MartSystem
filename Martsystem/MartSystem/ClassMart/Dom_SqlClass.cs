@@ -23,9 +23,9 @@ namespace MartSystem
             {
                 dataCon.Con.Open();
                 SC = new SqlCommand();
-                SC.CommandText = @"getAutoID  " + " '" + column + "'," + " '" + seperater + "'," + " '" + TableName + "'";
+                SC.CommandText = @"getID  " + " '" + column + "'," + " '" + seperater + "'," + " '" + TableName + "'";
                 SC.Connection = dataCon.Con;
-                ID = SC.ExecuteScalar().ToString();
+                ID = SC.ExecuteScalar();
             }
             catch (Exception e)
             {
@@ -47,14 +47,46 @@ namespace MartSystem
             return ID + "";
 
         }
-        public static void UpdateDate(DataTable Datatable)
+        public static int GetIDFromDB(String Column,String Table)
         {
-            DT = new DataTable();
-            DT = Datatable;
+            int ID =0;
+            object value = "";
             try
             {
-                SDA.Update(DT);
-                MessageBox.Show("Update SuccessFully !");
+                dataCon.Con.Open();
+                SC = new SqlCommand();
+                SC.CommandText = @"Select Max(" +Column+") from "+Table;
+                SC.Connection = dataCon.Con;
+                value = SC.ExecuteScalar();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            finally
+            {
+                dataCon.Con.Close();
+            }
+            bool s = int.TryParse(value.ToString(), out ID);
+            if (s == true)
+            {
+                ID += 1;
+            }
+            else
+            {
+                ID = 1;
+            }
+            return ID;
+        }
+        public static void UpdateDate(DataTable Datatable)
+        {
+            try
+            {
+                int i;
+               // SCB = new SqlCommandBuilder(SDA);
+                i=SDA.Update(Datatable);
+               
+                MessageBox.Show("Update "+i + " Rows successfully!");
             }
             catch (Exception e)
             {
