@@ -116,13 +116,13 @@ namespace MartSystem
 
         private void button6_Click(object sender, EventArgs e)
         {
-            if (txtSearch.Text != "Search by Category Name")
+            if (txtSearch.Text != "Search by Category Name or Category ID")
             {
                 String Search = "";
                 int i = 0;
                 bool s = int.TryParse(txtSearch.Text, out i);
                 if (s == true)
-                    Search = "Phone=" + txtSearch.Text;
+                    Search = "CatID=" + txtSearch.Text;
                 else
                     Search = "CatName=" + "'" + txtSearch.Text.ToLower() + "'";
                 dt.DefaultView.RowFilter = Search;
@@ -132,6 +132,7 @@ namespace MartSystem
         private void button7_Click(object sender, EventArgs e)
         {
             dt.DefaultView.RowFilter = string.Empty;
+            txtSearch.Text = "Search by Category Name or Category ID";
             Clear();
         }
 

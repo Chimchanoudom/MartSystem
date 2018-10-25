@@ -68,7 +68,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(695, 159);
+            this.panel1.Size = new System.Drawing.Size(748, 159);
             this.panel1.TabIndex = 4;
             // 
             // groupBox6
@@ -78,7 +78,7 @@
             this.groupBox6.Font = new System.Drawing.Font("Khmer SN Kampot", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox6.Location = new System.Drawing.Point(321, 0);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(376, 159);
+            this.groupBox6.Size = new System.Drawing.Size(424, 159);
             this.groupBox6.TabIndex = 5;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "ស្វែងរក";
@@ -91,7 +91,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(3, 33);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(370, 36);
+            this.panel7.Size = new System.Drawing.Size(418, 36);
             this.panel7.TabIndex = 1;
             // 
             // button7
@@ -101,7 +101,7 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(288, 0);
+            this.button7.Location = new System.Drawing.Point(338, 0);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(78, 36);
             this.button7.TabIndex = 7;
@@ -116,7 +116,7 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(208, 0);
+            this.button6.Location = new System.Drawing.Point(258, 0);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(80, 36);
             this.button6.TabIndex = 6;
@@ -132,9 +132,9 @@
             this.txtSearch.Location = new System.Drawing.Point(0, 0);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(208, 36);
+            this.txtSearch.Size = new System.Drawing.Size(258, 36);
             this.txtSearch.TabIndex = 0;
-            this.txtSearch.Text = "Search by Category Name";
+            this.txtSearch.Text = "Search by Category Name or Category ID";
             // 
             // groupDataEmployee
             // 
@@ -297,7 +297,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 159);
             this.panel2.Margin = new System.Windows.Forms.Padding(5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(695, 332);
+            this.panel2.Size = new System.Drawing.Size(748, 332);
             this.panel2.TabIndex = 6;
             // 
             // dataCat
@@ -320,7 +320,7 @@
             this.dataCat.Name = "dataCat";
             this.dataCat.ReadOnly = true;
             this.dataCat.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataCat.Size = new System.Drawing.Size(695, 332);
+            this.dataCat.Size = new System.Drawing.Size(748, 332);
             this.dataCat.TabIndex = 2;
             this.dataCat.SelectionChanged += new System.EventHandler(this.dataCat_SelectionChanged);
             // 
@@ -328,7 +328,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(695, 491);
+            this.ClientSize = new System.Drawing.Size(748, 491);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;

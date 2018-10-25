@@ -51,11 +51,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="branch.cs">
+    <Compile Include="Brand.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="branch.Designer.cs">
-      <DependentUpon>branch.cs</DependentUpon>
+    <Compile Include="Brand.Designer.cs">
+      <DependentUpon>Brand.cs</DependentUpon>
     </Compile>
     <Compile Include="category.cs">
       <SubType>Form</SubType>
@@ -89,8 +89,8 @@
     <Compile Include="supplyer.Designer.cs">
       <DependentUpon>supplyer.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="branch.resx">
-      <DependentUpon>branch.cs</DependentUpon>
+    <EmbeddedResource Include="Brand.resx">
+      <DependentUpon>Brand.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="category.resx">
       <DependentUpon>category.cs</DependentUpon>

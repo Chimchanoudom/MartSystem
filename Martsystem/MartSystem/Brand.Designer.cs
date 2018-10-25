@@ -1,6 +1,6 @@
 ﻿namespace MartSystem
 {
-    partial class branch
+    partial class Brand
     {
         /// <summary>
         /// Required designer variable.
@@ -30,45 +30,69 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dataBrand = new System.Windows.Forms.DataGridView();
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnsearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.txtFirstName = new System.Windows.Forms.TextBox();
+            this.txtBarndName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblID = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btndelete = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.groupDataEmployee = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.datasupplier = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataBrand)).BeginInit();
             this.panel7.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.groupDataEmployee.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.datasupplier)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.datasupplier);
+            this.panel2.Controls.Add(this.dataBrand);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 159);
             this.panel2.Margin = new System.Windows.Forms.Padding(5);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(673, 332);
             this.panel2.TabIndex = 3;
+            // 
+            // dataBrand
+            // 
+            this.dataBrand.AllowUserToAddRows = false;
+            this.dataBrand.AllowUserToDeleteRows = false;
+            this.dataBrand.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataBrand.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
+            this.dataBrand.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataBrand.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataBrand.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataBrand.Location = new System.Drawing.Point(0, 0);
+            this.dataBrand.Name = "dataBrand";
+            this.dataBrand.ReadOnly = true;
+            this.dataBrand.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataBrand.Size = new System.Drawing.Size(673, 332);
+            this.dataBrand.TabIndex = 2;
+            this.dataBrand.SelectionChanged += new System.EventHandler(this.dataBrand_SelectionChanged);
             // 
             // label12
             // 
@@ -90,8 +114,8 @@
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.button7);
-            this.panel7.Controls.Add(this.button6);
+            this.panel7.Controls.Add(this.btnCancel);
+            this.panel7.Controls.Add(this.btnsearch);
             this.panel7.Controls.Add(this.txtSearch);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(3, 33);
@@ -99,33 +123,35 @@
             this.panel7.Size = new System.Drawing.Size(370, 36);
             this.panel7.TabIndex = 1;
             // 
-            // button7
+            // btnCancel
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(288, 0);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(78, 36);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "Cancel";
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCancel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(288, 0);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(78, 36);
+            this.btnCancel.TabIndex = 7;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // button6
+            // btnsearch
             // 
-            this.button6.BackColor = System.Drawing.Color.Fuchsia;
-            this.button6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(208, 0);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(80, 36);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "Search";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnsearch.BackColor = System.Drawing.Color.Fuchsia;
+            this.btnsearch.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnsearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnsearch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsearch.ForeColor = System.Drawing.Color.White;
+            this.btnsearch.Location = new System.Drawing.Point(208, 0);
+            this.btnsearch.Name = "btnsearch";
+            this.btnsearch.Size = new System.Drawing.Size(80, 36);
+            this.btnsearch.TabIndex = 6;
+            this.btnsearch.Text = "Search";
+            this.btnsearch.UseVisualStyleBackColor = false;
+            this.btnsearch.Click += new System.EventHandler(this.btnsearch_Click);
             // 
             // txtSearch
             // 
@@ -137,15 +163,15 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(208, 36);
             this.txtSearch.TabIndex = 0;
-            this.txtSearch.Text = "Search by Brand Name";
+            this.txtSearch.Text = "Search by Brand Name or Band ID";
             // 
-            // txtFirstName
+            // txtBarndName
             // 
-            this.txtFirstName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFirstName.Location = new System.Drawing.Point(159, 42);
-            this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(133, 27);
-            this.txtFirstName.TabIndex = 7;
+            this.txtBarndName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBarndName.Location = new System.Drawing.Point(159, 42);
+            this.txtBarndName.Name = "txtBarndName";
+            this.txtBarndName.Size = new System.Drawing.Size(133, 27);
+            this.txtBarndName.TabIndex = 7;
             // 
             // label4
             // 
@@ -156,14 +182,14 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Brand Name";
             // 
-            // label1
+            // lblID
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(160, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 21);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "ID";
+            this.lblID.AutoSize = true;
+            this.lblID.Location = new System.Drawing.Point(160, 11);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(27, 21);
+            this.lblID.TabIndex = 9;
+            this.lblID.Text = "ID";
             // 
             // label2
             // 
@@ -178,9 +204,9 @@
             // 
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.txtFirstName);
+            this.panel3.Controls.Add(this.txtBarndName);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.lblID);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(5, 27);
@@ -188,64 +214,68 @@
             this.panel3.Size = new System.Drawing.Size(294, 85);
             this.panel3.TabIndex = 4;
             // 
-            // button5
+            // btnSave
             // 
-            this.button5.BackColor = System.Drawing.Color.Blue;
-            this.button5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(219, 0);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(73, 37);
-            this.button5.TabIndex = 12;
-            this.button5.Text = "Save";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnSave.BackColor = System.Drawing.Color.Blue;
+            this.btnSave.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(219, 0);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(73, 37);
+            this.btnSave.TabIndex = 12;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // button4
+            // btndelete
             // 
-            this.button4.BackColor = System.Drawing.Color.Red;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(146, 0);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(73, 37);
-            this.button4.TabIndex = 11;
-            this.button4.Text = "Delete";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btndelete.BackColor = System.Drawing.Color.Red;
+            this.btndelete.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btndelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btndelete.ForeColor = System.Drawing.Color.White;
+            this.btndelete.Location = new System.Drawing.Point(146, 0);
+            this.btndelete.Name = "btndelete";
+            this.btndelete.Size = new System.Drawing.Size(73, 37);
+            this.btndelete.TabIndex = 11;
+            this.btndelete.Text = "Delete";
+            this.btndelete.UseVisualStyleBackColor = false;
+            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
             // 
-            // button3
+            // btnEdit
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(73, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(73, 37);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Edit";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnEdit.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEdit.Location = new System.Drawing.Point(73, 0);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(73, 37);
+            this.btnEdit.TabIndex = 10;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // button2
+            // btnAdd
             // 
-            this.button2.BackColor = System.Drawing.Color.Green;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(73, 37);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Add";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnAdd.BackColor = System.Drawing.Color.Green;
+            this.btnAdd.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(0, 0);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(73, 37);
+            this.btnAdd.TabIndex = 9;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.button5);
-            this.panel4.Controls.Add(this.button4);
-            this.panel4.Controls.Add(this.button3);
-            this.panel4.Controls.Add(this.button2);
+            this.panel4.Controls.Add(this.btnSave);
+            this.panel4.Controls.Add(this.btndelete);
+            this.panel4.Controls.Add(this.btnEdit);
+            this.panel4.Controls.Add(this.btnAdd);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(5, 112);
             this.panel4.Name = "panel4";
@@ -293,30 +323,7 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "ស្វែងរក";
             // 
-            // datasupplier
-            // 
-            this.datasupplier.AllowUserToAddRows = false;
-            this.datasupplier.AllowUserToDeleteRows = false;
-            this.datasupplier.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.datasupplier.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
-            this.datasupplier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datasupplier.DefaultCellStyle = dataGridViewCellStyle1;
-            this.datasupplier.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.datasupplier.Location = new System.Drawing.Point(0, 0);
-            this.datasupplier.Name = "datasupplier";
-            this.datasupplier.ReadOnly = true;
-            this.datasupplier.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datasupplier.Size = new System.Drawing.Size(673, 332);
-            this.datasupplier.TabIndex = 2;
-            // 
-            // branch
+            // Brand
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -325,9 +332,12 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "branch";
+            this.Name = "Brand";
             this.Text = "branch";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.branch_FormClosed);
+            this.Load += new System.EventHandler(this.branch_Load);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataBrand)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -336,7 +346,6 @@
             this.groupDataEmployee.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.datasupplier)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -347,22 +356,22 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnsearch;
         private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.TextBox txtFirstName;
+        private System.Windows.Forms.TextBox txtBarndName;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btndelete;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.GroupBox groupDataEmployee;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.DataGridView datasupplier;
+        private System.Windows.Forms.DataGridView dataBrand;
     }
 }

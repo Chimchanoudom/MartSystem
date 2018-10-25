@@ -16,7 +16,7 @@ namespace MartSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new category());
+            Application.Run(new Brand());
         }
     }
 }
