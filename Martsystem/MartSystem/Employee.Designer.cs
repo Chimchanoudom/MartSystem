@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -44,7 +44,6 @@
             this.rndSearchID = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -66,10 +65,10 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.groupDataEmployee = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.DateHireDate = new System.Windows.Forms.DateTimePicker();
+            this.txtTimeShift = new System.Windows.Forms.MaskedTextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pcPhoto = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.rndFemale = new System.Windows.Forms.RadioButton();
             this.rndMale = new System.Windows.Forms.RadioButton();
@@ -95,10 +94,11 @@
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblID = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.datasupplier = new System.Windows.Forms.DataGridView();
+            this.button5 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -107,7 +107,7 @@
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.groupDataEmployee.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcPhoto)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datasupplier)).BeginInit();
@@ -304,19 +304,6 @@
             this.panel6.Size = new System.Drawing.Size(455, 48);
             this.panel6.TabIndex = 3;
             // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Blue;
-            this.button5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(345, 0);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(110, 48);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "Save";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.Red;
@@ -355,6 +342,7 @@
             this.button2.TabIndex = 5;
             this.button2.Text = "Add";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel5
             // 
@@ -395,7 +383,9 @@
             this.cbxPosition.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxPosition.FormattingEnabled = true;
             this.cbxPosition.Items.AddRange(new object[] {
-            ""});
+            "Admin",
+            "Cashire",
+            "Cleaner"});
             this.cbxPosition.Location = new System.Drawing.Point(122, 5);
             this.cbxPosition.Name = "cbxPosition";
             this.cbxPosition.Size = new System.Drawing.Size(185, 29);
@@ -531,10 +521,10 @@
             // groupDataEmployee
             // 
             this.groupDataEmployee.BackColor = System.Drawing.Color.Transparent;
-            this.groupDataEmployee.Controls.Add(this.dateTimePicker1);
-            this.groupDataEmployee.Controls.Add(this.maskedTextBox1);
+            this.groupDataEmployee.Controls.Add(this.DateHireDate);
+            this.groupDataEmployee.Controls.Add(this.txtTimeShift);
             this.groupDataEmployee.Controls.Add(this.button1);
-            this.groupDataEmployee.Controls.Add(this.pictureBox1);
+            this.groupDataEmployee.Controls.Add(this.pcPhoto);
             this.groupDataEmployee.Controls.Add(this.panel4);
             this.groupDataEmployee.Controls.Add(this.label17);
             this.groupDataEmployee.Controls.Add(this.label16);
@@ -558,7 +548,7 @@
             this.groupDataEmployee.Controls.Add(this.txtFirstName);
             this.groupDataEmployee.Controls.Add(this.label4);
             this.groupDataEmployee.Controls.Add(this.label3);
-            this.groupDataEmployee.Controls.Add(this.label1);
+            this.groupDataEmployee.Controls.Add(this.lblID);
             this.groupDataEmployee.Controls.Add(this.label2);
             this.groupDataEmployee.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupDataEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -573,44 +563,44 @@
             this.groupDataEmployee.TabStop = false;
             this.groupDataEmployee.Text = "Employees Information";
             // 
-            // dateTimePicker1
+            // DateHireDate
             // 
-            this.dateTimePicker1.CustomFormat = "dd/MMMM/yyyy";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(155, 60);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(234, 27);
-            this.dateTimePicker1.TabIndex = 8;
+            this.DateHireDate.CustomFormat = "dd/MMMM/yyyy";
+            this.DateHireDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DateHireDate.Location = new System.Drawing.Point(155, 60);
+            this.DateHireDate.Name = "DateHireDate";
+            this.DateHireDate.Size = new System.Drawing.Size(234, 27);
+            this.DateHireDate.TabIndex = 8;
             // 
-            // maskedTextBox1
+            // txtTimeShift
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(155, 103);
-            this.maskedTextBox1.Mask = "90:00  -  90:00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(113, 27);
-            this.maskedTextBox1.TabIndex = 7;
+            this.txtTimeShift.Location = new System.Drawing.Point(155, 103);
+            this.txtTimeShift.Mask = "90:00  -  90:00";
+            this.txtTimeShift.Name = "txtTimeShift";
+            this.txtTimeShift.Size = new System.Drawing.Size(113, 27);
+            this.txtTimeShift.TabIndex = 7;
             // 
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.DarkCyan;
-            this.button1.Location = new System.Drawing.Point(397, 226);
+            this.button1.Location = new System.Drawing.Point(397, 220);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(149, 44);
             this.button1.TabIndex = 4;
             this.button1.Text = "Brows to image";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // pcPhoto
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = global::MartSystem.Properties.Resources.employee;
-            this.pictureBox1.Location = new System.Drawing.Point(397, 68);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(151, 151);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
+            this.pcPhoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pcPhoto.Image = global::MartSystem.Properties.Resources.employee;
+            this.pcPhoto.Location = new System.Drawing.Point(397, 62);
+            this.pcPhoto.Name = "pcPhoto";
+            this.pcPhoto.Size = new System.Drawing.Size(151, 151);
+            this.pcPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcPhoto.TabIndex = 6;
+            this.pcPhoto.TabStop = false;
             // 
             // panel4
             // 
@@ -842,14 +832,14 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Time Shift";
             // 
-            // label1
+            // lblID
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(151, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 21);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ID";
+            this.lblID.AutoSize = true;
+            this.lblID.Location = new System.Drawing.Point(151, 32);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(27, 21);
+            this.lblID.TabIndex = 0;
+            this.lblID.Text = "ID";
             // 
             // label2
             // 
@@ -876,14 +866,14 @@
             this.datasupplier.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.datasupplier.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
             this.datasupplier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datasupplier.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datasupplier.DefaultCellStyle = dataGridViewCellStyle3;
             this.datasupplier.Dock = System.Windows.Forms.DockStyle.Fill;
             this.datasupplier.Location = new System.Drawing.Point(0, 0);
             this.datasupplier.Name = "datasupplier";
@@ -891,6 +881,19 @@
             this.datasupplier.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.datasupplier.Size = new System.Drawing.Size(1444, 134);
             this.datasupplier.TabIndex = 2;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Blue;
+            this.button5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(345, 0);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(110, 48);
+            this.button5.TabIndex = 8;
+            this.button5.Text = "Save";
+            this.button5.UseVisualStyleBackColor = false;
             // 
             // Employee
             // 
@@ -904,6 +907,7 @@
             this.Name = "Employee";
             this.Text = "Employee";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Employee_Load);
             this.panel3.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
@@ -916,7 +920,7 @@
             this.panel5.PerformLayout();
             this.groupDataEmployee.ResumeLayout(false);
             this.groupDataEmployee.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcPhoto)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.datasupplier)).EndInit();
@@ -946,7 +950,7 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.GroupBox groupDataEmployee;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pcPhoto;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.RadioButton rndFemale;
         private System.Windows.Forms.RadioButton rndMale;
@@ -969,14 +973,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.MaskedTextBox txtTimeShift;
+        private System.Windows.Forms.DateTimePicker DateHireDate;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label29;
@@ -995,5 +998,6 @@
         private System.Windows.Forms.RadioButton rndSearchFname;
         private System.Windows.Forms.RadioButton rndSearchID;
         private System.Windows.Forms.DataGridView datasupplier;
+        private System.Windows.Forms.Button button5;
     }
 }

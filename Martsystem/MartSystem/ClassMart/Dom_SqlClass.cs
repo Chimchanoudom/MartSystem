@@ -35,14 +35,15 @@ namespace MartSystem
             {
                 dataCon.Con.Close();
             }
-            if (ID == null || ID.Equals(""))
+            int num;
+            bool s = int.TryParse(ID.ToString(), out num);
+            if (s == true)
             {
-                ID = "";
+                num += 1;
             }
             else
             {
-                int num = int.Parse(ID + "") - 1;
-                ID = num + "";
+                ID = "";
             }
             return ID + "";
 
