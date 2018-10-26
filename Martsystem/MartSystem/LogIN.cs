@@ -50,5 +50,59 @@ namespace MartSystem
             btn = (BunifuThinButton2)sender;
             btn.Font = new Font(btnLogIn.Font.FontFamily, 12);
         }
+
+        private void btnLogIn_Click(object sender, EventArgs e)
+        {
+            foreach(DataRow Dr in dt.Rows)
+            {
+                    if ((txtuserName.Text.ToLower() ==Dr["UserAcc"].ToString().ToLower()&&txtpass.Text.ToLower()==Dr["Pwd"].ToString().ToLower()))
+                    {
+                    if (Convert.ToBoolean(Dr["Active"]) == true){
+                        MessageBox.Show("Welcome "+Dr["Lname"]+" "+Dr["Fname"]);
+                        Dom_SqlClass.empID = Dr["EmpID"].ToString();
+                        Dom_SqlClass.fName = Dr["Fname"].ToString();
+                        Dom_SqlClass.lName = Dr["Lname"].ToString();
+                        Dom_SqlClass.position = Dr["Position"].ToString();
+                        //sth
+                        break;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Your Account is Deactive !");
+                        break;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Incorrect Password or User Name !");
+                    break;
+                }
+            }
+        }
+        DataTable dt;
+        private void LogIN_Load(object sender, EventArgs e)
+        {
+            dt = Dom_SqlClass.retriveData("Employee join UserAcc on Employee.EmpID=UserAcc.EmpID", "", new string[] {"*"});
+        }
+
+        private void txtpass_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtpass.ForeColor = Color.Green;
+        }
+
+        private void txtpass_MouseUp(object sender, MouseEventArgs e)
+        {
+            txtpass.ForeColor = Color.Black;
+        }
+
+        private void txtpass_MouseEnter(object sender, EventArgs e)
+        {
+           // txtpass_MouseClick(null, null);
+        }
+
+        private void txtpass_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 }

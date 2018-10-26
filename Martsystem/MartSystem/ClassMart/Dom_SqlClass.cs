@@ -9,7 +9,7 @@ using System.Data;
 
 namespace MartSystem
 {
-    class Dom_SqlClass
+    class Dom_SqlClass: UserLoginDetail
     {
 
         static SqlCommand SC = new SqlCommand();
