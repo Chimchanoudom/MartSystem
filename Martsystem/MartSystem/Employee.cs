@@ -24,6 +24,7 @@ namespace MartSystem
         }
         void Clear()
         {
+            //fghff
             DateHireDate.Value =dTPickerBirthDate.Value= DateTime.Now;
             txtAddress.Text = "";
             txtFirstName.Text = "";
