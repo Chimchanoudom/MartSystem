@@ -32,6 +32,7 @@ namespace MartSystem
             for (int i = 0; i < numberColum; i++)
             {
                 Data.Columns[i].HeaderText = ColumnHeader[i];
+                Data.Columns[i].Name= ColumnHeader[i];
             }
         }
 
@@ -60,10 +61,10 @@ namespace MartSystem
 
         public static void ColumnName(DataGridView data,int column,String[]columnName)
         {
-            
             for (int i = 0; i < column; i++)
             {
                 data.Columns[i].Name = columnName[i];
+                
             }
         }
         public static String SetID(int indexsubstring,String ID,String suffix)

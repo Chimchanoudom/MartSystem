@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rndSearchUsername = new System.Windows.Forms.RadioButton();
             this.rndSearchLname = new System.Windows.Forms.RadioButton();
             this.rndSearchPosition = new System.Windows.Forms.RadioButton();
             this.rndSearchTelephone = new System.Windows.Forms.RadioButton();
@@ -44,9 +44,10 @@
             this.rndSearchID = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.CheckActive = new System.Windows.Forms.CheckBox();
             this.cbxPosition = new System.Windows.Forms.ComboBox();
@@ -65,10 +66,10 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.groupDataEmployee = new System.Windows.Forms.GroupBox();
-            this.DateHireDate = new System.Windows.Forms.DateTimePicker();
+            this.dTHireDate = new System.Windows.Forms.DateTimePicker();
             this.txtTimeShift = new System.Windows.Forms.MaskedTextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pcPhoto = new System.Windows.Forms.PictureBox();
+            this.btnBrowse = new System.Windows.Forms.Button();
+            this.ImageBox = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.rndFemale = new System.Windows.Forms.RadioButton();
             this.rndMale = new System.Windows.Forms.RadioButton();
@@ -81,7 +82,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.dTPickerBirthDate = new System.Windows.Forms.DateTimePicker();
+            this.dTBirthDate = new System.Windows.Forms.DateTimePicker();
             this.txtAddress = new System.Windows.Forms.RichTextBox();
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -98,7 +99,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.datasupplier = new System.Windows.Forms.DataGridView();
-            this.button5 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -107,7 +107,7 @@
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.groupDataEmployee.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcPhoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageBox)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datasupplier)).BeginInit();
@@ -141,8 +141,8 @@
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.button7);
-            this.panel7.Controls.Add(this.button6);
+            this.panel7.Controls.Add(this.btnCancel);
+            this.panel7.Controls.Add(this.btnSearch);
             this.panel7.Controls.Add(this.txtSearch);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(3, 151);
@@ -150,33 +150,33 @@
             this.panel7.Size = new System.Drawing.Size(452, 36);
             this.panel7.TabIndex = 1;
             // 
-            // button7
+            // btnCancel
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(322, 0);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(96, 36);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "Cancel";
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCancel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(322, 0);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(96, 36);
+            this.btnCancel.TabIndex = 7;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // btnSearch
             // 
-            this.button6.BackColor = System.Drawing.Color.Fuchsia;
-            this.button6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(226, 0);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(96, 36);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "Search";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnSearch.BackColor = System.Drawing.Color.Fuchsia;
+            this.btnSearch.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.Location = new System.Drawing.Point(226, 0);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(96, 36);
+            this.btnSearch.TabIndex = 6;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = false;
             // 
             // txtSearch
             // 
@@ -190,7 +190,7 @@
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.radioButton1);
+            this.groupBox7.Controls.Add(this.rndSearchUsername);
             this.groupBox7.Controls.Add(this.rndSearchLname);
             this.groupBox7.Controls.Add(this.rndSearchPosition);
             this.groupBox7.Controls.Add(this.rndSearchTelephone);
@@ -204,17 +204,17 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "លក្ខខណ្ឌ";
             // 
-            // radioButton1
+            // rndSearchUsername
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(310, 36);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(112, 25);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "User Name";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rndSearchUsername.AutoSize = true;
+            this.rndSearchUsername.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rndSearchUsername.Location = new System.Drawing.Point(310, 36);
+            this.rndSearchUsername.Name = "rndSearchUsername";
+            this.rndSearchUsername.Size = new System.Drawing.Size(112, 25);
+            this.rndSearchUsername.TabIndex = 0;
+            this.rndSearchUsername.TabStop = true;
+            this.rndSearchUsername.Text = "User Name";
+            this.rndSearchUsername.UseVisualStyleBackColor = true;
             // 
             // rndSearchLname
             // 
@@ -294,55 +294,73 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.button5);
-            this.panel6.Controls.Add(this.button4);
-            this.panel6.Controls.Add(this.button3);
-            this.panel6.Controls.Add(this.button2);
+            this.panel6.Controls.Add(this.btnSave);
+            this.panel6.Controls.Add(this.btnDelete);
+            this.panel6.Controls.Add(this.btnEdit);
+            this.panel6.Controls.Add(this.btnAdd);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(3, 246);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(455, 48);
             this.panel6.TabIndex = 3;
             // 
-            // button4
+            // btnSave
             // 
-            this.button4.BackColor = System.Drawing.Color.Red;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(230, 0);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(115, 48);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "Delete";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnSave.BackColor = System.Drawing.Color.Blue;
+            this.btnSave.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(345, 0);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(110, 48);
+            this.btnSave.TabIndex = 8;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.EnabledChanged += new System.EventHandler(this.btnAdd_EnabledChanged);
             // 
-            // button3
+            // btnDelete
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(115, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(115, 48);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Edit";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnDelete.BackColor = System.Drawing.Color.Red;
+            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(230, 0);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(115, 48);
+            this.btnDelete.TabIndex = 7;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.EnabledChanged += new System.EventHandler(this.btnAdd_EnabledChanged);
             // 
-            // button2
+            // btnEdit
             // 
-            this.button2.BackColor = System.Drawing.Color.Green;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(115, 48);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Add";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnEdit.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEdit.Location = new System.Drawing.Point(115, 0);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(115, 48);
+            this.btnEdit.TabIndex = 6;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.EnabledChanged += new System.EventHandler(this.btnAdd_EnabledChanged);
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.Green;
+            this.btnAdd.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(0, 0);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(115, 48);
+            this.btnAdd.TabIndex = 5;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.EnabledChanged += new System.EventHandler(this.btnAdd_EnabledChanged);
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // panel5
             // 
@@ -521,10 +539,10 @@
             // groupDataEmployee
             // 
             this.groupDataEmployee.BackColor = System.Drawing.Color.Transparent;
-            this.groupDataEmployee.Controls.Add(this.DateHireDate);
+            this.groupDataEmployee.Controls.Add(this.dTHireDate);
             this.groupDataEmployee.Controls.Add(this.txtTimeShift);
-            this.groupDataEmployee.Controls.Add(this.button1);
-            this.groupDataEmployee.Controls.Add(this.pcPhoto);
+            this.groupDataEmployee.Controls.Add(this.btnBrowse);
+            this.groupDataEmployee.Controls.Add(this.ImageBox);
             this.groupDataEmployee.Controls.Add(this.panel4);
             this.groupDataEmployee.Controls.Add(this.label17);
             this.groupDataEmployee.Controls.Add(this.label16);
@@ -535,7 +553,7 @@
             this.groupDataEmployee.Controls.Add(this.label12);
             this.groupDataEmployee.Controls.Add(this.label11);
             this.groupDataEmployee.Controls.Add(this.label10);
-            this.groupDataEmployee.Controls.Add(this.dTPickerBirthDate);
+            this.groupDataEmployee.Controls.Add(this.dTBirthDate);
             this.groupDataEmployee.Controls.Add(this.txtAddress);
             this.groupDataEmployee.Controls.Add(this.txtPhoneNumber);
             this.groupDataEmployee.Controls.Add(this.label9);
@@ -563,14 +581,14 @@
             this.groupDataEmployee.TabStop = false;
             this.groupDataEmployee.Text = "Employees Information";
             // 
-            // DateHireDate
+            // dTHireDate
             // 
-            this.DateHireDate.CustomFormat = "dd/MMMM/yyyy";
-            this.DateHireDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DateHireDate.Location = new System.Drawing.Point(155, 60);
-            this.DateHireDate.Name = "DateHireDate";
-            this.DateHireDate.Size = new System.Drawing.Size(234, 27);
-            this.DateHireDate.TabIndex = 8;
+            this.dTHireDate.CustomFormat = "dd/MMMM/yyyy";
+            this.dTHireDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dTHireDate.Location = new System.Drawing.Point(155, 60);
+            this.dTHireDate.Name = "dTHireDate";
+            this.dTHireDate.Size = new System.Drawing.Size(234, 27);
+            this.dTHireDate.TabIndex = 8;
             // 
             // txtTimeShift
             // 
@@ -580,27 +598,28 @@
             this.txtTimeShift.Size = new System.Drawing.Size(113, 27);
             this.txtTimeShift.TabIndex = 7;
             // 
-            // button1
+            // btnBrowse
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.DarkCyan;
-            this.button1.Location = new System.Drawing.Point(397, 220);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(149, 44);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Brows to image";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnBrowse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBrowse.ForeColor = System.Drawing.Color.DarkCyan;
+            this.btnBrowse.Location = new System.Drawing.Point(397, 220);
+            this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.Size = new System.Drawing.Size(149, 44);
+            this.btnBrowse.TabIndex = 4;
+            this.btnBrowse.Text = "Brows to image";
+            this.btnBrowse.UseVisualStyleBackColor = true;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
-            // pcPhoto
+            // ImageBox
             // 
-            this.pcPhoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pcPhoto.Image = global::MartSystem.Properties.Resources.employee;
-            this.pcPhoto.Location = new System.Drawing.Point(397, 62);
-            this.pcPhoto.Name = "pcPhoto";
-            this.pcPhoto.Size = new System.Drawing.Size(151, 151);
-            this.pcPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcPhoto.TabIndex = 6;
-            this.pcPhoto.TabStop = false;
+            this.ImageBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ImageBox.Image = global::MartSystem.Properties.Resources.employee;
+            this.ImageBox.Location = new System.Drawing.Point(397, 62);
+            this.ImageBox.Name = "ImageBox";
+            this.ImageBox.Size = new System.Drawing.Size(151, 151);
+            this.ImageBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ImageBox.TabIndex = 6;
+            this.ImageBox.TabStop = false;
             // 
             // panel4
             // 
@@ -711,21 +730,21 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(126, 32);
+            this.label10.Location = new System.Drawing.Point(126, 30);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(14, 21);
             this.label10.TabIndex = 1;
             this.label10.Text = ":";
             // 
-            // dTPickerBirthDate
+            // dTBirthDate
             // 
-            this.dTPickerBirthDate.CustomFormat = "dd/MMMM/yyyy";
-            this.dTPickerBirthDate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dTPickerBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dTPickerBirthDate.Location = new System.Drawing.Point(155, 266);
-            this.dTPickerBirthDate.Name = "dTPickerBirthDate";
-            this.dTPickerBirthDate.Size = new System.Drawing.Size(234, 27);
-            this.dTPickerBirthDate.TabIndex = 3;
+            this.dTBirthDate.CustomFormat = "dd/MMMM/yyyy";
+            this.dTBirthDate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dTBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dTBirthDate.Location = new System.Drawing.Point(155, 266);
+            this.dTBirthDate.Name = "dTBirthDate";
+            this.dTBirthDate.Size = new System.Drawing.Size(234, 27);
+            this.dTBirthDate.TabIndex = 3;
             // 
             // txtAddress
             // 
@@ -835,7 +854,7 @@
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(151, 32);
+            this.lblID.Location = new System.Drawing.Point(151, 30);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(27, 21);
             this.lblID.TabIndex = 0;
@@ -866,34 +885,21 @@
             this.datasupplier.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.datasupplier.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
             this.datasupplier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datasupplier.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datasupplier.DefaultCellStyle = dataGridViewCellStyle1;
             this.datasupplier.Dock = System.Windows.Forms.DockStyle.Fill;
             this.datasupplier.Location = new System.Drawing.Point(0, 0);
             this.datasupplier.Name = "datasupplier";
             this.datasupplier.ReadOnly = true;
-            this.datasupplier.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.datasupplier.Size = new System.Drawing.Size(1444, 134);
             this.datasupplier.TabIndex = 2;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Blue;
-            this.button5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(345, 0);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(110, 48);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "Save";
-            this.button5.UseVisualStyleBackColor = false;
+            this.datasupplier.SelectionChanged += new System.EventHandler(this.datasupplier_SelectionChanged);
             // 
             // Employee
             // 
@@ -920,7 +926,7 @@
             this.panel5.PerformLayout();
             this.groupDataEmployee.ResumeLayout(false);
             this.groupDataEmployee.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcPhoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageBox)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.datasupplier)).EndInit();
@@ -950,7 +956,7 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.GroupBox groupDataEmployee;
-        private System.Windows.Forms.PictureBox pcPhoto;
+        private System.Windows.Forms.PictureBox ImageBox;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.RadioButton rndFemale;
         private System.Windows.Forms.RadioButton rndMale;
@@ -961,7 +967,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DateTimePicker dTPickerBirthDate;
+        private System.Windows.Forms.DateTimePicker dTBirthDate;
         private System.Windows.Forms.RichTextBox txtAddress;
         private System.Windows.Forms.TextBox txtPhoneNumber;
         private System.Windows.Forms.Label label9;
@@ -972,14 +978,14 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBrowse;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.MaskedTextBox txtTimeShift;
-        private System.Windows.Forms.DateTimePicker DateHireDate;
+        private System.Windows.Forms.DateTimePicker dTHireDate;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label29;
@@ -987,17 +993,17 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rndSearchUsername;
         private System.Windows.Forms.RadioButton rndSearchLname;
         private System.Windows.Forms.RadioButton rndSearchPosition;
         private System.Windows.Forms.RadioButton rndSearchTelephone;
         private System.Windows.Forms.RadioButton rndSearchFname;
         private System.Windows.Forms.RadioButton rndSearchID;
         private System.Windows.Forms.DataGridView datasupplier;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnSave;
     }
 }

@@ -36,13 +36,13 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtuserName = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.jj = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.txtpass = new System.Windows.Forms.TextBox();
+            this.jj = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -161,25 +161,6 @@
             this.txtuserName.TabIndex = 0;
             this.txtuserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // jj
-            // 
-            this.jj.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.jj.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jj.ForeColor = System.Drawing.Color.Black;
-            this.jj.HintForeColor = System.Drawing.Color.Green;
-            this.jj.HintText = "";
-            this.jj.isPassword = true;
-            this.jj.LineFocusedColor = System.Drawing.Color.Black;
-            this.jj.LineIdleColor = System.Drawing.Color.Gray;
-            this.jj.LineMouseHoverColor = System.Drawing.Color.Gray;
-            this.jj.LineThickness = 4;
-            this.jj.Location = new System.Drawing.Point(153, 133);
-            this.jj.Margin = new System.Windows.Forms.Padding(4);
-            this.jj.Name = "jj";
-            this.jj.Size = new System.Drawing.Size(260, 33);
-            this.jj.TabIndex = 1;
-            this.jj.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -236,11 +217,31 @@
             this.txtpass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtpass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtpass.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpass.Location = new System.Drawing.Point(153, 141);
+            this.txtpass.Location = new System.Drawing.Point(153, 145);
             this.txtpass.Name = "txtpass";
             this.txtpass.Size = new System.Drawing.Size(260, 20);
             this.txtpass.TabIndex = 7;
             this.txtpass.UseSystemPasswordChar = true;
+            // 
+            // jj
+            // 
+            this.jj.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.jj.Enabled = false;
+            this.jj.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jj.ForeColor = System.Drawing.Color.Black;
+            this.jj.HintForeColor = System.Drawing.Color.Green;
+            this.jj.HintText = "";
+            this.jj.isPassword = true;
+            this.jj.LineFocusedColor = System.Drawing.Color.Black;
+            this.jj.LineIdleColor = System.Drawing.Color.Gray;
+            this.jj.LineMouseHoverColor = System.Drawing.Color.Gray;
+            this.jj.LineThickness = 4;
+            this.jj.Location = new System.Drawing.Point(153, 133);
+            this.jj.Margin = new System.Windows.Forms.Padding(4);
+            this.jj.Name = "jj";
+            this.jj.Size = new System.Drawing.Size(260, 33);
+            this.jj.TabIndex = 1;
+            this.jj.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // LogIN
             // 
@@ -276,13 +277,13 @@
         private System.Windows.Forms.Panel panel2;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtuserName;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox jj;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.TextBox txtpass;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox jj;
     }
 }
 

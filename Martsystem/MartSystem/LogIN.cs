@@ -55,7 +55,9 @@ namespace MartSystem
         {
             foreach(DataRow Dr in dt.Rows)
             {
-                    if ((txtuserName.Text.ToLower() ==Dr["UserAcc"].ToString().ToLower()&&txtpass.Text.ToLower()==Dr["Pwd"].ToString().ToLower()))
+                MessageBox.Show(Dr["UserAcc"].ToString());
+                MessageBox.Show(Dr["Pwd"].ToString());
+                if ((txtuserName.Text.ToLower() ==Dr["UserAcc"].ToString().ToLower()&&txtpass.Text.ToLower()==Dr["Pwd"].ToString().ToLower()))
                     {
                     if (Convert.ToBoolean(Dr["Active"]) == true){
                         MessageBox.Show("Welcome "+Dr["Lname"]+" "+Dr["Fname"]);
