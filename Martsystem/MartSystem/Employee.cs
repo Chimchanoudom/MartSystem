@@ -139,6 +139,8 @@ namespace MartSystem
             {
                 if (datasupplier.SelectedRows.Count == 1)
                 {
+                    if (BigRowIndex != -1)
+                        datasupplier.Rows[BigRowIndex].Height = new DataGridViewRow().Height;
                     datasupplier.SelectedRows[0].Height = new DataGridViewRow().Height + 50;
                     BigRowIndex = datasupplier.SelectedRows[0].Index;
                     btnEdit.Enabled = true;
@@ -168,6 +170,11 @@ namespace MartSystem
                 else
                 {
                     btnEdit.Enabled = false;
+                    if (!isFormLoading && BigRowIndex != -1)
+                    {
+                        datasupplier.Rows[BigRowIndex].Height = new DataGridViewRow().Height;
+                        BigRowIndex = -1;
+                    }
                 }
             }
             else
