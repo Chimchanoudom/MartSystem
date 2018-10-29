@@ -25,3 +25,18 @@ D:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Properties
 D:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.supplyer.resources
 D:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.csproj.GenerateResource.Cache
 D:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Brand.resources
+D:\SETEC\SA\MartSystem\Martsystem\MartSystem\bin\Debug\MartSystem.exe.config
+D:\SETEC\SA\MartSystem\Martsystem\MartSystem\bin\Debug\MartSystem.exe
+D:\SETEC\SA\MartSystem\Martsystem\MartSystem\bin\Debug\MartSystem.pdb
+D:\SETEC\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.csprojResolveAssemblyReference.cache
+D:\SETEC\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Brand.resources
+D:\SETEC\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.category.resources
+D:\SETEC\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Employee.resources
+D:\SETEC\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.LogIN.resources
+D:\SETEC\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Properties.Resources.resources
+D:\SETEC\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.supplyer.resources
+D:\SETEC\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.csproj.GenerateResource.cache
+D:\SETEC\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.csproj.CoreCompileInputs.cache
+D:\SETEC\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.csproj.CopyComplete
+D:\SETEC\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.exe
+D:\SETEC\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.pdb
