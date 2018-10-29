@@ -30,8 +30,11 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
 <<<<<<< HEAD
+<<<<<<< HEAD
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+=======
+>>>>>>> e9f1c4eae44fecce2d051cd1697aabf52d4d7ac6
 =======
 >>>>>>> e9f1c4eae44fecce2d051cd1697aabf52d4d7ac6
             this.panel3 = new System.Windows.Forms.Panel();
@@ -50,15 +53,21 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel6 = new System.Windows.Forms.Panel();
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
 =======
+=======
+>>>>>>> e9f1c4eae44fecce2d051cd1697aabf52d4d7ac6
             this.btnSave = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+<<<<<<< HEAD
+>>>>>>> e9f1c4eae44fecce2d051cd1697aabf52d4d7ac6
+=======
 >>>>>>> e9f1c4eae44fecce2d051cd1697aabf52d4d7ac6
             this.panel5 = new System.Windows.Forms.Panel();
             this.CheckActive = new System.Windows.Forms.CheckBox();
@@ -114,6 +123,9 @@
             this.dataEmp = new System.Windows.Forms.DataGridView();
 =======
             this.datasupplier = new System.Windows.Forms.DataGridView();
+<<<<<<< HEAD
+>>>>>>> e9f1c4eae44fecce2d051cd1697aabf52d4d7ac6
+=======
 >>>>>>> e9f1c4eae44fecce2d051cd1697aabf52d4d7ac6
             this.panel3.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -321,6 +333,7 @@
             this.panel6.TabIndex = 3;
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.Blue;
@@ -375,6 +388,8 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
 =======
+=======
+>>>>>>> e9f1c4eae44fecce2d051cd1697aabf52d4d7ac6
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.Blue;
@@ -432,6 +447,9 @@
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.EnabledChanged += new System.EventHandler(this.btnAdd_EnabledChanged);
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+<<<<<<< HEAD
+>>>>>>> e9f1c4eae44fecce2d051cd1697aabf52d4d7ac6
+=======
 >>>>>>> e9f1c4eae44fecce2d051cd1697aabf52d4d7ac6
             // 
             // panel5
@@ -1011,6 +1029,9 @@
             this.datasupplier.Size = new System.Drawing.Size(1444, 134);
             this.datasupplier.TabIndex = 2;
             this.datasupplier.SelectionChanged += new System.EventHandler(this.datasupplier_SelectionChanged);
+<<<<<<< HEAD
+>>>>>>> e9f1c4eae44fecce2d051cd1697aabf52d4d7ac6
+=======
 >>>>>>> e9f1c4eae44fecce2d051cd1697aabf52d4d7ac6
             // 
             // Employee
@@ -1116,8 +1137,13 @@
         private System.Windows.Forms.RadioButton rndSearchFname;
         private System.Windows.Forms.RadioButton rndSearchID;
 <<<<<<< HEAD
+<<<<<<< HEAD
         private System.Windows.Forms.DataGridView dataEmp;
         private System.Windows.Forms.Button button5;
+=======
+        private System.Windows.Forms.DataGridView datasupplier;
+        private System.Windows.Forms.Button btnSave;
+>>>>>>> e9f1c4eae44fecce2d051cd1697aabf52d4d7ac6
 =======
         private System.Windows.Forms.DataGridView datasupplier;
         private System.Windows.Forms.Button btnSave;

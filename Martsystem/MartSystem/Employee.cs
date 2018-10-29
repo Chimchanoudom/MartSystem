@@ -20,9 +20,12 @@ namespace MartSystem
             InitializeComponent();
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         DataTable  DT2=new DataTable() ;
         DataSet DT1;
 =======
+=======
+>>>>>>> e9f1c4eae44fecce2d051cd1697aabf52d4d7ac6
 
 
         Boolean isFormLoading = true;
@@ -46,7 +49,12 @@ namespace MartSystem
         void Clear()
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
             DateHireDate.Value =dTPickerBirthDate.Value= DateTime.Now;
+=======
+            //fghff
+            dTHireDate.Value =dTBirthDate.Value= DateTime.Now;
+>>>>>>> e9f1c4eae44fecce2d051cd1697aabf52d4d7ac6
 =======
             //fghff
             dTHireDate.Value =dTBirthDate.Value= DateTime.Now;
@@ -61,9 +69,12 @@ namespace MartSystem
             txtUserName.Text = "";
             lblID.Text = ID;
 <<<<<<< HEAD
+<<<<<<< HEAD
             pcPhoto.Image = Properties.Resources.employee;            
             dataEmp.ClearSelection();
 =======
+=======
+>>>>>>> e9f1c4eae44fecce2d051cd1697aabf52d4d7ac6
             ImageBox.Image = Properties.Resources.employee;
             if (!isFormLoading && BigRowIndex != -1)
             {
@@ -72,6 +83,9 @@ namespace MartSystem
             }
             datasupplier.ClearSelection();
             
+<<<<<<< HEAD
+>>>>>>> e9f1c4eae44fecce2d051cd1697aabf52d4d7ac6
+=======
 >>>>>>> e9f1c4eae44fecce2d051cd1697aabf52d4d7ac6
         }
 
@@ -79,6 +93,7 @@ namespace MartSystem
 
         private void Employee_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
 <<<<<<< HEAD
             DT1 = Dom_SqlClass.retriveDataMultiTable(@"SELECT e.EmpID,e.HiredDate,e.Fname,e.Lname,e.Gender,e.DOB,e.Address,e.Phone,e.BasicSalary,e.Position,e.TimeShift,e.Active,u.EmpID,u.UserAcc,u.Pwd FROM Employee e join UserAcc u on e.EmpID=u.EmpID;");
             dataEmp.DataSource = DT1.Tables[0];
@@ -100,6 +115,22 @@ namespace MartSystem
             datasupplier.Columns[4].DefaultCellStyle.Format = "yyyy/MM/dd";
             datasupplier.ColumnHeadersDefaultCellStyle.Font = new Font("Times New Roman", 12,FontStyle.Bold);
 
+=======
+            DefaultColorBtnAdd=btnAdd.BackColor;
+            DefaultColorBtnEdit=btnEdit.BackColor;
+            DefaultColorBtnDelete=btnDelete.BackColor;
+
+            datasupplier.ColumnCount = 14;
+            dom_Design.GenerateColumHeader(new string[] { "ID", "Hire Date", "First Name", "Last Name","Gender", "Date of birth","Address","Phone","Basic Salary","Position","Time Shift","Active","User Name","Password" }, datasupplier.ColumnCount, datasupplier);
+            DataGridViewColumn dgvImg = new DataGridViewImageColumn();
+            dgvImg.Name = "Image";
+            dgvImg.HeaderText="Image";
+            datasupplier.Columns.Add(dgvImg);
+            datasupplier.Columns[1].DefaultCellStyle.Format = "yyyy/MM/dd";
+            datasupplier.Columns[4].DefaultCellStyle.Format = "yyyy/MM/dd";
+            datasupplier.ColumnHeadersDefaultCellStyle.Font = new Font("Times New Roman", 12,FontStyle.Bold);
+
+>>>>>>> e9f1c4eae44fecce2d051cd1697aabf52d4d7ac6
             //Disable this after completely finished coding
             UserLoginDetail.position = "admin";
             //
@@ -130,6 +161,9 @@ namespace MartSystem
                 dataCon.Con.Close();
             }
             
+<<<<<<< HEAD
+>>>>>>> e9f1c4eae44fecce2d051cd1697aabf52d4d7ac6
+=======
 >>>>>>> e9f1c4eae44fecce2d051cd1697aabf52d4d7ac6
             //dom_Design.ColumnName(datasupplier, 5, new string[] { "ID", "SupName", "Tel", "Email", "Address" });
             ID = "Emp_" + EmpClass.GetData.getIdFromDB();
@@ -155,11 +189,18 @@ namespace MartSystem
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
         private void button2_Click(object sender, EventArgs e)
         {
             if (dataEmp.SelectedRows.Count == 0)
+=======
+        private void datasupplier_SelectionChanged(object sender, EventArgs e)
+        {
+            btnAdd.Enabled=!(btnEdit.Enabled = btnDelete.Enabled = (datasupplier.SelectedRows.Count > 0));
+            if (datasupplier.SelectedRows.Count > 0)
+>>>>>>> e9f1c4eae44fecce2d051cd1697aabf52d4d7ac6
 =======
         private void datasupplier_SelectionChanged(object sender, EventArgs e)
         {
@@ -262,7 +303,11 @@ namespace MartSystem
                 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                     dataEmp.Rows.Add(new object[] {
+=======
+                datasupplier.Rows.Add(new object[] {
+>>>>>>> e9f1c4eae44fecce2d051cd1697aabf52d4d7ac6
 =======
                 datasupplier.Rows.Add(new object[] {
 >>>>>>> e9f1c4eae44fecce2d051cd1697aabf52d4d7ac6
@@ -288,12 +333,16 @@ namespace MartSystem
             else
             {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 DialogResult dir = MessageBox.Show("Do you want to cancell this selection ?", "selection will be cancell", MessageBoxButtons.YesNo);
                 if (dir == DialogResult.Yes)
                 {
                     Clear();
                     dataEmp.ClearSelection();
                 }
+=======
+                MessageBox.Show("Please fill in all the required information!");
+>>>>>>> e9f1c4eae44fecce2d051cd1697aabf52d4d7ac6
 =======
                 MessageBox.Show("Please fill in all the required information!");
 >>>>>>> e9f1c4eae44fecce2d051cd1697aabf52d4d7ac6
