@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Data;
 using MartSystem;
-
+using System.Drawing;
 
 namespace MartSystem
 {
@@ -76,6 +76,32 @@ namespace MartSystem
 
         public static class exActionQuery
         {
+            public static void insertDataToDB(string TableName, List<object> DataValues)
+            {
+                ///Example: INSERT INTO Employee (ColumnName) VALUES (dataToInsert);
+                string cmdInsert = "INSERT INTO " + TableName + " ";
+                string values = " VALUES (";
+                
+                for(int i = 0; i < DataValues.Count; i++)
+                {
+                    if(DataValues[i] is Image)
+                    {
+                        values += DataValues[i] + ",";
+                        continue;
+                    }
+                    values += DataValues[i] + ",";
+                }
+                
+                values = values.Substring(0, values.Length - 1) + ")";
+
+                string sqlCmd = cmdInsert + values + ";";
+                //MessageBox.Show(sqlCmd);
+                bool error = false;
+                dataCon.ExecuteActionQry(sqlCmd, ref error);
+                if(error)
+                    MessageBox.Show("Insertion Failed!");
+            }
+
             public static void insertDataToDB(string TableName, Dictionary<string, string> columnNameAndDataValues)
             {
                 ///Example: INSERT INTO Employee (ColumnName) VALUES (dataToInsert);
@@ -95,7 +121,8 @@ namespace MartSystem
                 //MessageBox.Show(sqlCmd);
                 bool error = false;
                 dataCon.ExecuteActionQry(sqlCmd, ref error);
-                //MessageBox.Show("Successfully ADDED!");
+                if (error)
+                    MessageBox.Show("Insertion Failed!");
             }
 
             public static void insertDataToDB(string TableName, string[] dataToInsert)
@@ -112,7 +139,8 @@ namespace MartSystem
                 string sqlCmd = cmdInsert + values;
                 bool error = false;
                 dataCon.ExecuteActionQry(sqlCmd, ref error);
-                //MessageBox.Show("Successfully ADDED!");
+                if (error)
+                    MessageBox.Show("Insertion Failed!");
             }
 
             public static void updateDataToDB(string TableName, Dictionary<string, string> columnNameAndDataValues, string condition = "")
@@ -130,7 +158,8 @@ namespace MartSystem
                 //MessageBox.Show(sqlCmd);
                 bool error = false;
                 dataCon.ExecuteActionQry(sqlCmd, ref error);
-                //MessageBox.Show("Successfully UPDATED!");
+                if (error)
+                    MessageBox.Show("update Failed!");
             }
 
             public static void CollateData(ref List<string> data)
@@ -154,7 +183,8 @@ namespace MartSystem
                 //MessageBox.Show(sqlCmd);
                 bool error = false;
                 dataCon.ExecuteActionQry(sqlCmd, ref error);
-                //MessageBox.Show("Successfully DELETED!");
+                if (error)
+                    MessageBox.Show("Delete Failed!");
             }
 
 

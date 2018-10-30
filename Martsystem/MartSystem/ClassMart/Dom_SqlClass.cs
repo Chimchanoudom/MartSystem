@@ -91,7 +91,6 @@ namespace MartSystem
             }
             catch (Exception e)
             {
-
                 MessageBox.Show("Update Fails !" + e.Message);
             }
         }
@@ -154,7 +153,25 @@ namespace MartSystem
             return insert;
         }
 
- 
+        public static void FillItemToCombobox(String StatemenSelect, String Valuemember, String DisplayMember, ComboBox cm)
+        {
+            try
+            {
+                dataCon.Con.Open();
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(StatemenSelect, dataCon.Con);
+                DataTable dataSource = new DataTable();
+                dataAdapter.Fill(dataSource);
+                cm.DataSource = dataSource;
+                cm.DisplayMember = DisplayMember;
+                cm.ValueMember = Valuemember;
+                dataCon.Con.Close();
+                cm.SelectedIndex = -1;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
         public static Boolean Edit(object Edit)
         {
             bool edit = false;
@@ -190,16 +207,15 @@ namespace MartSystem
             }
             return delete;
         }
-        public static DataSet retriveDataMultiTable(String SelectStatement)
+        public static DataTable retriveDataMultiTable(String SelectStatement)
         {
-            DataSet DS=new DataSet();
             try
             {
                 dataCon.Con.Open();
                 SC = new SqlCommand(SelectStatement, dataCon.Con);
                 SDA = new SqlDataAdapter(SC);
                 SCB = new SqlCommandBuilder(SDA);
-                SDA.Fill(DS);
+                SDA.Fill(DT);
             }
             catch (Exception e)
             {
@@ -209,7 +225,7 @@ namespace MartSystem
             {
                 dataCon.Con.Close();
             }
-            return DS;
+            return DT;
         }
         public static bool SQLMultiTable(String[] Statement)
         {

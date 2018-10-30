@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,6 +35,17 @@ namespace MartSystem
                 Data.Columns[i].HeaderText = ColumnHeader[i];
                 Data.Columns[i].Name= ColumnHeader[i];
             }
+        }
+
+        public static void GenerateColumHeader(String[] ColumnHeader, int numberColum,DataGridView Data ,DataTable DgvDataSource)
+        {
+            for (int i = 0; i < numberColum; i++)
+            {
+                DgvDataSource.Columns.Add(ColumnHeader[i]);
+                Data.Columns[i].HeaderText = ColumnHeader[i];
+                Data.Columns[i].Name = ColumnHeader[i];
+            }
+            Data.DataSource = DgvDataSource;
         }
 
         public static String GenerateID(string ID,String Suffix) 
