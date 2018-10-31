@@ -154,5 +154,9 @@ namespace MartSystem
                 txtBarndName.Text = dataBrand.Rows[index].Cells[1].Value.ToString(); 
             }
         }
+
+        private void groupBox6_Enter(object sender, EventArgs e)
+        {
+        }
     }
 }

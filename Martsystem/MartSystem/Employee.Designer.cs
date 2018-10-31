@@ -163,6 +163,7 @@
             this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSearch
             // 
@@ -177,6 +178,7 @@
             this.btnSearch.TabIndex = 6;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearch
             // 
@@ -317,6 +319,7 @@
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.EnabledChanged += new System.EventHandler(this.btnAdd_EnabledChanged);
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnDelete
             // 
@@ -331,6 +334,7 @@
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.EnabledChanged += new System.EventHandler(this.btnAdd_EnabledChanged);
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -389,6 +393,8 @@
             // CheckActive
             // 
             this.CheckActive.AutoSize = true;
+            this.CheckActive.Checked = true;
+            this.CheckActive.CheckState = System.Windows.Forms.CheckState.Checked;
             this.CheckActive.Location = new System.Drawing.Point(125, 180);
             this.CheckActive.Name = "CheckActive";
             this.CheckActive.Size = new System.Drawing.Size(15, 14);
@@ -403,7 +409,7 @@
             this.cbxPosition.Items.AddRange(new object[] {
             "Admin",
             "Cashire",
-            "Cleaner"});
+            "Stock Holder"});
             this.cbxPosition.Location = new System.Drawing.Point(122, 5);
             this.cbxPosition.Name = "cbxPosition";
             this.cbxPosition.Size = new System.Drawing.Size(185, 29);
@@ -620,6 +626,7 @@
             this.ImageBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ImageBox.TabIndex = 6;
             this.ImageBox.TabStop = false;
+            this.ImageBox.Paint += new System.Windows.Forms.PaintEventHandler(this.ImageBox_Paint);
             // 
             // panel4
             // 

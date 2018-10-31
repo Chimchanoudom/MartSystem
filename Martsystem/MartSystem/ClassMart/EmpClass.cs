@@ -75,7 +75,7 @@ namespace MartSystem
 
             public static string getIdFromDB()
             {
-                string id = "";
+                string id = "1";
                 try
                 {
                     dataCon.Con.Open();
@@ -87,7 +87,7 @@ namespace MartSystem
                     }
                 }
                 catch (Exception)
-                { System.Windows.Forms.MessageBox.Show("Unable to perform the action!");}
+                { } //System.Windows.Forms.MessageBox.Show("Unable to perform the action!");}
                 dataCon.Con.Close();
                 return (id.Length == 2) ? "0" + id : "00" + id;
             }
