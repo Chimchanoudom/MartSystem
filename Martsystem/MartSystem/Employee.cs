@@ -289,24 +289,40 @@ namespace MartSystem
                 string username = rows.Cells["UserName"].Value.ToString();
                 string code = rows.Cells["Password"].Value.ToString();
 
-                dataCon.exActionQuery.deleteDataFromDB(tablename, "WHERE EmpID='" + id + "';");
-                string sqlCmd = "INSERT INTO Employee VALUES('" + empid + "','" + fname + "','" + lname + "','" + gender + "','" + dob + "','" + address + "','" + tel + "','" + img + "','" + basicSalary + "','" + role + "','" + time + "','" + active + "','" + date + "');";
+                //dataCon.exActionQuery.deleteDataFromDB(tablename, "WHERE EmpID='" + id + "';");
+                string sqlCmd = "";
                 bool error = false;
-                dataCon.ExecuteActionQry(sqlCmd, ref error);
-                if (error)
+                if (!eIDfromDB.Contains(id))
                 {
-                    error = false;
-                    return;
+                    sqlCmd = "INSERT INTO Employee VALUES('" + empid + "','" + fname + "','" + lname + "','" + gender + "','" + dob + "','" + address + "','" + tel + "','" + img + "','" + basicSalary + "','" + role + "','" + time + "','" + active + "','" + date + "');";
+                    dataCon.ExecuteActionQry(sqlCmd, ref error);
+                    if (error)
+                    {
+                        error = false;
+                        MessageBox.Show("Insertion Failed!");
+                    }
                 }
+                else
+                {
+                    sqlCmd = @"UPDATE Employee SET EmpID ='" + id + "', Fname ='" + fname + "', Lname ='" + lname + "', Gender ='" + gender + "', DOB ='" + dob + "', Address ='" + address + "', Phone ='" + tel + "', Image ='" + img + "', BasicSalary ='" + basicSalary + "', Position ='" + role + "', TimeShift ='" + time + "', Active ='" + active + "', HiredDate ='" + date + "' WHERE EmpID ='" + id + "';";
+                    dataCon.ExecuteActionQry(sqlCmd, ref error);
+                    if (error)
+                    {
+                        error = false;
+                        MessageBox.Show("Update Failed!");
+                    }
+                }
+                dataCon.exActionQuery.deleteDataFromDB("UserAcc", "WHERE EmpID='" + id + "';");
                 sqlCmd = "INSERT INTO UserAcc VALUES('" + empid + "','" + username + "','" + code + "');";
                 dataCon.ExecuteActionQry(sqlCmd, ref error);
                 if (error)
                 {
                     error = false;
-                    return;
+                    MessageBox.Show("Insertion Failed!");
                 }
             }
 
+            getIDLeftInDB();
             foreach(string oldIdinDb in eIDfromDB)
             {
                 if (!idLeftInDB.Contains(oldIdinDb))
@@ -315,6 +331,29 @@ namespace MartSystem
                 }
             }
             MessageBox.Show("Saved!");
+        }
+        
+        void getIDLeftInDB()
+        {
+            eIDfromDB = new List<string>();
+            try
+            {
+                dataCon.Con.Open();
+                string sqlCmd = "SELECT EmpID FROM Employee;";
+                SqlDataReader dr = dataCon.ExecuteQry(sqlCmd);
+                while (dr.Read())
+                {
+                    eIDfromDB.Add(dr.GetString(0));
+                }
+                dr.Close();
+            }
+            catch (Exception)
+            {
+            }
+            finally
+            {
+                dataCon.Con.Close();
+            }
         }
 
         private void ImageBox_Paint(object sender, PaintEventArgs e)

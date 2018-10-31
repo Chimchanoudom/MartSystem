@@ -76,7 +76,7 @@ namespace MartSystem
 
         public static class exActionQuery
         {
-            public static void insertDataToDB(string TableName, List<object> DataValues)
+            public static bool insertDataToDB(string TableName, List<object> DataValues)
             {
                 ///Example: INSERT INTO Employee (ColumnName) VALUES (dataToInsert);
                 string cmdInsert = "INSERT INTO " + TableName + " ";
@@ -100,9 +100,10 @@ namespace MartSystem
                 dataCon.ExecuteActionQry(sqlCmd, ref error);
                 if(error)
                     MessageBox.Show("Insertion Failed!");
+                return error;
             }
 
-            public static void insertDataToDB(string TableName, Dictionary<string, string> columnNameAndDataValues)
+            public static bool insertDataToDB(string TableName, Dictionary<string, string> columnNameAndDataValues)
             {
                 ///Example: INSERT INTO Employee (ColumnName) VALUES (dataToInsert);
                 string cmdInsert = "INSERT INTO " + TableName + " ";
@@ -123,9 +124,10 @@ namespace MartSystem
                 dataCon.ExecuteActionQry(sqlCmd, ref error);
                 if (error)
                     MessageBox.Show("Insertion Failed!");
+                return error;
             }
 
-            public static void insertDataToDB(string TableName, string[] dataToInsert)
+            public static bool insertDataToDB(string TableName, string[] dataToInsert)
             {
                 ///Example: INSERT INTO Employee VALUES (dataToInsert);
                 string cmdInsert = "INSERT INTO " + TableName + " ";
@@ -141,9 +143,10 @@ namespace MartSystem
                 dataCon.ExecuteActionQry(sqlCmd, ref error);
                 if (error)
                     MessageBox.Show("Insertion Failed!");
+                return error;
             }
 
-            public static void updateDataToDB(string TableName, Dictionary<string, string> columnNameAndDataValues, string condition = "")
+            public static bool updateDataToDB(string TableName, Dictionary<string, string> columnNameAndDataValues, string condition = "")
             {
                 string cmdUpdate = "update " + TableName + " SET ";
                 string Operation = "";
@@ -160,6 +163,7 @@ namespace MartSystem
                 dataCon.ExecuteActionQry(sqlCmd, ref error);
                 if (error)
                     MessageBox.Show("update Failed!");
+                return error;
             }
 
             public static void CollateData(ref List<string> data)
@@ -173,8 +177,9 @@ namespace MartSystem
                 data = temp;
             }
 
-            public static void deleteDataFromDB(string TableName, string condition = "")
+            public static bool deleteDataFromDB(string TableName, string condition = "")
             {
+                
                 string cmdDelete = "DELETE FROM " + TableName + " ";
 
                 condition = (condition == String.Empty) ? "WHERE 1=1;" : ((condition[condition.Length - 1]).ToString() == ";") ? condition : condition + ";";
@@ -185,10 +190,9 @@ namespace MartSystem
                 dataCon.ExecuteActionQry(sqlCmd, ref error);
                 if (error)
                     MessageBox.Show("Delete Failed!");
+                return error;                    
             }
-
-
-
+           
         }
     }      
 }
