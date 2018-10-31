@@ -289,6 +289,7 @@ namespace MartSystem
                 string username = rows.Cells["UserName"].Value.ToString();
                 string code = rows.Cells["Password"].Value.ToString();
 
+<<<<<<< HEAD
                 //dataCon.exActionQuery.deleteDataFromDB(tablename, "WHERE EmpID='" + id + "';");
                 string sqlCmd = "";
                 bool error = false;
@@ -313,16 +314,34 @@ namespace MartSystem
                     }
                 }
                 dataCon.exActionQuery.deleteDataFromDB("UserAcc", "WHERE EmpID='" + id + "';");
+=======
+                dataCon.exActionQuery.deleteDataFromDB(tablename, "WHERE EmpID='" + id + "';");
+                string sqlCmd = "INSERT INTO Employee VALUES('" + empid + "','" + fname + "','" + lname + "','" + gender + "','" + dob + "','" + address + "','" + tel + "','" + img + "','" + basicSalary + "','" + role + "','" + time + "','" + active + "','" + date + "');";
+                bool error = false;
+                dataCon.ExecuteActionQry(sqlCmd, ref error);
+                if (error)
+                {
+                    error = false;
+                    return;
+                }
+>>>>>>> 0e412cd12951f9bbb6678a01a17b42f82c5891da
                 sqlCmd = "INSERT INTO UserAcc VALUES('" + empid + "','" + username + "','" + code + "');";
                 dataCon.ExecuteActionQry(sqlCmd, ref error);
                 if (error)
                 {
                     error = false;
+<<<<<<< HEAD
                     MessageBox.Show("Insertion Failed!");
                 }
             }
 
             getIDLeftInDB();
+=======
+                    return;
+                }
+            }
+
+>>>>>>> 0e412cd12951f9bbb6678a01a17b42f82c5891da
             foreach(string oldIdinDb in eIDfromDB)
             {
                 if (!idLeftInDB.Contains(oldIdinDb))
@@ -332,6 +351,7 @@ namespace MartSystem
             }
             MessageBox.Show("Saved!");
         }
+<<<<<<< HEAD
         
         void getIDLeftInDB()
         {
@@ -355,6 +375,8 @@ namespace MartSystem
                 dataCon.Con.Close();
             }
         }
+=======
+>>>>>>> 0e412cd12951f9bbb6678a01a17b42f82c5891da
 
         private void ImageBox_Paint(object sender, PaintEventArgs e)
         {
