@@ -76,11 +76,7 @@ namespace MartSystem
 
         public static class exActionQuery
         {
-<<<<<<< HEAD
             public static bool insertDataToDB(string TableName, List<object> DataValues)
-=======
-            public static void insertDataToDB(string TableName, List<object> DataValues)
->>>>>>> 0e412cd12951f9bbb6678a01a17b42f82c5891da
             {
                 ///Example: INSERT INTO Employee (ColumnName) VALUES (dataToInsert);
                 string cmdInsert = "INSERT INTO " + TableName + " ";
@@ -104,16 +100,10 @@ namespace MartSystem
                 dataCon.ExecuteActionQry(sqlCmd, ref error);
                 if(error)
                     MessageBox.Show("Insertion Failed!");
-<<<<<<< HEAD
                 return error;
             }
 
             public static bool insertDataToDB(string TableName, Dictionary<string, string> columnNameAndDataValues)
-=======
-            }
-
-            public static void insertDataToDB(string TableName, Dictionary<string, string> columnNameAndDataValues)
->>>>>>> 0e412cd12951f9bbb6678a01a17b42f82c5891da
             {
                 ///Example: INSERT INTO Employee (ColumnName) VALUES (dataToInsert);
                 string cmdInsert = "INSERT INTO " + TableName + " ";
@@ -134,10 +124,7 @@ namespace MartSystem
                 dataCon.ExecuteActionQry(sqlCmd, ref error);
                 if (error)
                     MessageBox.Show("Insertion Failed!");
-<<<<<<< HEAD
                 return error;
-=======
->>>>>>> 0e412cd12951f9bbb6678a01a17b42f82c5891da
             }
 
             public static bool insertDataToDB(string TableName, string[] dataToInsert)
@@ -156,10 +143,7 @@ namespace MartSystem
                 dataCon.ExecuteActionQry(sqlCmd, ref error);
                 if (error)
                     MessageBox.Show("Insertion Failed!");
-<<<<<<< HEAD
                 return error;
-=======
->>>>>>> 0e412cd12951f9bbb6678a01a17b42f82c5891da
             }
 
             public static bool updateDataToDB(string TableName, Dictionary<string, string> columnNameAndDataValues, string condition = "")
@@ -179,10 +163,7 @@ namespace MartSystem
                 dataCon.ExecuteActionQry(sqlCmd, ref error);
                 if (error)
                     MessageBox.Show("update Failed!");
-<<<<<<< HEAD
                 return error;
-=======
->>>>>>> 0e412cd12951f9bbb6678a01a17b42f82c5891da
             }
 
             public static void CollateData(ref List<string> data)
@@ -209,14 +190,9 @@ namespace MartSystem
                 dataCon.ExecuteActionQry(sqlCmd, ref error);
                 if (error)
                     MessageBox.Show("Delete Failed!");
-<<<<<<< HEAD
                 return error;                    
-=======
->>>>>>> 0e412cd12951f9bbb6678a01a17b42f82c5891da
             }
-
-
-
+           
         }
     }      
 }
