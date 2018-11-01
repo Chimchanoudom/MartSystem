@@ -30,8 +30,11 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
 <<<<<<< HEAD
+<<<<<<< HEAD
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+=======
+>>>>>>> f7e037a4b821f7768ad2424299c6c7b2f96f93ec
 =======
 >>>>>>> f7e037a4b821f7768ad2424299c6c7b2f96f93ec
             this.panel3 = new System.Windows.Forms.Panel();
@@ -906,6 +909,7 @@
             this.datasupplier.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.datasupplier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 <<<<<<< HEAD
+<<<<<<< HEAD
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -915,6 +919,8 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.datasupplier.DefaultCellStyle = dataGridViewCellStyle2;
 =======
+=======
+>>>>>>> f7e037a4b821f7768ad2424299c6c7b2f96f93ec
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -923,11 +929,15 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.datasupplier.DefaultCellStyle = dataGridViewCellStyle1;
+<<<<<<< HEAD
+>>>>>>> f7e037a4b821f7768ad2424299c6c7b2f96f93ec
+=======
 >>>>>>> f7e037a4b821f7768ad2424299c6c7b2f96f93ec
             this.datasupplier.Dock = System.Windows.Forms.DockStyle.Fill;
             this.datasupplier.Location = new System.Drawing.Point(0, 0);
             this.datasupplier.Name = "datasupplier";
             this.datasupplier.ReadOnly = true;
+<<<<<<< HEAD
 <<<<<<< HEAD
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
@@ -937,6 +947,8 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.datasupplier.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+=======
+>>>>>>> f7e037a4b821f7768ad2424299c6c7b2f96f93ec
 =======
 >>>>>>> f7e037a4b821f7768ad2424299c6c7b2f96f93ec
             this.datasupplier.Size = new System.Drawing.Size(1444, 134);

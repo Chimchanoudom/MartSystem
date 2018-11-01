@@ -40,3 +40,6 @@ D:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.supplyer.r
 D:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.csproj.GenerateResource.Cache
 D:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.exe
 D:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.pdb
+F:\Team Project\MartSystem\Martsystem\MartSystem\bin\Debug\MartSystem.exe.config
+F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.exe
+F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.pdb
