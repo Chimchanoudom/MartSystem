@@ -36,10 +36,16 @@
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\..\..\Visual studio\PI\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.Data.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v17.2.Core, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Remoting" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,6 +55,8 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Brand.cs">
@@ -69,11 +77,23 @@
     <Compile Include="ClassMart\EmpClass.cs" />
     <Compile Include="ClassMart\RestrictionClass.cs" />
     <Compile Include="ClassMart\UserLoginDetail.cs" />
+    <Compile Include="CreateInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateInvoice.Designer.cs">
+      <DependentUpon>CreateInvoice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Employee.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Employee.Designer.cs">
       <DependentUpon>Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvoiceData.Designer.cs">
+      <DependentUpon>InvoiceData.cs</DependentUpon>
     </Compile>
     <Compile Include="LogIN.cs">
       <SubType>Form</SubType>
@@ -89,12 +109,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
     <Compile Include="Sell.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Sell.Designer.cs">
       <DependentUpon>Sell.cs</DependentUpon>
     </Compile>
+=======
+>>>>>>> 892a5705db46e17067d74c8183bf7f045875dc44
     <Compile Include="Stock.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,8 +136,14 @@
     <EmbeddedResource Include="category.resx">
       <DependentUpon>category.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CreateInvoice.resx">
+      <DependentUpon>CreateInvoice.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Employee.resx">
       <DependentUpon>Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvoiceData.resx">
+      <DependentUpon>InvoiceData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LogIN.resx">
       <DependentUpon>LogIN.cs</DependentUpon>
@@ -132,9 +161,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+<<<<<<< HEAD
     <EmbeddedResource Include="Sell.resx">
       <DependentUpon>Sell.cs</DependentUpon>
     </EmbeddedResource>
+=======
+>>>>>>> 892a5705db46e17067d74c8183bf7f045875dc44
     <EmbeddedResource Include="Stock.resx">
       <DependentUpon>Stock.cs</DependentUpon>
     </EmbeddedResource>
