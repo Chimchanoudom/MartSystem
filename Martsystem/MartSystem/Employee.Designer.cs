@@ -29,14 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-<<<<<<< HEAD
-<<<<<<< HEAD
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-=======
->>>>>>> f7e037a4b821f7768ad2424299c6c7b2f96f93ec
-=======
->>>>>>> f7e037a4b821f7768ad2424299c6c7b2f96f93ec
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -131,7 +124,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1444, 424);
+            this.panel3.Size = new System.Drawing.Size(1436, 424);
             this.panel3.TabIndex = 5;
             // 
             // groupBox6
@@ -139,13 +132,13 @@
             this.groupBox6.Controls.Add(this.panel7);
             this.groupBox6.Controls.Add(this.groupBox7);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox6.Font = new System.Drawing.Font("Khmer SN Kampot", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox6.Location = new System.Drawing.Point(1019, 0);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(458, 422);
             this.groupBox6.TabIndex = 4;
             this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "ស្វែងរក";
+            this.groupBox6.Text = "Search";
             // 
             // panel7
             // 
@@ -153,7 +146,7 @@
             this.panel7.Controls.Add(this.btnSearch);
             this.panel7.Controls.Add(this.txtSearch);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(3, 151);
+            this.panel7.Location = new System.Drawing.Point(3, 141);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(452, 36);
             this.panel7.TabIndex = 1;
@@ -207,12 +200,13 @@
             this.groupBox7.Controls.Add(this.rndSearchFname);
             this.groupBox7.Controls.Add(this.rndSearchID);
             this.groupBox7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox7.Location = new System.Drawing.Point(3, 33);
+            this.groupBox7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox7.Location = new System.Drawing.Point(3, 23);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(452, 118);
             this.groupBox7.TabIndex = 0;
             this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "លក្ខខណ្ឌ";
+            this.groupBox7.Text = "Filter Condition";
             // 
             // rndSearchUsername
             // 
@@ -888,9 +882,10 @@
             // 
             this.panel1.Controls.Add(this.datasupplier);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 424);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1444, 134);
+            this.panel1.Size = new System.Drawing.Size(1436, 134);
             this.panel1.TabIndex = 6;
             // 
             // datasupplier
@@ -900,58 +895,26 @@
             this.datasupplier.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.datasupplier.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datasupplier.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.datasupplier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-<<<<<<< HEAD
-<<<<<<< HEAD
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datasupplier.DefaultCellStyle = dataGridViewCellStyle2;
-=======
-=======
->>>>>>> f7e037a4b821f7768ad2424299c6c7b2f96f93ec
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datasupplier.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.datasupplier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datasupplier.DefaultCellStyle = dataGridViewCellStyle1;
-<<<<<<< HEAD
->>>>>>> f7e037a4b821f7768ad2424299c6c7b2f96f93ec
-=======
->>>>>>> f7e037a4b821f7768ad2424299c6c7b2f96f93ec
             this.datasupplier.Dock = System.Windows.Forms.DockStyle.Fill;
             this.datasupplier.Location = new System.Drawing.Point(0, 0);
             this.datasupplier.Name = "datasupplier";
             this.datasupplier.ReadOnly = true;
-<<<<<<< HEAD
-<<<<<<< HEAD
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datasupplier.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-=======
->>>>>>> f7e037a4b821f7768ad2424299c6c7b2f96f93ec
-=======
->>>>>>> f7e037a4b821f7768ad2424299c6c7b2f96f93ec
-            this.datasupplier.Size = new System.Drawing.Size(1444, 134);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.datasupplier.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.datasupplier.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.datasupplier.Size = new System.Drawing.Size(1436, 134);
             this.datasupplier.TabIndex = 2;
             this.datasupplier.SelectionChanged += new System.EventHandler(this.datasupplier_SelectionChanged);
             // 
@@ -960,7 +923,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1444, 558);
+            this.ClientSize = new System.Drawing.Size(1436, 558);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;

@@ -43,3 +43,15 @@ D:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.pdb
 F:\Team Project\MartSystem\Martsystem\MartSystem\bin\Debug\MartSystem.exe.config
 F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.exe
 F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.pdb
+F:\Team Project\MartSystem\Martsystem\MartSystem\bin\Debug\MartSystem.exe
+F:\Team Project\MartSystem\Martsystem\MartSystem\bin\Debug\MartSystem.pdb
+F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.csprojResolveAssemblyReference.cache
+F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Brand.resources
+F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.category.resources
+F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Employee.resources
+F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.LogIN.resources
+F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Properties.Resources.resources
+F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.supplyer.resources
+F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.csproj.GenerateResource.Cache
+F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Product.resources
+F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Sell.resources
