@@ -100,3 +100,6 @@ E:\Year 3\SA\MartSystem\Martsystem\MartSystem\bin\Debug\ja\DevExpress.Pdf.v17.2.
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\bin\Debug\ru\DevExpress.Pdf.v17.2.Core.resources.dll
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.CreateInvoice.resources
 >>>>>>> 892a5705db46e17067d74c8183bf7f045875dc44
+E:\Year 3\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Product.resources
+E:\Year 3\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.CreateExpense.resources
+E:\Year 3\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.ExpenseData.resources

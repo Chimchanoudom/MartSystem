@@ -77,6 +77,12 @@
     <Compile Include="ClassMart\EmpClass.cs" />
     <Compile Include="ClassMart\RestrictionClass.cs" />
     <Compile Include="ClassMart\UserLoginDetail.cs" />
+    <Compile Include="CreateExpense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateExpense.Designer.cs">
+      <DependentUpon>CreateExpense.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreateInvoice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,12 @@
     </Compile>
     <Compile Include="Employee.Designer.cs">
       <DependentUpon>Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpenseData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExpenseData.Designer.cs">
+      <DependentUpon>ExpenseData.cs</DependentUpon>
     </Compile>
     <Compile Include="InvoiceData.cs">
       <SubType>Form</SubType>
@@ -109,15 +121,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-<<<<<<< HEAD
-    <Compile Include="Sell.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Sell.Designer.cs">
-      <DependentUpon>Sell.cs</DependentUpon>
-    </Compile>
-=======
->>>>>>> 892a5705db46e17067d74c8183bf7f045875dc44
     <Compile Include="Stock.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,11 +139,17 @@
     <EmbeddedResource Include="category.resx">
       <DependentUpon>category.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CreateExpense.resx">
+      <DependentUpon>CreateExpense.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateInvoice.resx">
       <DependentUpon>CreateInvoice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employee.resx">
       <DependentUpon>Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpenseData.resx">
+      <DependentUpon>ExpenseData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InvoiceData.resx">
       <DependentUpon>InvoiceData.cs</DependentUpon>
@@ -161,12 +170,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-<<<<<<< HEAD
-    <EmbeddedResource Include="Sell.resx">
-      <DependentUpon>Sell.cs</DependentUpon>
-    </EmbeddedResource>
-=======
->>>>>>> 892a5705db46e17067d74c8183bf7f045875dc44
     <EmbeddedResource Include="Stock.resx">
       <DependentUpon>Stock.cs</DependentUpon>
     </EmbeddedResource>
