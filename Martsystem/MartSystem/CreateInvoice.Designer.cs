@@ -29,10 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.cbProduct = new System.Windows.Forms.ComboBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
@@ -48,10 +50,9 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.watermarked_Textbox1 = new MartSystem.Custom_Contols.Watermarked_Textbox();
             this.panel1.SuspendLayout();
+            this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -60,7 +61,6 @@
             this.panel6.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -73,6 +73,33 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(913, 462);
             this.panel1.TabIndex = 0;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.textBox6);
+            this.panel9.Controls.Add(this.label3);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel9.Location = new System.Drawing.Point(0, 0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(913, 57);
+            this.panel9.TabIndex = 1;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(127, 11);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(178, 32);
+            this.textBox6.TabIndex = 4;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(8, 17);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(113, 23);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Invoice ID:";
             // 
             // dataGridView1
             // 
@@ -103,20 +130,13 @@
             // panel8
             // 
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel8.Controls.Add(this.textBox2);
+            this.panel8.Controls.Add(this.watermarked_Textbox1);
             this.panel8.Controls.Add(this.cbProduct);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(0, 277);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(388, 185);
             this.panel8.TabIndex = 3;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(11, 10);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(363, 32);
-            this.textBox2.TabIndex = 1;
             // 
             // cbProduct
             // 
@@ -275,32 +295,16 @@
             this.label4.TabIndex = 1;
             this.label4.Text = "Grand Total(USD):";
             // 
-            // panel9
+            // watermarked_Textbox1
             // 
-            this.panel9.Controls.Add(this.textBox6);
-            this.panel9.Controls.Add(this.label3);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel9.Location = new System.Drawing.Point(0, 0);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(913, 57);
-            this.panel9.TabIndex = 1;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(127, 11);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(178, 32);
-            this.textBox6.TabIndex = 4;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(8, 17);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 23);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Invoice ID:";
+            this.watermarked_Textbox1.ForeColor = System.Drawing.Color.Gray;
+            this.watermarked_Textbox1.Location = new System.Drawing.Point(11, 10);
+            this.watermarked_Textbox1.Name = "watermarked_Textbox1";
+            this.watermarked_Textbox1.Size = new System.Drawing.Size(363, 32);
+            this.watermarked_Textbox1.TabIndex = 2;
+            this.watermarked_Textbox1.Text = "Enter Barcode";
+            this.watermarked_Textbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.watermarked_Textbox1.WatermarkedText = "Enter Barcode";
             // 
             // CreateInvoice
             // 
@@ -317,6 +321,8 @@
             this.Text = "CreateInvoice";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
@@ -329,8 +335,6 @@
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -355,10 +359,10 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.ComboBox cbProduct;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label3;
+        private Custom_Contols.Watermarked_Textbox watermarked_Textbox1;
     }
 }

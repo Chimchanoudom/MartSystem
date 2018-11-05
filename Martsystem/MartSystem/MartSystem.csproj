@@ -89,6 +89,12 @@
     <Compile Include="CreateInvoice.Designer.cs">
       <DependentUpon>CreateInvoice.cs</DependentUpon>
     </Compile>
+    <Compile Include="Custom Controls\Watermarked Textbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Custom Controls\Watermarked Textbox.Designer.cs">
+      <DependentUpon>Watermarked Textbox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Employee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CreateInvoice.resx">
       <DependentUpon>CreateInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom Controls\Watermarked Textbox.resx">
+      <DependentUpon>Watermarked Textbox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employee.resx">
       <DependentUpon>Employee.cs</DependentUpon>
