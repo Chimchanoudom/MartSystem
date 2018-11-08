@@ -73,6 +73,7 @@
     <Compile Include="category.Designer.cs">
       <DependentUpon>category.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClassMart\ComboboxItem.cs" />
     <Compile Include="ClassMart\dataCon.cs" />
     <Compile Include="ClassMart\dom_Design.cs" />
     <Compile Include="ClassMart\Dom_SqlClass.cs" />

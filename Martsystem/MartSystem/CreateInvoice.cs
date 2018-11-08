@@ -38,6 +38,13 @@ namespace MartSystem
             //dgvInvoiceDetail.Rows.Add("Coca", "Can", "+", "3", "-", 0.5.ToString("#,##0.00"), 1.5003424.ToString("#,##0.00"), "x");
 
             dgvInvoiceDetail.Width = panel10.Width - panel2.Width;
+
+            for(int i = 0; i < dtProduct.Rows.Count; i++)
+            {
+                ComboboxItem item = new ComboboxItem(dtProduct.Rows[i]["proname"] + "", dtProduct.Rows[i]["Barcode"] + "");
+                cbProduct.Items.Add(item);
+            }
+            txtBarcode.Focus();
         }
 
         private void dgvInvoiceDetail_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -45,6 +52,13 @@ namespace MartSystem
             getQty(e);
         }
 
+
+        void removeRowFromDGV(int rowIndex)
+        {
+            total -= double.Parse(dgvInvoiceDetail.Rows[rowIndex].Cells["ColSubTotal"].Value + "");
+            dgvInvoiceDetail.Rows.RemoveAt(rowIndex);
+            showGrandTotal();
+        }
         void getQty(DataGridViewCellEventArgs e)
         {
             int qtyToAdd=0;
@@ -58,7 +72,7 @@ namespace MartSystem
                     qtyToAdd = -1;
                     break;
                 case 7:
-                    dgvInvoiceDetail.Rows.RemoveAt(e.RowIndex);
+                    removeRowFromDGV(e.RowIndex);
                     return;
                 case 3:
                     break;
@@ -75,7 +89,7 @@ namespace MartSystem
 
             if (qty== 1&&qtyToAdd==-1)
             {
-                dgvInvoiceDetail.Rows.RemoveAt(e.RowIndex);
+                removeRowFromDGV(e.RowIndex);
                 return;
             }
             else if ((double)dr[0][2] == qty&&qtyToAdd==1)
@@ -84,33 +98,32 @@ namespace MartSystem
             qty += qtyToAdd;
 
             dgvInvoiceDetail.Rows[e.RowIndex].Cells[3].Value = qty;
-            getSubTotal(e.RowIndex, qty);
-            getGrandTotal(e.RowIndex);
+            getSubTotalAndGrandTotal(e.RowIndex, qty);
+
+            showGrandTotal();
         }
         double subtotal;
-        void getSubTotal(int rowIndex ,double qty)
+        void getSubTotalAndGrandTotal(int rowIndex ,double qty)
         {
-            //dgvInvoiceDetail.Rows[rowIndex].Cells[3].Value = qty;
+            total -=double.Parse(dgvInvoiceDetail.Rows[rowIndex].Cells[6].Value + "");
 
             subtotal = double.Parse(dgvInvoiceDetail.Rows[rowIndex].Cells[5].Value + "") * qty;
 
+            total += subtotal;
             dgvInvoiceDetail.Rows[rowIndex].Cells[6].Value = subtotal.ToString("#,##0.00");
 
-            
         }
 
         private void dgvInvoiceDetail_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
             int rowIndex = dgvInvoiceDetail.Rows.Count - 1;
-            getSubTotal(rowIndex,double.Parse(dgvInvoiceDetail.Rows[rowIndex].Cells["Qty"].Value+""));
-            getGrandTotal(rowIndex);
+            getSubTotalAndGrandTotal(rowIndex,double.Parse(dgvInvoiceDetail.Rows[rowIndex].Cells["Qty"].Value+""));
+            showGrandTotal();
         }
 
         double oldSubTotal;
-        void getGrandTotal(int rowIndex)
+        void showGrandTotal()
         {
-            
-            total += double.Parse(dgvInvoiceDetail.Rows[rowIndex].Cells["ColSubTotal"].Value + "");
             double totalKh = total * dataCon.rate;
             txtGrandEng.Text = total.ToString("#,##0.00");
             txtGrandKh.Text = totalKh.ToString("#,##0");
@@ -175,11 +188,6 @@ namespace MartSystem
         }
 
 
-        private void dgvInvoiceDetail_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
-        {
-            total -=double.Parse(e.Row.Cells["SubTotal"].Value + "");
-        }
-
         private void watermarked_Textbox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             DataRow[] dr = dtProduct.Select("Barcode='" + txtBarcode.Text + "'");
@@ -212,21 +220,21 @@ namespace MartSystem
                         newQty = oldQty;
                     }
 
-                    getSubTotal(drInDGV.Index,newQty);
-                    getGrandTotal(drInDGV.Index);
+                    getSubTotalAndGrandTotal(drInDGV.Index,newQty);
+                    showGrandTotal();
                     
                     return;
                 }
 
-                dgvInvoiceDetail.Rows.Add(dr[0]["ProName"], dr[0]["QtyType"], "+",1,"-",dr[0]["UnitPrice"],"","x");
+                dgvInvoiceDetail.Rows.Add(dr[0]["ProName"], dr[0]["QtyType"], "+",1,"-",dr[0]["UnitPrice"],"0","x");
 
                 int lastIndexInDgv = dgvInvoiceDetail.RowCount - 1;
 
-                getSubTotal(lastIndexInDgv, double.Parse(dgvInvoiceDetail.Rows[lastIndexInDgv].Cells["Qty"].Value+""));
+                getSubTotalAndGrandTotal(lastIndexInDgv, double.Parse(dgvInvoiceDetail.Rows[lastIndexInDgv].Cells["Qty"].Value+""));
 
                 dgvInvoiceDetail.Rows[lastIndexInDgv].Cells["ColSubTotal"].Value = subtotal + "";
 
-                getGrandTotal(dgvInvoiceDetail.RowCount-1);
+                showGrandTotal();
             }
         }
 
@@ -267,6 +275,46 @@ namespace MartSystem
         {
             if ("1234567890\b".IndexOf(e.KeyChar) == -1)
                 e.KeyChar = '\0';
+        }
+
+        private void txtRecieveKh_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                int recieveKh = int.Parse(txtRecieveKh.Text, System.Globalization.NumberStyles.AllowThousands);
+                if (recieveKh % 100 != 0)
+                    throw new FormatException();
+            }
+            catch (FormatException)
+            {
+                txtRecieveKh.Undo();
+            }
+
+            System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
+            int valueBefore = Int32.Parse(txtRecieveKh.Text, System.Globalization.NumberStyles.AllowThousands);
+            txtRecieveKh.Text = String.Format(culture, "{0:N0}", valueBefore);
+
+
+        }
+
+
+        private void txtRecieveEng_Leave(object sender, EventArgs e)
+        {
+            double recieveEng = double.Parse(txtRecieveEng.Text);
+            txtRecieveEng.Text = recieveEng.ToString("#,##0.00");
+           
+
+        }
+
+        private void cbProduct_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbProduct.SelectedIndex != -1)
+            {
+                string barcode = (cbProduct.SelectedItem as ComboboxItem).Value;
+                txtBarcode.Text = barcode;
+                cbProduct.SelectedIndex = -1;
+                watermarked_Textbox1_KeyPress(null, null);
+            }
         }
     }
 }
