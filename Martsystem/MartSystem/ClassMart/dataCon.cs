@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using System.Data;
 using MartSystem;
 using System.Drawing;
+using System.IO;
 
 namespace MartSystem
 {
@@ -34,6 +35,31 @@ namespace MartSystem
             return dataReader;
         }
 
+        public static int rate { get; set; }
+
+        public static void getRate()
+        {
+            if (File.Exists("Rate.avi"))
+            {
+                using (StreamReader sr = new StreamReader("Rate.avi"))
+                {
+                    try
+                    {
+                        rate = int.Parse(sr.ReadLine());
+                    }
+                    catch (FormatException)
+                    {
+                        rate = 4000;
+                    }
+
+                }
+            }
+            else
+            {
+                rate = 4000;
+                
+            }
+        }
 
 
         public static DateTime ConvertStringToDateTime(string st)

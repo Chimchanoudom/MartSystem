@@ -36,6 +36,14 @@
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\..\..\Visual studio\PI\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
+<<<<<<< HEAD
+=======
+    <Reference Include="DevExpress.Data.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v17.2.Core, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+>>>>>>> b3a7776b4b6978b75e3c17db856e35951dff4d13
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -63,18 +71,55 @@
     <Compile Include="category.Designer.cs">
       <DependentUpon>category.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClassMart\ComboboxItem.cs" />
     <Compile Include="ClassMart\dataCon.cs" />
     <Compile Include="ClassMart\dom_Design.cs" />
     <Compile Include="ClassMart\Dom_SqlClass.cs" />
     <Compile Include="ClassMart\EmpClass.cs" />
     <Compile Include="ClassMart\RestrictionClass.cs" />
     <Compile Include="ClassMart\UserLoginDetail.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="CreateExpense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateExpense.Designer.cs">
+      <DependentUpon>CreateExpense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateInvoice.Designer.cs">
+      <DependentUpon>CreateInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Controls\Watermarked Textbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Custom Controls\Watermarked Textbox.Designer.cs">
+      <DependentUpon>Watermarked Textbox.cs</DependentUpon>
+    </Compile>
+>>>>>>> b3a7776b4b6978b75e3c17db856e35951dff4d13
     <Compile Include="Employee.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Employee.Designer.cs">
       <DependentUpon>Employee.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+=======
+    <Compile Include="ExpenseData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExpenseData.Designer.cs">
+      <DependentUpon>ExpenseData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvoiceData.Designer.cs">
+      <DependentUpon>InvoiceData.cs</DependentUpon>
+    </Compile>
+>>>>>>> b3a7776b4b6978b75e3c17db856e35951dff4d13
     <Compile Include="LogIN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +134,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="Stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock.Designer.cs">
+      <DependentUpon>Stock.cs</DependentUpon>
+    </Compile>
+>>>>>>> b3a7776b4b6978b75e3c17db856e35951dff4d13
     <Compile Include="supplyer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,9 +155,30 @@
     <EmbeddedResource Include="category.resx">
       <DependentUpon>category.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="Employee.resx">
       <DependentUpon>Employee.cs</DependentUpon>
     </EmbeddedResource>
+=======
+    <EmbeddedResource Include="CreateExpense.resx">
+      <DependentUpon>CreateExpense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateInvoice.resx">
+      <DependentUpon>CreateInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom Controls\Watermarked Textbox.resx">
+      <DependentUpon>Watermarked Textbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee.resx">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpenseData.resx">
+      <DependentUpon>ExpenseData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvoiceData.resx">
+      <DependentUpon>InvoiceData.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> b3a7776b4b6978b75e3c17db856e35951dff4d13
     <EmbeddedResource Include="LogIN.resx">
       <DependentUpon>LogIN.cs</DependentUpon>
     </EmbeddedResource>
@@ -120,6 +195,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+<<<<<<< HEAD
+=======
+    <EmbeddedResource Include="Stock.resx">
+      <DependentUpon>Stock.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> b3a7776b4b6978b75e3c17db856e35951dff4d13
     <EmbeddedResource Include="supplyer.resx">
       <DependentUpon>supplyer.cs</DependentUpon>
     </EmbeddedResource>
