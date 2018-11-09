@@ -9,7 +9,7 @@
 
         /// <summary>
         /// Clean up any resources being used.
-        /// </summary>
+        /// </summary> 
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-<<<<<<< HEAD
+
 
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
 
@@ -37,9 +37,8 @@
            // System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
 
-=======
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
->>>>>>> b3a7776b4b6978b75e3c17db856e35951dff4d13
+           // System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -979,7 +978,7 @@
             this.datasupplier.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.datasupplier.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-<<<<<<< HEAD
+
 
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F);
@@ -1001,8 +1000,6 @@
 
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
 
-=======
->>>>>>> b3a7776b4b6978b75e3c17db856e35951dff4d13
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -1012,23 +1009,19 @@
             this.datasupplier.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.datasupplier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datasupplier.DefaultCellStyle = dataGridViewCellStyle1;
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> b3a7776b4b6978b75e3c17db856e35951dff4d13
+
             this.datasupplier.Dock = System.Windows.Forms.DockStyle.Fill;
             this.datasupplier.Location = new System.Drawing.Point(0, 0);
             this.datasupplier.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.datasupplier.Name = "datasupplier";
             this.datasupplier.ReadOnly = true;
-<<<<<<< HEAD
 
-=======
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
->>>>>>> b3a7776b4b6978b75e3c17db856e35951dff4d13
+
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -1036,7 +1029,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.datasupplier.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.datasupplier.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-<<<<<<< HEAD
+
             this.datasupplier.Size = new System.Drawing.Size(1436, 134);
 
 
@@ -1051,9 +1044,9 @@
 
             this.datasupplier.Size = new System.Drawing.Size(1444, 134);
 
-=======
+
             this.datasupplier.Size = new System.Drawing.Size(1914, 166);
->>>>>>> b3a7776b4b6978b75e3c17db856e35951dff4d13
+
             this.datasupplier.TabIndex = 2;
             this.datasupplier.SelectionChanged += new System.EventHandler(this.datasupplier_SelectionChanged);
             // 
