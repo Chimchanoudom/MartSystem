@@ -29,14 +29,13 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-<<<<<<< HEAD
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-=======
 
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+
+
+           // System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
 
->>>>>>> 892a5705db46e17067d74c8183bf7f045875dc44
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -902,8 +901,7 @@
             this.datasupplier.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.datasupplier.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-<<<<<<< HEAD
-=======
+
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -923,7 +921,7 @@
             this.datasupplier.DefaultCellStyle = dataGridViewCellStyle2;
 
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
->>>>>>> 892a5705db46e17067d74c8183bf7f045875dc44
+
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -933,15 +931,14 @@
             this.datasupplier.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.datasupplier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datasupplier.DefaultCellStyle = dataGridViewCellStyle1;
-<<<<<<< HEAD
-=======
 
->>>>>>> 892a5705db46e17067d74c8183bf7f045875dc44
+
+
             this.datasupplier.Dock = System.Windows.Forms.DockStyle.Fill;
             this.datasupplier.Location = new System.Drawing.Point(0, 0);
             this.datasupplier.Name = "datasupplier";
             this.datasupplier.ReadOnly = true;
-<<<<<<< HEAD
+
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -949,7 +946,7 @@
             this.datasupplier.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.datasupplier.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.datasupplier.Size = new System.Drawing.Size(1436, 134);
-=======
+
 
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
@@ -961,7 +958,7 @@
             this.datasupplier.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
 
             this.datasupplier.Size = new System.Drawing.Size(1444, 134);
->>>>>>> 892a5705db46e17067d74c8183bf7f045875dc44
+
             this.datasupplier.TabIndex = 2;
             this.datasupplier.SelectionChanged += new System.EventHandler(this.datasupplier_SelectionChanged);
             // 
