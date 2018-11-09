@@ -26,7 +26,7 @@ namespace MartSystem
             dataCon.getRate();
 
             txtRate.Text = dataCon.rate.ToString("#,##0");
-            sql = "select Barcode,proname,qty,QtyType,UnitPrice from product;";
+            sql = "select Barcode,proname,qty,QtyType,UnitPrice,proID from product;";
             SqlDataAdapter dataAdapter = new SqlDataAdapter(sql,dataCon.Con);
 
             dataAdapter.Fill(dtProduct);
@@ -139,6 +139,7 @@ namespace MartSystem
             showChange();
         }
 
+
         void showChange()
         {
             if (recieve != 0&&total!=0)
@@ -246,7 +247,8 @@ namespace MartSystem
                     return;
                 }
 
-                dgvInvoiceDetail.Rows.Add(dr[0]["ProName"], dr[0]["QtyType"], "+",1,"-",dr[0]["UnitPrice"],"0","x");
+
+                dgvInvoiceDetail.Rows.Add(dr[0]["ProName"], dr[0]["QtyType"], "+",1,"-",dr[0]["UnitPrice"],"0","x",dr[0]["proID"]);
 
                 int lastIndexInDgv = dgvInvoiceDetail.RowCount - 1;
 
@@ -332,6 +334,52 @@ namespace MartSystem
             recieve = (recieveKh) / int.Parse(txtRate.Text,System.Globalization.NumberStyles.AllowThousands) + recieveEng;
 
             showChange();
+        }
+
+        private void btnClean_Click(object sender, EventArgs e)
+        {
+            dgvInvoiceDetail.Rows.Clear();
+            total = 0;
+            ShowGrandTotalAndChange();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            Dictionary<string, double> qtyProductToRemove = new Dictionary<string, double>();
+
+            if (recieve >= total && total > 0)
+            {
+                DateTime now = DateTime.Now;
+                sql = "insert into invoice values('"+txtInvoiceID.Text+"','"+now+"',"+total+","+txtRate.Text+","+txtRecieveEng.Text+","+txtRecieveKh.Text+",'"+UserLoginDetail.empID+"')";
+                sql += "insert into invoiceDetail(invID,ProID,qty,SubTotal) values";
+
+                foreach (DataGridViewRow temp in dgvInvoiceDetail.Rows)
+                {
+                    sql += "("+txtInvoiceID.Text+","+temp.Cells["ProName"] +",'"+temp.Cells["proID"]+"',"+temp.Cells["Qty"]+","+temp.Cells["ColSubtotal"] +"),";
+
+                    qtyProductToRemove.Add(temp.Cells["ProName"]+"", double.Parse(temp.Cells["Qty"] + ""));
+                }
+
+                sql = sql.Substring(0, sql.Length - 1) + ");";
+
+                bool error = false;
+                dataCon.ExecuteActionQry(sql, ref error);
+
+                if (!error)
+                {
+                    foreach(DataRow temp in dtProduct.Rows)
+                    {
+                        if (qtyProductToRemove.ContainsKey(temp["proname"] + ""))
+                        {
+                            temp["qty"] = (double)temp["qty"] - qtyProductToRemove["proname"];
+                        }
+                    }
+
+                    btnClean_Click(null, null);
+
+                    MessageBox.Show("Saved", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
     }
 }

@@ -36,9 +36,9 @@
             this.txtBarcode = new MartSystem.Custom_Contols.Watermarked_Textbox();
             this.cbProduct = new System.Windows.Forms.ComboBox();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnPrint = new System.Windows.Forms.Button();
+            this.btnClean = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
@@ -59,6 +59,13 @@
             this.txtGrandKh = new System.Windows.Forms.TextBox();
             this.panel10 = new System.Windows.Forms.Panel();
             this.dgvInvoiceDetail = new System.Windows.Forms.DataGridView();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.dtDateTime = new System.Windows.Forms.DateTimePicker();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.txtRate = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtInvoiceID = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.ProName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewButtonColumn();
@@ -67,12 +74,7 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColSubtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.txtRate = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtInvoiceID = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.ProID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -146,53 +148,55 @@
             // panel7
             // 
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel7.Controls.Add(this.button3);
-            this.panel7.Controls.Add(this.button2);
-            this.panel7.Controls.Add(this.button1);
+            this.panel7.Controls.Add(this.btnSave);
+            this.panel7.Controls.Add(this.btnPrint);
+            this.panel7.Controls.Add(this.btnClean);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 219);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(391, 120);
             this.panel7.TabIndex = 8;
             // 
-            // button3
+            // btnSave
             // 
-            this.button3.BackColor = System.Drawing.Color.Firebrick;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(11, 62);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(363, 41);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Save";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnSave.BackColor = System.Drawing.Color.Firebrick;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(11, 62);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(363, 41);
+            this.btnSave.TabIndex = 2;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // button2
+            // btnPrint
             // 
-            this.button2.BackColor = System.Drawing.Color.SeaGreen;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(195, 14);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(179, 41);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Print";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnPrint.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnPrint.FlatAppearance.BorderSize = 0;
+            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrint.ForeColor = System.Drawing.Color.White;
+            this.btnPrint.Location = new System.Drawing.Point(195, 14);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(179, 41);
+            this.btnPrint.TabIndex = 1;
+            this.btnPrint.Text = "Print";
+            this.btnPrint.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnClean
             // 
-            this.button1.BackColor = System.Drawing.Color.SeaGreen;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(11, 14);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(179, 41);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Clean";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnClean.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnClean.FlatAppearance.BorderSize = 0;
+            this.btnClean.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClean.ForeColor = System.Drawing.Color.White;
+            this.btnClean.Location = new System.Drawing.Point(11, 14);
+            this.btnClean.Name = "btnClean";
+            this.btnClean.Size = new System.Drawing.Size(179, 41);
+            this.btnClean.TabIndex = 1;
+            this.btnClean.Text = "Clean";
+            this.btnClean.UseVisualStyleBackColor = false;
+            this.btnClean.Click += new System.EventHandler(this.btnClean_Click);
             // 
             // panel3
             // 
@@ -332,7 +336,6 @@
             this.txtRecieveKh.Size = new System.Drawing.Size(146, 30);
             this.txtRecieveKh.TabIndex = 104;
             this.txtRecieveKh.Text = "0";
-
             this.txtRecieveKh.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRecieveKh_KeyPress);
             // 
             // panel5
@@ -415,7 +418,8 @@
             this.Column5,
             this.Column7,
             this.ColSubtotal,
-            this.Column6});
+            this.Column6,
+            this.ProID});
             this.dgvInvoiceDetail.Dock = System.Windows.Forms.DockStyle.Left;
             this.dgvInvoiceDetail.Location = new System.Drawing.Point(0, 0);
             this.dgvInvoiceDetail.Margin = new System.Windows.Forms.Padding(4);
@@ -429,6 +433,77 @@
             this.dgvInvoiceDetail.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInvoiceDetail_CellEndEdit);
             this.dgvInvoiceDetail.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dgvInvoiceDetail_EditingControlShowing);
             this.dgvInvoiceDetail.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvInvoiceDetail_RowsAdded);
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.dtDateTime);
+            this.panel9.Controls.Add(this.panel11);
+            this.panel9.Controls.Add(this.txtInvoiceID);
+            this.panel9.Controls.Add(this.label3);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel9.Location = new System.Drawing.Point(0, 0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(913, 62);
+            this.panel9.TabIndex = 1;
+            // 
+            // dtDateTime
+            // 
+            this.dtDateTime.CustomFormat = "dd/MM/yyyy hh:mm:ss tt";
+            this.dtDateTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtDateTime.Location = new System.Drawing.Point(323, 13);
+            this.dtDateTime.Name = "dtDateTime";
+            this.dtDateTime.Size = new System.Drawing.Size(287, 30);
+            this.dtDateTime.TabIndex = 100;
+            this.dtDateTime.Visible = false;
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.txtRate);
+            this.panel11.Controls.Add(this.label2);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel11.Location = new System.Drawing.Point(522, 0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(391, 62);
+            this.panel11.TabIndex = 6;
+            // 
+            // txtRate
+            // 
+            this.txtRate.ContextMenuStrip = this.contextMenuStrip1;
+            this.txtRate.Location = new System.Drawing.Point(198, 15);
+            this.txtRate.Name = "txtRate";
+            this.txtRate.Size = new System.Drawing.Size(146, 30);
+            this.txtRate.TabIndex = 100;
+            this.txtRate.Text = "0";
+            this.txtRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(9, 18);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(58, 25);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Rate:";
+            // 
+            // txtInvoiceID
+            // 
+            this.txtInvoiceID.ContextMenuStrip = this.contextMenuStrip1;
+            this.txtInvoiceID.Location = new System.Drawing.Point(118, 15);
+            this.txtInvoiceID.Name = "txtInvoiceID";
+            this.txtInvoiceID.Size = new System.Drawing.Size(178, 30);
+            this.txtInvoiceID.TabIndex = 99;
+            this.txtInvoiceID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(8, 18);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(104, 25);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Invoice ID:";
             // 
             // ProName
             // 
@@ -511,65 +586,11 @@
             this.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Column6.Width = 50;
             // 
-            // panel9
+            // ProID
             // 
-            this.panel9.Controls.Add(this.panel11);
-            this.panel9.Controls.Add(this.txtInvoiceID);
-            this.panel9.Controls.Add(this.label3);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel9.Location = new System.Drawing.Point(0, 0);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(913, 62);
-            this.panel9.TabIndex = 1;
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.txtRate);
-            this.panel11.Controls.Add(this.label2);
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel11.Location = new System.Drawing.Point(522, 0);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(391, 62);
-            this.panel11.TabIndex = 6;
-            // 
-            // txtRate
-            // 
-            this.txtRate.ContextMenuStrip = this.contextMenuStrip1;
-            this.txtRate.Location = new System.Drawing.Point(198, 15);
-            this.txtRate.Name = "txtRate";
-            this.txtRate.Size = new System.Drawing.Size(146, 30);
-            this.txtRate.TabIndex = 100;
-            this.txtRate.Text = "0";
-            this.txtRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(9, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 25);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Rate:";
-            // 
-            // txtInvoiceID
-            // 
-            this.txtInvoiceID.ContextMenuStrip = this.contextMenuStrip1;
-            this.txtInvoiceID.Location = new System.Drawing.Point(127, 12);
-            this.txtInvoiceID.Name = "txtInvoiceID";
-            this.txtInvoiceID.Size = new System.Drawing.Size(178, 30);
-            this.txtInvoiceID.TabIndex = 99;
-            this.txtInvoiceID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(8, 18);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 25);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Invoice ID:";
+            this.ProID.HeaderText = "Column1";
+            this.ProID.Name = "ProID";
+            this.ProID.Visible = false;
             // 
             // CreateInvoice
             // 
@@ -619,10 +640,10 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox txtGrandKh;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnClean;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.ComboBox cbProduct;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.TextBox txtInvoiceID;
@@ -638,6 +659,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtChangeEng;
+        private System.Windows.Forms.TextBox txtChangeKh;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DateTimePicker dtDateTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewButtonColumn Column4;
@@ -646,11 +674,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColSubtotal;
         private System.Windows.Forms.DataGridViewButtonColumn Column6;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtChangeEng;
-        private System.Windows.Forms.TextBox txtChangeKh;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProID;
     }
 }
