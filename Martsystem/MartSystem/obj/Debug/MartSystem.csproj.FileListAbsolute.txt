@@ -122,3 +122,10 @@ E:\Year 3\SA\MartSystem\Martsystem\MartSystem\bin\Debug\de\DevExpress.Sparkline.
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\bin\Debug\es\DevExpress.Sparkline.v17.2.Core.resources.dll
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\bin\Debug\ja\DevExpress.Sparkline.v17.2.Core.resources.dll
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\bin\Debug\ru\DevExpress.Sparkline.v17.2.Core.resources.dll
+F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.CreateExpense.resources
+F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.CreateInvoice.resources
+F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Custom_Contols.Watermarked_Textbox.resources
+F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.ExpenseData.resources
+F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Import.resources
+F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.InvoiceData.resources
+F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Stock.resources

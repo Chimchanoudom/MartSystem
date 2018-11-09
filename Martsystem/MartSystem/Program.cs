@@ -18,7 +18,7 @@ namespace MartSystem
             Application.SetCompatibleTextRenderingDefault(false);
 
 
-            Application.Run(new CreateInvoice());
+            Application.Run(new Import());
 
         }
     }
