@@ -45,6 +45,13 @@ namespace MartSystem
                 cbProduct.Items.Add(item);
             }
             txtBarcode.Focus();
+
+            dataCon.Con.Open();
+            sql = "newGetAutoID 'invid','_','invoice';";
+            SqlDataReader dataReader = dataCon.ExecuteQry(sql);
+            dataReader.Read();
+            txtInvoiceID.Text = dataReader.GetInt32(0).ToString("Inv_000");
+            dataCon.Con.Close();
         }
 
         private void dgvInvoiceDetail_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -57,7 +64,7 @@ namespace MartSystem
         {
             total -= double.Parse(dgvInvoiceDetail.Rows[rowIndex].Cells["ColSubTotal"].Value + "");
             dgvInvoiceDetail.Rows.RemoveAt(rowIndex);
-            showGrandTotal();
+            ShowGrandTotalAndChange();
         }
         void getQty(DataGridViewCellEventArgs e)
         {
@@ -100,7 +107,7 @@ namespace MartSystem
             dgvInvoiceDetail.Rows[e.RowIndex].Cells[3].Value = qty;
             getSubTotalAndGrandTotal(e.RowIndex, qty);
 
-            showGrandTotal();
+            ShowGrandTotalAndChange();
         }
         double subtotal;
         void getSubTotalAndGrandTotal(int rowIndex ,double qty)
@@ -118,15 +125,28 @@ namespace MartSystem
         {
             int rowIndex = dgvInvoiceDetail.Rows.Count - 1;
             getSubTotalAndGrandTotal(rowIndex,double.Parse(dgvInvoiceDetail.Rows[rowIndex].Cells["Qty"].Value+""));
-            showGrandTotal();
+            ShowGrandTotalAndChange();
         }
 
         double oldSubTotal;
-        void showGrandTotal()
+        void ShowGrandTotalAndChange()
         {
+            
             double totalKh = total * dataCon.rate;
             txtGrandEng.Text = total.ToString("#,##0.00");
             txtGrandKh.Text = totalKh.ToString("#,##0");
+
+            showChange();
+        }
+
+        void showChange()
+        {
+            if (recieve != 0&&total!=0)
+            {
+                double change = total - recieve;
+                txtChangeEng.Text = change.ToString("#,##0.00");
+                txtChangeKh.Text = (change * int.Parse(txtRate.Text, System.Globalization.NumberStyles.AllowThousands)).ToString("#,##0");
+            }
         }
 
         double qtyForEndEdit;
@@ -221,7 +241,7 @@ namespace MartSystem
                     }
 
                     getSubTotalAndGrandTotal(drInDGV.Index,newQty);
-                    showGrandTotal();
+                    ShowGrandTotalAndChange();
                     
                     return;
                 }
@@ -234,7 +254,7 @@ namespace MartSystem
 
                 dgvInvoiceDetail.Rows[lastIndexInDgv].Cells["ColSubTotal"].Value = subtotal + "";
 
-                showGrandTotal();
+                ShowGrandTotalAndChange();
             }
         }
 
@@ -279,21 +299,6 @@ namespace MartSystem
 
         private void txtRecieveKh_Leave(object sender, EventArgs e)
         {
-            try
-            {
-                int recieveKh = int.Parse(txtRecieveKh.Text, System.Globalization.NumberStyles.AllowThousands);
-                if (recieveKh % 100 != 0)
-                    throw new FormatException();
-            }
-            catch (FormatException)
-            {
-                txtRecieveKh.Undo();
-            }
-
-            System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
-            int valueBefore = Int32.Parse(txtRecieveKh.Text, System.Globalization.NumberStyles.AllowThousands);
-            txtRecieveKh.Text = String.Format(culture, "{0:N0}", valueBefore);
-
 
         }
 
@@ -315,6 +320,18 @@ namespace MartSystem
                 cbProduct.SelectedIndex = -1;
                 watermarked_Textbox1_KeyPress(null, null);
             }
+        }
+
+
+        double recieve;
+        private void txtRecieveKh_TextChanged(object sender, EventArgs e)
+        {
+            double recieveKh =double.Parse(txtRecieveKh.Text);
+            double recieveEng = double.Parse(txtRecieveEng.Text);
+
+            recieve = (recieveKh) / int.Parse(txtRate.Text,System.Globalization.NumberStyles.AllowThousands) + recieveEng;
+
+            showChange();
         }
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -40,8 +40,14 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtChangeEng = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.txtChangeKh = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.lbRecieve = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtRecieveEng = new System.Windows.Forms.TextBox();
@@ -67,24 +73,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtInvoiceID = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel12.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInvoiceDetail)).BeginInit();
             this.panel9.SuspendLayout();
             this.panel11.SuspendLayout();
-            this.panel12.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -117,9 +117,9 @@
             this.panel8.Controls.Add(this.txtBarcode);
             this.panel8.Controls.Add(this.cbProduct);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(0, 357);
+            this.panel8.Location = new System.Drawing.Point(0, 339);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(391, 83);
+            this.panel8.Size = new System.Drawing.Size(391, 101);
             this.panel8.TabIndex = 3;
             // 
             // txtBarcode
@@ -150,7 +150,7 @@
             this.panel7.Controls.Add(this.button2);
             this.panel7.Controls.Add(this.button1);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(0, 237);
+            this.panel7.Location = new System.Drawing.Point(0, 219);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(391, 120);
             this.panel7.TabIndex = 8;
@@ -204,14 +204,68 @@
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(391, 237);
+            this.panel3.Size = new System.Drawing.Size(391, 219);
             this.panel3.TabIndex = 1;
+            // 
+            // panel12
+            // 
+            this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel12.Controls.Add(this.label6);
+            this.panel12.Controls.Add(this.label7);
+            this.panel12.Controls.Add(this.txtChangeEng);
+            this.panel12.Controls.Add(this.txtChangeKh);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel12.Location = new System.Drawing.Point(0, 160);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(387, 66);
+            this.panel12.TabIndex = 10;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(6, 15);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(88, 25);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Change:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Kh Battambang", 12F);
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(347, 12);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(26, 36);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "$";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label7.Click += new System.EventHandler(this.lbRecieve_Click);
+            // 
+            // txtChangeEng
+            // 
+            this.txtChangeEng.ContextMenuStrip = this.contextMenuStrip1;
+            this.txtChangeEng.Location = new System.Drawing.Point(194, 13);
+            this.txtChangeEng.Name = "txtChangeEng";
+            this.txtChangeEng.Size = new System.Drawing.Size(146, 30);
+            this.txtChangeEng.TabIndex = 106;
+            this.txtChangeEng.Text = "0.00";
+            this.txtChangeEng.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // txtChangeKh
+            // 
+            this.txtChangeKh.Location = new System.Drawing.Point(195, 12);
+            this.txtChangeKh.Name = "txtChangeKh";
+            this.txtChangeKh.Size = new System.Drawing.Size(146, 30);
+            this.txtChangeKh.TabIndex = 2;
+            this.txtChangeKh.Text = "0";
             // 
             // panel4
             // 
@@ -224,8 +278,20 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 60);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(387, 116);
+            this.panel4.Size = new System.Drawing.Size(387, 100);
             this.panel4.TabIndex = 7;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Kh Battambang", 12F);
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(346, 56);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(26, 36);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "$";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lbRecieve
             // 
@@ -258,7 +324,6 @@
             this.txtRecieveEng.TabIndex = 105;
             this.txtRecieveEng.Text = "0.00";
             this.txtRecieveEng.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRecieveEng_KeyPress);
-            this.txtRecieveEng.Leave += new System.EventHandler(this.txtRecieveEng_Leave);
             // 
             // txtRecieveKh
             // 
@@ -267,8 +332,8 @@
             this.txtRecieveKh.Size = new System.Drawing.Size(146, 30);
             this.txtRecieveKh.TabIndex = 104;
             this.txtRecieveKh.Text = "0";
+
             this.txtRecieveKh.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRecieveKh_KeyPress);
-            this.txtRecieveKh.Leave += new System.EventHandler(this.txtRecieveKh_Leave);
             // 
             // panel5
             // 
@@ -397,8 +462,8 @@
             // Qty
             // 
             this.Qty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Qty.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Qty.DefaultCellStyle = dataGridViewCellStyle1;
             this.Qty.FillWeight = 1F;
             this.Qty.HeaderText = "Quantity";
             this.Qty.MinimumWidth = 90;
@@ -474,7 +539,7 @@
             this.txtRate.Name = "txtRate";
             this.txtRate.Size = new System.Drawing.Size(146, 30);
             this.txtRate.TabIndex = 100;
-            this.txtRate.Text = "102";
+            this.txtRate.Text = "0";
             this.txtRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // label2
@@ -506,69 +571,6 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Invoice ID:";
             // 
-            // panel12
-            // 
-            this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel12.Controls.Add(this.label6);
-            this.panel12.Controls.Add(this.label7);
-            this.panel12.Controls.Add(this.textBox1);
-            this.panel12.Controls.Add(this.textBox2);
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel12.Location = new System.Drawing.Point(0, 176);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(387, 66);
-            this.panel12.TabIndex = 10;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(6, 15);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(88, 25);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Change:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Kh Battambang", 12F);
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(347, 12);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(26, 36);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "$";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // textBox1
-            // 
-            this.textBox1.ContextMenuStrip = this.contextMenuStrip1;
-            this.textBox1.Location = new System.Drawing.Point(195, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(146, 30);
-            this.textBox1.TabIndex = 106;
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(195, 12);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(146, 30);
-            this.textBox2.TabIndex = 2;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Kh Battambang", 12F);
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(346, 56);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(26, 36);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "$";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
             // CreateInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -589,6 +591,8 @@
             this.panel8.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -599,8 +603,6 @@
             this.panel9.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -647,8 +649,8 @@
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtChangeEng;
+        private System.Windows.Forms.TextBox txtChangeKh;
         private System.Windows.Forms.Label label5;
     }
 }
