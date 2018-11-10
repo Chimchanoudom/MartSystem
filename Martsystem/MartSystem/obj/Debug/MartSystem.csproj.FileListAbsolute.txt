@@ -129,6 +129,7 @@ F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Stock.reso
 F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.ImportData.resources
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Import.resources
 <<<<<<< HEAD
+<<<<<<< HEAD
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.ImportData.resources
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.exe.config
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Reports.ReportInvoice.resources
@@ -228,3 +229,6 @@ E:\Year 3\SA\MartSystem\Martsystem\MartSystem\bin\Debug\zh-CHT\Microsoft.ReportV
 >>>>>>> parent of 7917012... Revert "z"
 =======
 >>>>>>> d3b68b00f2e3bffad9f60c7cb07fad4599e79d7e
+=======
+E:\Year 3\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.ImportData.resources
+>>>>>>> parent of 599ba77... Revert "Revert "z""

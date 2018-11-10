@@ -37,15 +37,7 @@ namespace MartSystem
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            string filter = "";
-            if (rndID.Checked) filter = "[Expense ID]='" + txtSearch.Text + "'";
-            else if (rndDateCreated.Checked)
-            {
-                string date = dtDate.Value.Day + "-" + dtDate.Value.Month + "-" + dtDate.Value.Year;
-                filter = "[Date Created]='" + date + "'";
-            }
 
-            dtExpense.DefaultView.RowFilter = filter;
         }
 
 
@@ -63,9 +55,13 @@ namespace MartSystem
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DataRow dataRow = dtExpense.Rows[dgvExpenseData.SelectedRows[0].Index];
-            CreateExpense addExpense = new CreateExpense(dataRow);
-            addExpense.ShowDialog();
+            int selectedRowIndex = dgvExpenseData.SelectedRows[0].Index;
+            string id = dgvExpenseData.Rows[selectedRowIndex].Cells["Expense ID"].Value + "";
+
+            DataGridViewRowCollection expenseDataRow = dgvExpenseData.Rows;
+
+            CreateExpense createExpense = new CreateExpense(id, selectedRowIndex,expenseDataRow);
+            createExpense.ShowDialog();
         }
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -100,20 +96,12 @@ namespace MartSystem
 
         private void addToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CreateExpense addExpense = new CreateExpense(dtExpense);
-            addExpense.ShowDialog();
-        }
+            DataGridViewRowCollection expenseDataRow = dgvExpenseData.Rows;
+            
+            CreateExpense createExpense = new CreateExpense(dgvExpenseData, expenseDataRow);
+            createExpense.ShowDialog();
 
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            dtExpense.DefaultView.RowFilter = string.Empty;
-        }
 
-        private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-            if ("'".IndexOf(e.KeyChar) > -1)
-                e.KeyChar = '\0';
         }
     }
 }
