@@ -52,15 +52,15 @@
             this.groupBox6.Controls.Add(this.panel7);
             this.groupBox6.Controls.Add(this.groupBox7);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox6.Font = new System.Drawing.Font("Khmer SN Kampot", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox6.Location = new System.Drawing.Point(0, 0);
             this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox6.Size = new System.Drawing.Size(704, 198);
+            this.groupBox6.Size = new System.Drawing.Size(563, 198);
             this.groupBox6.TabIndex = 5;
             this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "ស្វែងរក";
+            this.groupBox6.Text = "Search";
             // 
             // panel7
             // 
@@ -69,10 +69,10 @@
             this.panel7.Controls.Add(this.btnSearch);
             this.panel7.Controls.Add(this.txtSearch);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(4, 130);
+            this.panel7.Location = new System.Drawing.Point(4, 111);
             this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(696, 44);
+            this.panel7.Size = new System.Drawing.Size(555, 32);
             this.panel7.TabIndex = 1;
             // 
             // dtDate
@@ -81,7 +81,7 @@
             this.dtDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtDate.Location = new System.Drawing.Point(0, -1);
             this.dtDate.Name = "dtDate";
-            this.dtDate.Size = new System.Drawing.Size(300, 45);
+            this.dtDate.Size = new System.Drawing.Size(300, 26);
             this.dtDate.TabIndex = 8;
             // 
             // btnCancel
@@ -94,7 +94,7 @@
             this.btnCancel.Location = new System.Drawing.Point(428, 0);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(128, 44);
+            this.btnCancel.Size = new System.Drawing.Size(128, 32);
             this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -109,7 +109,7 @@
             this.btnSearch.Location = new System.Drawing.Point(300, 0);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(128, 44);
+            this.btnSearch.Size = new System.Drawing.Size(128, 32);
             this.btnSearch.TabIndex = 6;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
@@ -120,9 +120,8 @@
             this.txtSearch.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(0, 0);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(300, 44);
+            this.txtSearch.Size = new System.Drawing.Size(300, 29);
             this.txtSearch.TabIndex = 0;
             // 
             // groupBox7
@@ -131,14 +130,14 @@
             this.groupBox7.Controls.Add(this.rndImportDate);
             this.groupBox7.Controls.Add(this.rndProID);
             this.groupBox7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox7.Location = new System.Drawing.Point(4, 42);
+            this.groupBox7.Location = new System.Drawing.Point(4, 23);
             this.groupBox7.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox7.Size = new System.Drawing.Size(696, 88);
+            this.groupBox7.Size = new System.Drawing.Size(555, 88);
             this.groupBox7.TabIndex = 0;
             this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "លក្ខខណ្ឌ";
+            this.groupBox7.Text = "Filter Condition";
             // 
             // rndExpiredDate
             // 
@@ -147,7 +146,7 @@
             this.rndExpiredDate.Location = new System.Drawing.Point(328, 44);
             this.rndExpiredDate.Margin = new System.Windows.Forms.Padding(4);
             this.rndExpiredDate.Name = "rndExpiredDate";
-            this.rndExpiredDate.Size = new System.Drawing.Size(157, 27);
+            this.rndExpiredDate.Size = new System.Drawing.Size(129, 25);
             this.rndExpiredDate.TabIndex = 0;
             this.rndExpiredDate.TabStop = true;
             this.rndExpiredDate.Text = "Expired Date";
@@ -160,7 +159,7 @@
             this.rndImportDate.Location = new System.Drawing.Point(170, 44);
             this.rndImportDate.Margin = new System.Windows.Forms.Padding(4);
             this.rndImportDate.Name = "rndImportDate";
-            this.rndImportDate.Size = new System.Drawing.Size(150, 27);
+            this.rndImportDate.Size = new System.Drawing.Size(125, 25);
             this.rndImportDate.TabIndex = 0;
             this.rndImportDate.TabStop = true;
             this.rndImportDate.Text = "Import Date";
@@ -174,7 +173,7 @@
             this.rndProID.Location = new System.Drawing.Point(28, 44);
             this.rndProID.Margin = new System.Windows.Forms.Padding(4);
             this.rndProID.Name = "rndProID";
-            this.rndProID.Size = new System.Drawing.Size(134, 27);
+            this.rndProID.Size = new System.Drawing.Size(111, 25);
             this.rndProID.TabIndex = 0;
             this.rndProID.TabStop = true;
             this.rndProID.Text = "Product ID";
@@ -186,7 +185,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 198);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(704, 308);
+            this.panel1.Size = new System.Drawing.Size(563, 308);
             this.panel1.TabIndex = 6;
             // 
             // dgvStock
@@ -199,15 +198,15 @@
             this.dgvStock.Name = "dgvStock";
             this.dgvStock.ReadOnly = true;
             this.dgvStock.RowTemplate.Height = 24;
-            this.dgvStock.Size = new System.Drawing.Size(704, 308);
+            this.dgvStock.Size = new System.Drawing.Size(563, 308);
             this.dgvStock.TabIndex = 0;
             // 
             // Stock
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(704, 506);
+            this.ClientSize = new System.Drawing.Size(563, 506);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox6);
             this.Font = new System.Drawing.Font("Century Gothic", 12F);
