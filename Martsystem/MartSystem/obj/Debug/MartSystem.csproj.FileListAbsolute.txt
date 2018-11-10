@@ -43,7 +43,7 @@ D:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.pdb
 F:\Team Project\MartSystem\Martsystem\MartSystem\bin\Debug\MartSystem.exe.config
 F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.exe
 F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.pdb
-<<<<<<< HEAD
+
 F:\Team Project\MartSystem\Martsystem\MartSystem\bin\Debug\MartSystem.exe
 F:\Team Project\MartSystem\Martsystem\MartSystem\bin\Debug\MartSystem.pdb
 F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.csprojResolveAssemblyReference.cache
@@ -56,7 +56,7 @@ F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.supplyer.r
 F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.csproj.GenerateResource.Cache
 F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Product.resources
 F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Sell.resources
-=======
+
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\bin\Debug\MartSystem.exe.config
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\bin\Debug\MartSystem.exe
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\bin\Debug\MartSystem.pdb
@@ -99,7 +99,7 @@ E:\Year 3\SA\MartSystem\Martsystem\MartSystem\bin\Debug\es\DevExpress.Pdf.v17.2.
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\bin\Debug\ja\DevExpress.Pdf.v17.2.Core.resources.dll
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\bin\Debug\ru\DevExpress.Pdf.v17.2.Core.resources.dll
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.CreateInvoice.resources
->>>>>>> 892a5705db46e17067d74c8183bf7f045875dc44
+
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Product.resources
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.CreateExpense.resources
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.ExpenseData.resources
@@ -129,3 +129,8 @@ F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.ExpenseDat
 F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Import.resources
 F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.InvoiceData.resources
 F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Stock.resources
+
+F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.ImportData.resources
+
+E:\Year 3\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Import.resources
+
