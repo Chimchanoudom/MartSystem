@@ -54,7 +54,6 @@ F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Properties
 F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.supplyer.resources
 F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.csproj.GenerateResource.Cache
 F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Product.resources
-F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Sell.resources
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\bin\Debug\MartSystem.exe.config
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\bin\Debug\MartSystem.exe
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\bin\Debug\MartSystem.pdb
