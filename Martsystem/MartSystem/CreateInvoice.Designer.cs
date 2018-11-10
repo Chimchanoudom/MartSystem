@@ -59,13 +59,6 @@
             this.txtGrandKh = new System.Windows.Forms.TextBox();
             this.panel10 = new System.Windows.Forms.Panel();
             this.dgvInvoiceDetail = new System.Windows.Forms.DataGridView();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.dtDateTime = new System.Windows.Forms.DateTimePicker();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.txtRate = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtInvoiceID = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.ProName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewButtonColumn();
@@ -75,6 +68,13 @@
             this.ColSubtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.ProID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.dtDateTime = new System.Windows.Forms.DateTimePicker();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.txtRate = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtInvoiceID = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -434,77 +434,6 @@
             this.dgvInvoiceDetail.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dgvInvoiceDetail_EditingControlShowing);
             this.dgvInvoiceDetail.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvInvoiceDetail_RowsAdded);
             // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.dtDateTime);
-            this.panel9.Controls.Add(this.panel11);
-            this.panel9.Controls.Add(this.txtInvoiceID);
-            this.panel9.Controls.Add(this.label3);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel9.Location = new System.Drawing.Point(0, 0);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(913, 62);
-            this.panel9.TabIndex = 1;
-            // 
-            // dtDateTime
-            // 
-            this.dtDateTime.CustomFormat = "dd/MM/yyyy hh:mm:ss tt";
-            this.dtDateTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtDateTime.Location = new System.Drawing.Point(323, 13);
-            this.dtDateTime.Name = "dtDateTime";
-            this.dtDateTime.Size = new System.Drawing.Size(287, 30);
-            this.dtDateTime.TabIndex = 100;
-            this.dtDateTime.Visible = false;
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.txtRate);
-            this.panel11.Controls.Add(this.label2);
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel11.Location = new System.Drawing.Point(522, 0);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(391, 62);
-            this.panel11.TabIndex = 6;
-            // 
-            // txtRate
-            // 
-            this.txtRate.ContextMenuStrip = this.contextMenuStrip1;
-            this.txtRate.Location = new System.Drawing.Point(198, 15);
-            this.txtRate.Name = "txtRate";
-            this.txtRate.Size = new System.Drawing.Size(146, 30);
-            this.txtRate.TabIndex = 100;
-            this.txtRate.Text = "0";
-            this.txtRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(9, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 25);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Rate:";
-            // 
-            // txtInvoiceID
-            // 
-            this.txtInvoiceID.ContextMenuStrip = this.contextMenuStrip1;
-            this.txtInvoiceID.Location = new System.Drawing.Point(118, 15);
-            this.txtInvoiceID.Name = "txtInvoiceID";
-            this.txtInvoiceID.Size = new System.Drawing.Size(178, 30);
-            this.txtInvoiceID.TabIndex = 99;
-            this.txtInvoiceID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(8, 18);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 25);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Invoice ID:";
-            // 
             // ProName
             // 
             this.ProName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -591,6 +520,77 @@
             this.ProID.HeaderText = "Column1";
             this.ProID.Name = "ProID";
             this.ProID.Visible = false;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.dtDateTime);
+            this.panel9.Controls.Add(this.panel11);
+            this.panel9.Controls.Add(this.txtInvoiceID);
+            this.panel9.Controls.Add(this.label3);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel9.Location = new System.Drawing.Point(0, 0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(913, 62);
+            this.panel9.TabIndex = 1;
+            // 
+            // dtDateTime
+            // 
+            this.dtDateTime.CustomFormat = "dd/MM/yyyy hh:mm:ss tt";
+            this.dtDateTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtDateTime.Location = new System.Drawing.Point(323, 13);
+            this.dtDateTime.Name = "dtDateTime";
+            this.dtDateTime.Size = new System.Drawing.Size(287, 30);
+            this.dtDateTime.TabIndex = 100;
+            this.dtDateTime.Visible = false;
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.txtRate);
+            this.panel11.Controls.Add(this.label2);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel11.Location = new System.Drawing.Point(522, 0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(391, 62);
+            this.panel11.TabIndex = 6;
+            // 
+            // txtRate
+            // 
+            this.txtRate.ContextMenuStrip = this.contextMenuStrip1;
+            this.txtRate.Location = new System.Drawing.Point(198, 15);
+            this.txtRate.Name = "txtRate";
+            this.txtRate.Size = new System.Drawing.Size(146, 30);
+            this.txtRate.TabIndex = 100;
+            this.txtRate.Text = "0";
+            this.txtRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(9, 18);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(58, 25);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Rate:";
+            // 
+            // txtInvoiceID
+            // 
+            this.txtInvoiceID.ContextMenuStrip = this.contextMenuStrip1;
+            this.txtInvoiceID.Location = new System.Drawing.Point(118, 15);
+            this.txtInvoiceID.Name = "txtInvoiceID";
+            this.txtInvoiceID.Size = new System.Drawing.Size(178, 30);
+            this.txtInvoiceID.TabIndex = 99;
+            this.txtInvoiceID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(8, 18);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(104, 25);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Invoice ID:";
             // 
             // CreateInvoice
             // 
