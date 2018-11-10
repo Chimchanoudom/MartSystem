@@ -52,7 +52,13 @@ namespace MartSystem
             dataReader.Read();
             txtInvoiceID.Text = dataReader.GetInt32(0).ToString("Inv_000");
             dataCon.Con.Close();
+
+            txtRecieveEng.LostFocus += new EventHandler(txtReceive_LostFocus);
+            txtRecieveKh.LostFocus+= new EventHandler(txtReceive_LostFocus);
+            
         }
+
+
 
         private void dgvInvoiceDetail_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -144,7 +150,7 @@ namespace MartSystem
         {
             if (recieve != 0&&total!=0)
             {
-                double change = total - recieve;
+                double change =  recieve- total;
                 txtChangeEng.Text = change.ToString("#,##0.00");
                 txtChangeKh.Text = (change * int.Parse(txtRate.Text, System.Globalization.NumberStyles.AllowThousands)).ToString("#,##0");
             }
@@ -326,7 +332,7 @@ namespace MartSystem
 
 
         double recieve;
-        private void txtRecieveKh_TextChanged(object sender, EventArgs e)
+        private void txtReceive_LostFocus(object sender, EventArgs e)
         {
             double recieveKh =double.Parse(txtRecieveKh.Text);
             double recieveEng = double.Parse(txtRecieveEng.Text);
@@ -380,6 +386,11 @@ namespace MartSystem
                     MessageBox.Show("Saved", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
