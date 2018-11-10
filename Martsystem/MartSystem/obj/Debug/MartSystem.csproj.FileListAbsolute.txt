@@ -129,8 +129,12 @@ F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.ExpenseDat
 F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Import.resources
 F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.InvoiceData.resources
 F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Stock.resources
+<<<<<<< HEAD
 
 F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.ImportData.resources
 
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Import.resources
 
+=======
+E:\Year 3\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Import.resources
+>>>>>>> f78c786a3a1d6e5e501b70428960921a10b947ba
