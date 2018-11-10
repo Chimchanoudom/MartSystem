@@ -43,7 +43,6 @@ D:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.pdb
 F:\Team Project\MartSystem\Martsystem\MartSystem\bin\Debug\MartSystem.exe.config
 F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.exe
 F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.pdb
-
 F:\Team Project\MartSystem\Martsystem\MartSystem\bin\Debug\MartSystem.exe
 F:\Team Project\MartSystem\Martsystem\MartSystem\bin\Debug\MartSystem.pdb
 F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.csprojResolveAssemblyReference.cache
@@ -56,7 +55,6 @@ F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.supplyer.r
 F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.csproj.GenerateResource.Cache
 F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Product.resources
 F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Sell.resources
-
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\bin\Debug\MartSystem.exe.config
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\bin\Debug\MartSystem.exe
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\bin\Debug\MartSystem.pdb
@@ -99,7 +97,6 @@ E:\Year 3\SA\MartSystem\Martsystem\MartSystem\bin\Debug\es\DevExpress.Pdf.v17.2.
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\bin\Debug\ja\DevExpress.Pdf.v17.2.Core.resources.dll
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\bin\Debug\ru\DevExpress.Pdf.v17.2.Core.resources.dll
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.CreateInvoice.resources
-
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Product.resources
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.CreateExpense.resources
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.ExpenseData.resources
@@ -129,10 +126,7 @@ F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.ExpenseDat
 F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Import.resources
 F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.InvoiceData.resources
 F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Stock.resources
-
-
 F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.ImportData.resources
-
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Import.resources
 <<<<<<< HEAD
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.ImportData.resources
@@ -233,8 +227,4 @@ E:\Year 3\SA\MartSystem\Martsystem\MartSystem\bin\Debug\zh-CHS\Microsoft.ReportV
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 >>>>>>> parent of 7917012... Revert "z"
 =======
-
-
-E:\Year 3\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Import.resources
-
 >>>>>>> d3b68b00f2e3bffad9f60c7cb07fad4599e79d7e
