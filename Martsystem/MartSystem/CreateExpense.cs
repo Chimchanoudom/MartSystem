@@ -18,26 +18,63 @@ namespace MartSystem
             InitializeComponent();
         }
 
-
-
-        public CreateExpense(DataTable dtExpenseData)
+        public CreateExpense(DataGridView dgvExpenseData,DataGridViewRowCollection rowCollectionOfExpense)
         {
             InitializeComponent();
-            this.dtExpenseData = dtExpenseData;
+            this.dgvExpenseData = dgvExpenseData;
+            this.rowCollectionOfExpense = rowCollectionOfExpense;
+            
+            cloneDataGridViewExpenseData();
         }
 
-        public CreateExpense(DataRow dataRow)
+        void cloneDataGridViewExpenseData()
+        {
+            for (int i = 0; i < rowCollectionOfExpense.Count; i++)
+            {
+                DataGridViewRow clonedRow = (DataGridViewRow)rowCollectionOfExpense[i].Clone();
+                for (int j = 0; j < clonedRow.Cells.Count; j++)
+                {
+                    clonedRow.Cells[j].Value = rowCollectionOfExpense[i].Cells[j].Value;
+                }
+            }
+        }
+
+        public CreateExpense(string id,int selectedRowIndexOfExpense, DataGridViewRowCollection rowCollectionOfExpense)
         {
             InitializeComponent();
-            this.dataRow = dataRow;
-        }
 
+            sql = "select Desciption,Amount from ExpenseDetail where ExpenseID='"+id+"';";
+            dataCon.Con.Open();
+            SqlDataReader dataReader = dataCon.ExecuteQry(sql);
+            while (dataReader.Read())
+            {
+                dgvExpenseDetail.Rows.Add(dataReader.GetString(0),Convert.ToDouble(dataReader.GetValue(1)));
+            }
+            dataCon.Con.Close();
+
+
+            lbExpenseID.Text = id;
+
+            editingExpense = true;
+
+            dgvExpenseDetail.ClearSelection();
+
+            this.rowCollectionOfExpense = rowCollectionOfExpense;
+            this.selectedRowIndexOfExpense = selectedRowIndexOfExpense;
+            cloneDataGridViewExpenseData();
+
+            total =double.Parse(rowCollectionOfExpense[selectedRowIndexOfExpense].Cells["Total"].Value + "");
+
+            txtTotal.Text = total.ToString("#,##0.00");
+        }
 
         string sql;
         int id;
-        
-        DataTable dtExpenseData;
-        DataRow dataRow;
+        bool editingExpense;
+        DataGridViewRowCollection rowCollectionOfExpense;
+        int selectedRowIndexOfExpense;
+        DataGridView dgvExpenseData;
+
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -46,10 +83,7 @@ namespace MartSystem
                 if (txtAmount.Text == "" || txtDescription.Text == "")
                     return;
 
-                double amount = double.Parse(txtAmount.Text);
-
-
-                dgvExpenseDetail.Rows.Add(txtDescription.Text,amount.ToString("#,##0.00"));
+                dgvExpenseDetail.Rows.Add(txtDescription.Text, txtAmount.Text);
                 getTotal();
 
                 txtDescription.Text =
@@ -137,13 +171,13 @@ namespace MartSystem
         {
             if (dgvExpenseDetail.Rows.Count > 0)
             {
-                if (dataRow!=null)
+                if (editingExpense)
                 {
                     sql = "delete from expenseDetail where expenseid='" + lbExpenseID.Text + "'";
 
                     sql += "update expense set Total=" + txtTotal.Text + " where expenseID='" + lbExpenseID.Text + "'";
 
-
+                    rowCollectionOfExpense[selectedRowIndexOfExpense].Cells["Total"].Value = txtTotal.Text;
                     insertDataIntoExpenseDetail();
                     Close();
 
@@ -154,9 +188,12 @@ namespace MartSystem
                 DateTime now = DateTime.Now;
                 sql = "insert into Expense values('"+lbExpenseID.Text+"','"+now+"',"+total+")";
 
-               
                 insertDataIntoExpenseDetail();
-                total = 0;
+
+
+                
+
+                rowCollectionOfExpense.Add(lbExpenseID.Text,now,total);
             }
             else
             {
@@ -181,23 +218,12 @@ namespace MartSystem
             {
                 MessageBox.Show("Saved", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                if (dataRow==null)
-                {
-                    DateTime now = DateTime.Now;
-                    dtExpenseData.Rows.Add(lbExpenseID.Text, now, txtTotal.Text);
-                }
-                else
-                {
-                    dataRow["Total"] = txtTotal.Text+"";
-                }
                 dgvExpenseDetail.Rows.Clear();
-
                 txtDescription.Text =
                txtAmount.Text = "";
                 txtTotal.Text = "0.00";
 
                 lbExpenseID.Text = (id + 1).ToString("Exp_000");
-
             }
         }
 
@@ -205,30 +231,12 @@ namespace MartSystem
         {
 
             dgvExpenseDetail.Columns["Amount"].DefaultCellStyle.Format = "#,##0.00";
-            dgvExpenseDetail.ClearSelection();
-            if (dataRow != null)
-            {
-                lbExpenseID.Text = dataRow["Expense ID"] + "";
 
-                sql = "select Desciption,amount from ExpenseDetail where expenseID='" + lbExpenseID.Text + "'";
-                dataCon.Con.Open();
-                SqlDataReader dataReader = dataCon.ExecuteQry(sql);
-                while (dataReader.Read())
-                {
-                    double subTotal = double.Parse(dataReader.GetValue(1) + "");
-                    dgvExpenseDetail.Rows.Add(dataReader.GetString(0),subTotal);
-                    total += subTotal;
-                    txtTotal.Text = subTotal.ToString("#,##0.00");
-                }
-                dataCon.Con.Close();
-
-                return;
-            }
-                
+            if (editingExpense) return;
 
             getInvoiceID();
 
-            
+            dgvExpenseDetail.ClearSelection();
         }
 
         void getInvoiceID()
