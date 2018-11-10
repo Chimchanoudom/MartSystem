@@ -131,8 +131,6 @@ F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.InvoiceDat
 F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Stock.resources
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Import.resources
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.ImportData.resources
-<<<<<<< HEAD
-=======
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.exe.config
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Reports.ReportInvoice.resources
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\bin\Debug\SqlServerTypes\x64\msvcr120.dll
