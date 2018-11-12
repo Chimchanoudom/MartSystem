@@ -29,11 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.txtBarcode = new MartSystem.Custom_Contols.Watermarked_Textbox();
             this.cbProduct = new System.Windows.Forms.ComboBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -77,6 +76,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtInvoiceID = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtBarcode = new MartSystem.Custom_Contols.Watermarked_Textbox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -127,26 +127,16 @@
             this.panel8.Size = new System.Drawing.Size(391, 101);
             this.panel8.TabIndex = 3;
             // 
-            // txtBarcode
-            // 
-            this.txtBarcode.ForeColor = System.Drawing.Color.Gray;
-            this.txtBarcode.Location = new System.Drawing.Point(11, 11);
-            this.txtBarcode.Name = "txtBarcode";
-            this.txtBarcode.Size = new System.Drawing.Size(363, 30);
-            this.txtBarcode.TabIndex = 1;
-            this.txtBarcode.Text = "Enter Barcode";
-            this.txtBarcode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtBarcode.WatermarkedText = "Enter Barcode";
-            this.txtBarcode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.watermarked_Textbox1_KeyPress);
-            // 
             // cbProduct
             // 
+            this.cbProduct.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbProduct.FormattingEnabled = true;
             this.cbProduct.Location = new System.Drawing.Point(11, 52);
             this.cbProduct.Name = "cbProduct";
             this.cbProduct.Size = new System.Drawing.Size(363, 33);
             this.cbProduct.TabIndex = 0;
             this.cbProduct.SelectedIndexChanged += new System.EventHandler(this.cbProduct_SelectedIndexChanged);
+            this.cbProduct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbProduct_KeyPress);
             // 
             // panel7
             // 
@@ -494,8 +484,8 @@
             // Qty
             // 
             this.Qty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Qty.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Qty.DefaultCellStyle = dataGridViewCellStyle3;
             this.Qty.FillWeight = 1F;
             this.Qty.HeaderText = "Quantity";
             this.Qty.MinimumWidth = 90;
@@ -618,6 +608,18 @@
             this.label3.Size = new System.Drawing.Size(104, 25);
             this.label3.TabIndex = 3;
             this.label3.Text = "Invoice ID:";
+            // 
+            // txtBarcode
+            // 
+            this.txtBarcode.ForeColor = System.Drawing.Color.Gray;
+            this.txtBarcode.Location = new System.Drawing.Point(11, 11);
+            this.txtBarcode.Name = "txtBarcode";
+            this.txtBarcode.Size = new System.Drawing.Size(363, 30);
+            this.txtBarcode.TabIndex = 1;
+            this.txtBarcode.Text = "Enter Barcode";
+            this.txtBarcode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBarcode.WatermarkedText = "Enter Barcode";
+            this.txtBarcode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.watermarked_Textbox1_KeyPress);
             // 
             // CreateInvoice
             // 

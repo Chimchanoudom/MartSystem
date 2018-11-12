@@ -476,6 +476,11 @@ namespace MartSystem
            
         }
 
+        private void cbProduct_KeyPress(object sender, KeyPressEventArgs e)
+        {
+          
+        }
+
         private void txtGrandEng_TextChanged(object sender, EventArgs e)
         {
             
