@@ -524,7 +524,7 @@ namespace MartSystem
                 {
                     sql += "('"+txtInvoiceID.Text+"','"+temp.Cells["proID"].Value+"',"+temp.Cells["Qty"].Value+","+temp.Cells["ColSubtotal"].Value +"),";
 
-                    qtyProductToRemove.Add(temp.Cells["ProName"]+"", Convert.ToDouble(temp.Cells["Qty"].Value));
+                    qtyProductToRemove.Add(temp.Cells["ProID"].Value +"", Convert.ToDouble(temp.Cells["Qty"].Value));
                 }
 
                 sql = sql.Substring(0, sql.Length - 1) + ";";
@@ -536,9 +536,9 @@ namespace MartSystem
                 {
                     foreach(DataRow temp in dtProduct.Rows)
                     {
-                        if (qtyProductToRemove.ContainsKey(temp["proname"] + ""))
+                        if (qtyProductToRemove.ContainsKey(temp["proID"] + ""))
                         {
-                            temp["qty"] = (double)temp["qty"] - qtyProductToRemove["proname"];
+                            temp["qty"] = (double)temp["qty"] - qtyProductToRemove[temp["proID"]+""];
                         }
                     }
 
