@@ -70,7 +70,28 @@ namespace MartSystem
             }
             return ID;
         }
-
+        public static String GenerateID(string ID, String Suffix,int indexSubstring)
+        {
+            int num = 0;
+            if (ID == "")
+                num = 1;
+            else
+            {
+                try
+                {
+                    num = int.Parse(ID) + 1;
+                }
+                catch
+                {
+                    num = int.Parse(ID.Substring(indexSubstring))+1;
+                }
+            }
+            if (Suffix != null)
+            {
+                ID = Suffix + (num);
+            }
+            return ID;
+        }
         public static void ColumnName(DataGridView data,int column,String[]columnName)
         {
             for (int i = 0; i < column; i++)

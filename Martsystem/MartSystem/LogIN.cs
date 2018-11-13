@@ -55,8 +55,8 @@ namespace MartSystem
         {
             foreach(DataRow Dr in dt.Rows)
             {
-                MessageBox.Show(Dr["UserAcc"].ToString());
-                MessageBox.Show(Dr["Pwd"].ToString());
+                //MessageBox.Show(Dr["UserAcc"].ToString());
+                //MessageBox.Show(Dr["Pwd"].ToString());
                 if ((txtuserName.Text.ToLower() ==Dr["UserAcc"].ToString().ToLower()&&txtpass.Text.ToLower()==Dr["Pwd"].ToString().ToLower()))
                     {
                     if (Convert.ToBoolean(Dr["Active"]) == true){
@@ -65,7 +65,7 @@ namespace MartSystem
                         Dom_SqlClass.fName = Dr["Fname"].ToString();
                         Dom_SqlClass.lName = Dr["Lname"].ToString();
                         Dom_SqlClass.position = Dr["Position"].ToString();
-                        //sth
+                        new Import().ShowDialog();
                         break;
                     }
                     else

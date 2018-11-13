@@ -22,9 +22,9 @@ namespace MartSystem
 
             //Application.Run(new ExpenseData());
 
-            Application.Run(new Import());   
+            Application.Run(new Quantity_Type());   
 
-            Application.Run(new ExpenseData());
+
 
 
 

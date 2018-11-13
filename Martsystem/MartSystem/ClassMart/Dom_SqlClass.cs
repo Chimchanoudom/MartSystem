@@ -23,7 +23,7 @@ namespace MartSystem
             {
                 dataCon.Con.Open();
                 SC = new SqlCommand();
-                SC.CommandText = @"getID  " + " '" + column + "'," + " '" + seperater + "'," + " '" + TableName + "'";
+                SC.CommandText = @"GetAutoID  " + " '" + column + "'," + " '" + seperater + "'," + " '" + TableName + "'";
                 SC.Connection = dataCon.Con;
                 ID = SC.ExecuteScalar();
             }
@@ -209,11 +209,12 @@ namespace MartSystem
         }
         public static DataTable retriveDataMultiTable(String SelectStatement)
         {
+            DT = new DataTable();
             try
             {
                 dataCon.Con.Open();
                 SC = new SqlCommand(SelectStatement, dataCon.Con);
-                SDA = new SqlDataAdapter(SC);
+               SDA = new SqlDataAdapter(SC);
                 SCB = new SqlCommandBuilder(SDA);
                 SDA.Fill(DT);
             }

@@ -223,3 +223,4 @@ E:\Year 3\SA\MartSystem\Martsystem\MartSystem\bin\Debug\pt\Microsoft.ReportViewe
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Quantity_Type.resources
