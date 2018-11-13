@@ -128,6 +128,7 @@ F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Stock.reso
 F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.ImportData.resources
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Import.resources
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.ImportData.resources
+<<<<<<< HEAD
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.exe.config
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Reports.ReportInvoice.resources
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\bin\Debug\SqlServerTypes\x64\msvcr120.dll
@@ -224,3 +225,5 @@ E:\Year 3\SA\MartSystem\Martsystem\MartSystem\bin\Debug\ru\Microsoft.ReportViewe
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 F:\Team Project\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Quantity_Type.resources
+=======
+>>>>>>> f363185e1235f91b2b7b03ab4501bc58a44e8428

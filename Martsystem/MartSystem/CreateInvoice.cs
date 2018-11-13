@@ -16,26 +16,93 @@ namespace MartSystem
         public CreateInvoice()
         {
             InitializeComponent();
+            
         }
 
+        public CreateInvoice(DataTable dtInvoiceData)
+        {
+            InitializeComponent();
+            btnSave.Width = flowLayoutPanel1.Width;
+            this.dtInvoiceData = dtInvoiceData;
+        }
+
+        public CreateInvoice(DataRow dataRowInvoice)
+        {
+            InitializeComponent();
+            this.dataRowInvoice = dataRowInvoice;
+            btnDelete.Visible= txtDate.Visible = true;
+            btnSave.Width = btnDelete.Width;
+            txtInvoiceID.Text = dataRowInvoice["Invoice ID"] + "";
+
+            txtDate.Text = dataRowInvoice["Date Created"] + "";
+
+            double n = double.Parse(dataRowInvoice["Dollars"] + "");
+            txtRecieveEng.Text = n.ToString("#,##0.00");
+
+            n = double.Parse(dataRowInvoice["Riel"] + "");
+            txtRecieveKh.Text = n.ToString("#,##0");
+
+            n = double.Parse(dataRowInvoice["rate"] + "");
+            txtRate.Text = n.ToString("#,##0");
+
+
+            n = double.Parse(txtGrandEng.Text);
+            n *= double.Parse(txtRate.Text, System.Globalization.NumberStyles.AllowThousands);
+
+            txtGrandKh.Text = n.ToString("#,##0");
+
+            txtReceive_LostFocus(txtRecieveEng, null);
+
+
+
+
+            sql = "select ProName,qtyType,i.qty,UnitPrice,p.proId from InvoiceDetail i join Product p on i.ProID=p.ProID;";
+
+            dataCon.Con.Open();
+            SqlDataReader dataReader = dataCon.ExecuteQry(sql);
+            
+            while (dataReader.Read())
+            {
+                dgvInvoiceDetail.Rows.Add(dataReader.GetString(0), dataReader.GetString(1), "+",Convert.ToDouble(dataReader.GetValue(2)), "-",Convert.ToDouble(dataReader.GetValue(3)), "0", "x", dataReader.GetString(4));
+            }
+
+            dataCon.Con.Close();
+
+        }
+
+
+        
+
+        DataRow dataRowInvoice;
         DataTable dtProduct = new DataTable();
         string sql;
-        double total;
+        double total,subtotal,oldSubTotal, recieve, qtyForEndEdit;
+        int id;
+        DataTable dtInvoiceData;
+
+
         private void CreateInvoice_Load(object sender, EventArgs e)
         {
-            dataCon.getRate();
+            if (dataRowInvoice == null)
+            {
+                dataCon.getRate();
+                txtRate.Text = dataCon.rate.ToString("#,##0");
 
-            txtRate.Text = dataCon.rate.ToString("#,##0");
+                dataCon.Con.Open();
+                sql = "newGetAutoID 'invid','_','invoice';";
+                SqlDataReader dataReader = dataCon.ExecuteQry(sql);
+                dataReader.Read();
+                id = dataReader.GetInt32(0);
+                txtInvoiceID.Text = id.ToString("Inv_000");
+                dataCon.Con.Close();
+            }
+           
             sql = "select Barcode,proname,qty,QtyType,UnitPrice,proID from product;";
             SqlDataAdapter dataAdapter = new SqlDataAdapter(sql,dataCon.Con);
 
             dataAdapter.Fill(dtProduct);
 
 
-
-            //dgvInvoiceDetail.Rows.Add("Coca", "Can", "+", "3", "-", 0.5.ToString("#,##0.00"), 1.5003424.ToString("#,##0.00"), "x");
-
-            //dgvInvoiceDetail.Rows.Add("Coca", "Can", "+", "3", "-", 0.5.ToString("#,##0.00"), 1.5003424.ToString("#,##0.00"), "x");
 
             dgvInvoiceDetail.Width = panel10.Width - panel2.Width;
 
@@ -46,13 +113,25 @@ namespace MartSystem
             }
             txtBarcode.Focus();
 
-            dataCon.Con.Open();
-            sql = "newGetAutoID 'invid','_','invoice';";
-            SqlDataReader dataReader = dataCon.ExecuteQry(sql);
-            dataReader.Read();
-            txtInvoiceID.Text = dataReader.GetInt32(0).ToString("Inv_000");
-            dataCon.Con.Close();
+           
+
+            txtRecieveEng.LostFocus += new EventHandler(txtReceive_LostFocus);
+            txtRecieveKh.LostFocus += new EventHandler(txtReceive_LostFocus);
+
+            if (dataRowInvoice != null)
+            {
+                foreach(DataGridViewRow temp in dgvInvoiceDetail.Rows)
+                {
+                    DataRow[] dataRow = dtProduct.Select("proID='" + temp.Cells["proID"].Value + "'");
+
+                    if (dataRow.Length == 1)
+                        dataRow[0]["qty"] = double.Parse(dataRow[0]["qty"] + "") + double.Parse(temp.Cells["qty"].Value + "");
+
+                }
+            }
         }
+
+
 
         private void dgvInvoiceDetail_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -109,7 +188,7 @@ namespace MartSystem
 
             ShowGrandTotalAndChange();
         }
-        double subtotal;
+       
         void getSubTotalAndGrandTotal(int rowIndex ,double qty)
         {
             total -=double.Parse(dgvInvoiceDetail.Rows[rowIndex].Cells[6].Value + "");
@@ -128,30 +207,60 @@ namespace MartSystem
             ShowGrandTotalAndChange();
         }
 
-        double oldSubTotal;
+        
         void ShowGrandTotalAndChange()
         {
-            
-            double totalKh = total * dataCon.rate;
             txtGrandEng.Text = total.ToString("#,##0.00");
+
+            double totalKh = total * int.Parse(txtRate.Text,System.Globalization.NumberStyles.AllowThousands);
+            roundKhMoney(ref totalKh);
             txtGrandKh.Text = totalKh.ToString("#,##0");
 
             showChange();
         }
 
 
-        void showChange()
+        void roundKhMoney(ref double khMoney)
         {
-            if (recieve != 0&&total!=0)
+            double m = khMoney;
+
+            if (m % 100 < 50)
             {
-                double change = total - recieve;
-                txtChangeEng.Text = change.ToString("#,##0.00");
-                txtChangeKh.Text = (change * int.Parse(txtRate.Text, System.Globalization.NumberStyles.AllowThousands)).ToString("#,##0");
+                khMoney = Math.Abs(khMoney) - (khMoney % 100);
             }
+            else
+            {
+                khMoney = Math.Abs(khMoney) - (khMoney % 100)+100;
+            }
+
+            if (m < 0)
+                khMoney *= -1;
+            
         }
 
-        double qtyForEndEdit;
-       
+        void showChange()
+        {
+            double change = recieve - total;
+
+            double changeKh = change * int.Parse(txtRate.Text, System.Globalization.NumberStyles.AllowThousands);
+            roundKhMoney(ref changeKh);
+
+            if (changeKh == 0)
+            {
+                change = 0;
+                recieve = total;
+            }
+
+
+            txtChangeEng.Text = change.ToString("#,##0.00");
+
+            txtChangeKh.Text = changeKh.ToString("#,##0");
+
+
+        }
+
+
+
         private void dgvInvoiceDetail_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
         {
             qtyForEndEdit = double.Parse(dgvInvoiceDetail.Rows[e.RowIndex].Cells[3].Value + "");
@@ -178,10 +287,7 @@ namespace MartSystem
         {
             foreach (Control temp in panel.Controls.OfType<TextBox>())
             {
-                string name = temp.Name;
-                string suffix = name.Substring(name.Length - 3, 3);
-
-                if (suffix == "Eng")
+                if (temp.Name.EndsWith ("Eng"))
                 {
                     temp.Visible = !temp.Visible;
                     break;
@@ -202,7 +308,7 @@ namespace MartSystem
 
         private void dataGridViewTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ("0123456789\b.".IndexOf(e.KeyChar) == -1)
+            if ("0123456789\b".IndexOf(e.KeyChar) == -1)
             {
                 e.KeyChar = '\0';
             }
@@ -219,7 +325,7 @@ namespace MartSystem
 
                 DataGridViewRow drInDGV = dgvInvoiceDetail.Rows
                 .Cast<DataGridViewRow>()
-                 .Where(r => r.Cells["ProName"].Value.ToString().Equals(dr[0]["ProName"]))
+                 .Where(r => r.Cells["ProID"].Value.ToString().Equals(dr[0]["proID"]))
                 .FirstOrDefault();
 
                
@@ -299,19 +405,10 @@ namespace MartSystem
                 e.KeyChar = '\0';
         }
 
-        private void txtRecieveKh_Leave(object sender, EventArgs e)
-        {
-
-        }
 
 
-        private void txtRecieveEng_Leave(object sender, EventArgs e)
-        {
-            double recieveEng = double.Parse(txtRecieveEng.Text);
-            txtRecieveEng.Text = recieveEng.ToString("#,##0.00");
-           
 
-        }
+
 
         private void cbProduct_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -325,13 +422,44 @@ namespace MartSystem
         }
 
 
-        double recieve;
-        private void txtRecieveKh_TextChanged(object sender, EventArgs e)
-        {
-            double recieveKh =double.Parse(txtRecieveKh.Text);
-            double recieveEng = double.Parse(txtRecieveEng.Text);
 
-            recieve = (recieveKh) / int.Parse(txtRate.Text,System.Globalization.NumberStyles.AllowThousands) + recieveEng;
+        private void txtReceive_LostFocus(object sender, EventArgs e)
+        {
+            double recieveKh=0, recieveEng=0;
+            try
+            {
+                 recieveKh = double.Parse(txtRecieveKh.Text);
+                if (recieveKh % 100 != 0)
+                    throw new FormatException();
+            }
+            catch (FormatException)
+            {
+               
+                txtRecieveKh.Text = "0";
+            }
+
+            try
+            {
+                recieveEng = double.Parse(txtRecieveEng.Text);
+            }
+            catch (FormatException)
+            {
+                txtRecieveEng.Text = "0.00";
+            }
+
+
+
+            recieve = Math.Round(recieveKh / int.Parse(txtRate.Text,System.Globalization.NumberStyles.AllowThousands),2) + recieveEng;
+
+            TextBox txt = (TextBox)sender;
+
+            double amountInTxt = double.Parse(txt.Text);
+
+            if (txt.Name.EndsWith("Eng"))
+                txt.Text = amountInTxt.ToString("#,##0.00");
+            else
+                txt.Text = amountInTxt.ToString("#,##0");
+
 
             showChange();
         }
@@ -343,24 +471,68 @@ namespace MartSystem
             ShowGrandTotalAndChange();
         }
 
+        private void CreateInvoice_FormClosed(object sender, FormClosedEventArgs e)
+        {
+           
+        }
+
+        private void cbProduct_KeyPress(object sender, KeyPressEventArgs e)
+        {
+          
+        }
+
+        private void txtGrandEng_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        double FormatStringToNumber(String number)
+        {
+            string[] n = number.Split(',');
+
+            string result="";
+            foreach (string temp in n)
+                result += temp+"";
+
+            return double.Parse(result);
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
             Dictionary<string, double> qtyProductToRemove = new Dictionary<string, double>();
 
             if (recieve >= total && total > 0)
             {
+                //comment this line when done testing
+                    UserLoginDetail.empID = "Emp_001";
+                    UserLoginDetail.fName = "Vut";
+                    UserLoginDetail.lName = "Pov";
+                //
+
                 DateTime now = DateTime.Now;
-                sql = "insert into invoice values('"+txtInvoiceID.Text+"','"+now+"',"+total+","+txtRate.Text+","+txtRecieveEng.Text+","+txtRecieveKh.Text+",'"+UserLoginDetail.empID+"')";
+                double recieveKh = FormatStringToNumber(txtRecieveKh.Text);
+                double recieveEng = FormatStringToNumber(txtRecieveEng.Text);
+
+                if (dataRowInvoice == null)
+                {
+                    sql = "insert into invoice values('" + txtInvoiceID.Text + "','" + now + "'," + total + "," + dataCon.rate + "," + recieveEng + "," + recieveKh + ",'" + UserLoginDetail.empID + "');";
+                }
+                else
+                {
+                    sql += "delete from invoiceDetail where invID='" + txtInvoiceID.Text + "';";
+                }
+
+                
                 sql += "insert into invoiceDetail(invID,ProID,qty,SubTotal) values";
 
                 foreach (DataGridViewRow temp in dgvInvoiceDetail.Rows)
                 {
-                    sql += "("+txtInvoiceID.Text+","+temp.Cells["ProName"] +",'"+temp.Cells["proID"]+"',"+temp.Cells["Qty"]+","+temp.Cells["ColSubtotal"] +"),";
+                    sql += "('"+txtInvoiceID.Text+"','"+temp.Cells["proID"].Value+"',"+temp.Cells["Qty"].Value+","+temp.Cells["ColSubtotal"].Value +"),";
 
-                    qtyProductToRemove.Add(temp.Cells["ProName"]+"", double.Parse(temp.Cells["Qty"] + ""));
+                    qtyProductToRemove.Add(temp.Cells["ProID"].Value +"", Convert.ToDouble(temp.Cells["Qty"].Value));
                 }
 
-                sql = sql.Substring(0, sql.Length - 1) + ");";
+                sql = sql.Substring(0, sql.Length - 1) + ";";
 
                 bool error = false;
                 dataCon.ExecuteActionQry(sql, ref error);
@@ -369,17 +541,57 @@ namespace MartSystem
                 {
                     foreach(DataRow temp in dtProduct.Rows)
                     {
-                        if (qtyProductToRemove.ContainsKey(temp["proname"] + ""))
+                        if (qtyProductToRemove.ContainsKey(temp["proID"] + ""))
                         {
-                            temp["qty"] = (double)temp["qty"] - qtyProductToRemove["proname"];
+                            temp["qty"] = (double)temp["qty"] - qtyProductToRemove[temp["proID"]+""];
                         }
                     }
 
-                    btnClean_Click(null, null);
-
                     MessageBox.Show("Saved", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (dtInvoiceData != null)
+                    {
+                        dtInvoiceData.Rows.Add(txtInvoiceID.Text, now, txtGrandEng.Text, dataCon.rate, recieveEng, recieveKh, UserLoginDetail.fName + " " + UserLoginDetail.lName);
+                    }
+                    else
+                    {
+                        dataRowInvoice["Total"] = txtGrandEng.Text;
+                        dataRowInvoice["Dollars"] = recieveEng;
+                        dataRowInvoice["Riel"] = recieveKh;
+                        this.Close();
+                        return;
+                    }
+
+                    btnClean_Click(null, null);
+                    
+                    total =
+                        oldSubTotal =
+                        recieve =
+                        subtotal = 0;
+
+                    txtGrandEng.Text = 
+                        txtRecieveEng.Text=
+                        txtChangeEng.Text= "0.00";
+
+                    txtGrandKh.Text =
+                        txtRecieveKh.Text =
+                        txtChangeKh.Text = "0";
+
+                    id++;
+                    txtInvoiceID.Text = id.ToString("Inv_000");
+
+                    
                 }
             }
         }
+
+
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
     }
 }

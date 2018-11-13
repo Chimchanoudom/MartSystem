@@ -17,6 +17,7 @@ namespace MartSystem
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
+<<<<<<< HEAD
 
 
 
@@ -28,6 +29,9 @@ namespace MartSystem
 
 
 
+=======
+            Application.Run(new Stock());
+>>>>>>> f363185e1235f91b2b7b03ab4501bc58a44e8428
         }
     }
 }
