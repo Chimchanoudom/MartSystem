@@ -17,7 +17,25 @@ namespace MartSystem
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
+<<<<<<< HEAD
             Application.Run(new InvoiceData());
+=======
+<<<<<<< HEAD
+
+
+
+            //Application.Run(new ExpenseData());
+
+            Application.Run(new Quantity_Type());   
+
+
+
+
+
+=======
+            Application.Run(new Stock());
+>>>>>>> f363185e1235f91b2b7b03ab4501bc58a44e8428
+>>>>>>> 88d4eeb45b32aee3c4b560f9b4ec7cbebbd021ed
         }
     }
 }

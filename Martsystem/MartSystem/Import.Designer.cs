@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -44,14 +45,14 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.btnSave = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.btnNewImport = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dateImport = new System.Windows.Forms.DateTimePicker();
             this.txtTotal = new System.Windows.Forms.TextBox();
-            this.txtEmpl = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.label18 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -62,6 +63,7 @@
             this.cmSupllierName = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.txtEmpl = new System.Windows.Forms.Label();
             this.LblID = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -73,12 +75,15 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.ProductName = new System.Windows.Forms.ComboBox();
+            this.cmProductName = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataImport = new System.Windows.Forms.DataGridView();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -90,6 +95,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Quallity)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataImport)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -110,7 +116,7 @@
             this.groupBox6.Controls.Add(this.groupBox7);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox6.Location = new System.Drawing.Point(853, 0);
+            this.groupBox6.Location = new System.Drawing.Point(1038, 0);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(458, 255);
             this.groupBox6.TabIndex = 5;
@@ -237,40 +243,26 @@
             this.groupBox2.Controls.Add(this.panel6);
             this.groupBox2.Controls.Add(this.panel3);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox2.Location = new System.Drawing.Point(401, 0);
+            this.groupBox2.Location = new System.Drawing.Point(474, 0);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox2.Size = new System.Drawing.Size(452, 255);
+            this.groupBox2.Size = new System.Drawing.Size(564, 255);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = " ";
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.btnSave);
             this.panel6.Controls.Add(this.btnDelete);
             this.panel6.Controls.Add(this.btnEdit);
             this.panel6.Controls.Add(this.btnAdd);
+            this.panel6.Controls.Add(this.btnNewImport);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(5, 209);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(442, 48);
+            this.panel6.Size = new System.Drawing.Size(554, 48);
             this.panel6.TabIndex = 4;
-            // 
-            // btnSave
-            // 
-            this.btnSave.BackColor = System.Drawing.Color.Blue;
-            this.btnSave.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnSave.FlatAppearance.BorderSize = 0;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(333, 0);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(106, 48);
-            this.btnSave.TabIndex = 8;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = false;
             // 
             // btnDelete
             // 
@@ -279,10 +271,10 @@
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(222, 0);
+            this.btnDelete.Location = new System.Drawing.Point(328, 0);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(111, 48);
-            this.btnDelete.TabIndex = 7;
+            this.btnDelete.TabIndex = 11;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
             // 
@@ -293,10 +285,10 @@
             this.btnEdit.FlatAppearance.BorderSize = 0;
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(111, 0);
+            this.btnEdit.Location = new System.Drawing.Point(217, 0);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(111, 48);
-            this.btnEdit.TabIndex = 6;
+            this.btnEdit.TabIndex = 10;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
             // 
@@ -306,18 +298,32 @@
             this.btnAdd.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(0, 0);
+            this.btnAdd.Location = new System.Drawing.Point(106, 0);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(111, 48);
-            this.btnAdd.TabIndex = 5;
+            this.btnAdd.TabIndex = 9;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnNewImport
+            // 
+            this.btnNewImport.BackColor = System.Drawing.Color.Blue;
+            this.btnNewImport.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnNewImport.FlatAppearance.BorderSize = 0;
+            this.btnNewImport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNewImport.ForeColor = System.Drawing.Color.White;
+            this.btnNewImport.Location = new System.Drawing.Point(0, 0);
+            this.btnNewImport.Name = "btnNewImport";
+            this.btnNewImport.Size = new System.Drawing.Size(106, 48);
+            this.btnNewImport.TabIndex = 8;
+            this.btnNewImport.Text = "Add New";
+            this.btnNewImport.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.dateImport);
             this.panel3.Controls.Add(this.txtTotal);
-            this.panel3.Controls.Add(this.txtEmpl);
             this.panel3.Controls.Add(this.label18);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.label17);
@@ -328,12 +334,13 @@
             this.panel3.Controls.Add(this.cmSupllierName);
             this.panel3.Controls.Add(this.label14);
             this.panel3.Controls.Add(this.label15);
+            this.panel3.Controls.Add(this.txtEmpl);
             this.panel3.Controls.Add(this.LblID);
             this.panel3.Controls.Add(this.label16);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(5, 25);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(442, 184);
+            this.panel3.Size = new System.Drawing.Size(554, 184);
             this.panel3.TabIndex = 3;
             // 
             // dateImport
@@ -346,17 +353,17 @@
             // 
             // txtTotal
             // 
+            this.txtTotal.ContextMenuStrip = this.contextMenuStrip1;
             this.txtTotal.Location = new System.Drawing.Point(181, 148);
             this.txtTotal.Name = "txtTotal";
+            this.txtTotal.ShortcutsEnabled = false;
             this.txtTotal.Size = new System.Drawing.Size(222, 27);
             this.txtTotal.TabIndex = 14;
             // 
-            // txtEmpl
+            // contextMenuStrip1
             // 
-            this.txtEmpl.Location = new System.Drawing.Point(181, 80);
-            this.txtEmpl.Name = "txtEmpl";
-            this.txtEmpl.Size = new System.Drawing.Size(222, 27);
-            this.txtEmpl.TabIndex = 16;
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // label18
             // 
@@ -423,6 +430,8 @@
             // 
             // cmSupllierName
             // 
+            this.cmSupllierName.ContextMenuStrip = this.contextMenuStrip1;
+            this.cmSupllierName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmSupllierName.FormattingEnabled = true;
             this.cmSupllierName.Location = new System.Drawing.Point(181, 114);
             this.cmSupllierName.Name = "cmSupllierName";
@@ -447,6 +456,15 @@
             this.label15.TabIndex = 11;
             this.label15.Text = ":";
             // 
+            // txtEmpl
+            // 
+            this.txtEmpl.AutoSize = true;
+            this.txtEmpl.Location = new System.Drawing.Point(181, 85);
+            this.txtEmpl.Name = "txtEmpl";
+            this.txtEmpl.Size = new System.Drawing.Size(27, 21);
+            this.txtEmpl.TabIndex = 12;
+            this.txtEmpl.Text = "ID";
+            // 
             // LblID
             // 
             this.LblID.AutoSize = true;
@@ -467,6 +485,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.panel4);
             this.groupBox1.Controls.Add(this.Quallity);
             this.groupBox1.Controls.Add(this.txtSubTotal);
             this.groupBox1.Controls.Add(this.txtPrice);
@@ -475,7 +494,7 @@
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.ProductName);
+            this.groupBox1.Controls.Add(this.cmProductName);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
@@ -484,14 +503,15 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox1.Size = new System.Drawing.Size(401, 255);
+            this.groupBox1.Size = new System.Drawing.Size(474, 255);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Import Data";
             // 
             // Quallity
             // 
-            this.Quallity.Location = new System.Drawing.Point(158, 71);
+            this.Quallity.ContextMenuStrip = this.contextMenuStrip1;
+            this.Quallity.Location = new System.Drawing.Point(158, 114);
             this.Quallity.Maximum = new decimal(new int[] {
             1410065408,
             2,
@@ -500,30 +520,29 @@
             this.Quallity.Name = "Quallity";
             this.Quallity.Size = new System.Drawing.Size(222, 27);
             this.Quallity.TabIndex = 3;
-            this.Quallity.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             // 
             // txtSubTotal
             // 
-            this.txtSubTotal.Location = new System.Drawing.Point(158, 142);
+            this.txtSubTotal.ContextMenuStrip = this.contextMenuStrip1;
+            this.txtSubTotal.Location = new System.Drawing.Point(158, 185);
             this.txtSubTotal.Name = "txtSubTotal";
+            this.txtSubTotal.ShortcutsEnabled = false;
             this.txtSubTotal.Size = new System.Drawing.Size(222, 27);
             this.txtSubTotal.TabIndex = 2;
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(158, 107);
+            this.txtPrice.ContextMenuStrip = this.contextMenuStrip1;
+            this.txtPrice.Location = new System.Drawing.Point(158, 150);
             this.txtPrice.Name = "txtPrice";
+            this.txtPrice.ShortcutsEnabled = false;
             this.txtPrice.Size = new System.Drawing.Size(222, 27);
             this.txtPrice.TabIndex = 2;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(138, 145);
+            this.label8.Location = new System.Drawing.Point(138, 188);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(14, 21);
             this.label8.TabIndex = 0;
@@ -532,7 +551,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(138, 110);
+            this.label6.Location = new System.Drawing.Point(138, 153);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(14, 21);
             this.label6.TabIndex = 0;
@@ -541,7 +560,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 145);
+            this.label7.Location = new System.Drawing.Point(12, 188);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(82, 21);
             this.label7.TabIndex = 0;
@@ -550,7 +569,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(138, 75);
+            this.label4.Location = new System.Drawing.Point(138, 118);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(14, 21);
             this.label4.TabIndex = 0;
@@ -559,24 +578,26 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 110);
+            this.label5.Location = new System.Drawing.Point(12, 153);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 21);
             this.label5.TabIndex = 0;
             this.label5.Text = "Unite Price";
             // 
-            // ProductName
+            // cmProductName
             // 
-            this.ProductName.FormattingEnabled = true;
-            this.ProductName.Location = new System.Drawing.Point(158, 37);
-            this.ProductName.Name = "ProductName";
-            this.ProductName.Size = new System.Drawing.Size(222, 29);
-            this.ProductName.TabIndex = 1;
+            this.cmProductName.ContextMenuStrip = this.contextMenuStrip1;
+            this.cmProductName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmProductName.FormattingEnabled = true;
+            this.cmProductName.Location = new System.Drawing.Point(158, 37);
+            this.cmProductName.Name = "cmProductName";
+            this.cmProductName.Size = new System.Drawing.Size(222, 29);
+            this.cmProductName.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 75);
+            this.label3.Location = new System.Drawing.Point(12, 118);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 21);
             this.label3.TabIndex = 0;
@@ -642,6 +663,40 @@
             this.dataImport.Size = new System.Drawing.Size(1444, 548);
             this.dataImport.TabIndex = 3;
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.checkBox7);
+            this.panel4.Controls.Add(this.checkBox6);
+            this.panel4.Location = new System.Drawing.Point(158, 72);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(308, 36);
+            this.panel4.TabIndex = 12;
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.checkBox6.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox6.Location = new System.Drawing.Point(0, 0);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(137, 36);
+            this.checkBox6.TabIndex = 0;
+            this.checkBox6.Text = "Quatity Normal";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            // 
+            // checkBox7
+            // 
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.Dock = System.Windows.Forms.DockStyle.Left;
+            this.checkBox7.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox7.Location = new System.Drawing.Point(137, 0);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(162, 36);
+            this.checkBox7.TabIndex = 0;
+            this.checkBox7.Tag = "";
+            this.checkBox7.Text = "Qualtity by Packet";
+            this.checkBox7.UseVisualStyleBackColor = true;
+            // 
             // Import
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -656,6 +711,7 @@
             this.Name = "Import";
             this.Text = "Import";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Import_Load);
             this.panel1.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
@@ -671,6 +727,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Quallity)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataImport)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -681,7 +739,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtTotal;
-        private System.Windows.Forms.TextBox txtEmpl;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label17;
@@ -700,16 +757,13 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox ProductName;
+        private System.Windows.Forms.ComboBox cmProductName;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnNewImport;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button btnCancel;
@@ -726,5 +780,13 @@
         private System.Windows.Forms.Label LblID;
         private System.Windows.Forms.DataGridView dataImport;
         private System.Windows.Forms.NumericUpDown Quallity;
+        private System.Windows.Forms.Label txtEmpl;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.CheckBox checkBox6;
     }
 }
