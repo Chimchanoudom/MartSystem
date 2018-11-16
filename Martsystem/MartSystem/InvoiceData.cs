@@ -45,7 +45,7 @@ namespace MartSystem
 
         private void dgvInvoiceData_SelectionChanged(object sender, EventArgs e)
         {
-            editToolStripMenuItem.Visible = dgvInvoiceData.SelectedRows.Count == 1;
+            logToolStripMenuItem.Visible= editToolStripMenuItem.Visible = dgvInvoiceData.SelectedRows.Count == 1;
         }
 
         private void addToolStripMenuItem_Click(object sender, EventArgs e)
@@ -61,6 +61,17 @@ namespace MartSystem
 
             CreateInvoice createInvoice = new CreateInvoice(selectedRow);
             createInvoice.ShowDialog();
+        }
+
+        private void logToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int selectedRowIndex = dgvInvoiceData.SelectedRows[0].Index;
+            string id = dgvInvoiceData.Rows[selectedRowIndex].Cells["Invoice ID"].Value + "";
+            sql = "select InvLogID 'Invoice Log ID',editdate 'Edit Date',CONCAT(fname,' ',Lname) 'Edit by' from InvoiceLog i join Employee e on i.EditBy=e.EmpID where invID='"+id+"';";
+
+            LogData invoiceLog = new LogData("Log for Invoice " + id,sql);
+
+            invoiceLog.ShowDialog();
         }
     }
 }

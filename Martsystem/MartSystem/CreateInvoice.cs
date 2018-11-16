@@ -519,6 +519,10 @@ namespace MartSystem
                 }
                 else
                 {
+                    sql = "insert into invoiceLog (editDate,EditBy,InvID) values('" + now + "','" + UserLoginDetail.empID + "','" + txtInvoiceID.Text + "');";
+
+                    sql += "update invoice set Total=" + total + ",recieveEng=" + recieveEng + ",recieveKh=" + recieveKh + " where invID='" + txtInvoiceID.Text + "';";
+
                     sql += "delete from invoiceDetail where invID='" + txtInvoiceID.Text + "';";
                 }
 

@@ -57,7 +57,6 @@ namespace MartSystem
             else
             {
                 rate = 4000;
-                
             }
         }
 
