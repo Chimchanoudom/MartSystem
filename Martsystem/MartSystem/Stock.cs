@@ -23,7 +23,7 @@ namespace MartSystem
 
         private void Stock_Load(object sender, EventArgs e)
         {
-            string sql = "select stockid 'Stock ID', ProName 'Product Name',importDate 'Import Date',s.Qty 'Quantity',id.UnitPrice 'Unit Price',ExpiredDate 'Expire Date' from stock s join Product p on s.ProID=p.ProID join Import i on s.ImportID=i.ImportID join ImportDetail id on (id.ImportID=s.ImportID and id.ProID=s.ProID);";
+            string sql = "select stockid 'Stock ID', ProName 'Product Name',importDate 'Import Date',s.Qty 'Quantity',s.UnitPrice 'Unit Price',ExpiredDate 'Expire Date' from stock s join Product p on s.ProID=p.ProID join Import i on s.ImportID=i.ImportID ;";
 
             SqlDataAdapter dataAdaptor = new SqlDataAdapter(sql,dataCon.Con);
 
@@ -40,13 +40,21 @@ namespace MartSystem
         {
             string filter = "";
             if (rndProductName.Checked) filter = "[Product Name]=";
-            else if (rndImportDate.Checked) filter = "[Import Date]=";
-            else if (rndExpiredDate.Checked) filter = "[Expire Date]=";
+            
 
-            DateTime date = new DateTime(dtDate.Value.Year, dtDate.Value.Month, dtDate.Value.Day, 0, 0,0);
 
-            if (rndImportDate.Checked || rndExpiredDate.Checked) filter += "'" + date + "'";
+
+            if (rndImportDate.Checked)
+            {
+                string[] st = txtSearch.Text.Split('-');
+                filter = "[Import Date]>='" + st[0] + "' AND [Import Date] <= '" + st[1] + "'";
+            }
             else if (rndProductName.Checked) filter += "'" + txtSearch.Text + "'";
+            else if (rndExpiredDate.Checked)
+            {
+                string[] st = txtSearch.Text.Split('-');
+                filter = "[Expire Date]>='" + st[0] + "' AND [Expire Date] <= '" + st[1] + "'";
+            }
 
 
 
@@ -55,12 +63,21 @@ namespace MartSystem
 
         private void rndProductName_CheckedChanged(object sender, EventArgs e)
         {
-            dtDate.Visible = !rndProductName.Checked;
+            
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
             dtStock.DefaultView.RowFilter = string.Empty;
+        }
+
+        private void rndImportDate_Click(object sender, EventArgs e)
+        {
+            SearchDate searchDate = new SearchDate(txtSearch);
+            searchDate.ShowDialog();
+
+            if (searchDate.DialogResult != DialogResult.Yes)
+                rndProductName.Checked = true;
         }
     }
 }

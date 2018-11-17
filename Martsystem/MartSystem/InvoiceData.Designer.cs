@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.dtDate = new System.Windows.Forms.DateTimePicker();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -72,7 +71,6 @@
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.dtDate);
             this.panel7.Controls.Add(this.btnCancel);
             this.panel7.Controls.Add(this.btnSearch);
             this.panel7.Controls.Add(this.txtSearch);
@@ -82,15 +80,6 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(640, 48);
             this.panel7.TabIndex = 1;
-            // 
-            // dtDate
-            // 
-            this.dtDate.CustomFormat = "dd/MM/yyyy";
-            this.dtDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtDate.Location = new System.Drawing.Point(0, 1);
-            this.dtDate.Name = "dtDate";
-            this.dtDate.Size = new System.Drawing.Size(300, 45);
-            this.dtDate.TabIndex = 8;
             // 
             // btnCancel
             // 
@@ -106,6 +95,7 @@
             this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSearch
             // 
@@ -121,6 +111,7 @@
             this.btnSearch.TabIndex = 6;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearch
             // 
@@ -173,6 +164,7 @@
             this.rndDateCreated.TabStop = true;
             this.rndDateCreated.Text = "Date Created";
             this.rndDateCreated.UseVisualStyleBackColor = true;
+            this.rndDateCreated.Click += new System.EventHandler(this.rndDateCreated_Click);
             // 
             // rndID
             // 
@@ -232,19 +224,19 @@
             this.editToolStripMenuItem,
             this.logToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 104);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(107, 76);
             // 
             // addToolStripMenuItem
             // 
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(106, 24);
             this.addToolStripMenuItem.Text = "Add";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(106, 24);
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Visible = false;
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
@@ -252,8 +244,9 @@
             // logToolStripMenuItem
             // 
             this.logToolStripMenuItem.Name = "logToolStripMenuItem";
-            this.logToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.logToolStripMenuItem.Size = new System.Drawing.Size(106, 24);
             this.logToolStripMenuItem.Text = "Log";
+            this.logToolStripMenuItem.Visible = false;
             this.logToolStripMenuItem.Click += new System.EventHandler(this.logToolStripMenuItem_Click);
             // 
             // InvoiceData
@@ -287,7 +280,6 @@
 
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.DateTimePicker dtDate;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtSearch;

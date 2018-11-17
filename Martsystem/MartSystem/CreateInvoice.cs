@@ -79,7 +79,7 @@ namespace MartSystem
         double total,subtotal,oldSubTotal, recieve, qtyForEndEdit;
         int id;
         DataTable dtInvoiceData;
-
+        bool error;
 
         private void CreateInvoice_Load(object sender, EventArgs e)
         {
@@ -481,6 +481,26 @@ namespace MartSystem
           
         }
 
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this invoice?","", MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+
+            if (dialogResult==DialogResult.Yes)
+            {
+                sql = "delete invoice where invid='" + txtInvoiceID.Text + "'";
+                error = false;
+                dataCon.ExecuteActionQry(sql, ref error);
+
+                if (!error)
+                {
+                    MessageBox.Show("Delete Successful", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    dataRowInvoice.Delete();
+                    Close();
+                }
+            }
+        }
+
         private void txtGrandEng_TextChanged(object sender, EventArgs e)
         {
             
@@ -538,7 +558,7 @@ namespace MartSystem
 
                 sql = sql.Substring(0, sql.Length - 1) + ";";
 
-                bool error = false;
+                error = false;
                 dataCon.ExecuteActionQry(sql, ref error);
 
                 if (!error)

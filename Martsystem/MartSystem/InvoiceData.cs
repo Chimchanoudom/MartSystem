@@ -24,7 +24,7 @@ namespace MartSystem
         private void InvoiceData_Load(object sender, EventArgs e)
         {
            
-            sql = "select InvID 'Invoice ID',DateCreated 'Date Created',total 'Total',rate 'Rate',recieveEng 'Dollars',recieveKh 'Riel',CONCAT(fname,' ',Lname) 'Employee' from Invoice i join Employee e on i.EmpID=e.EmpID;";
+            sql = "select InvID 'Invoice ID',DateCreated 'Date Created',total 'Total',rate 'Rate',recieveEng 'Dollars',recieveKh 'Riel',CONCAT(fname,' ',Lname) 'Employee' from Invoice i left join Employee e on i.EmpID=e.EmpID;";
             SqlDataAdapter dataAdaptor = new SqlDataAdapter(sql,dataCon.Con);
 
             dataAdaptor.Fill(dtInvoiceData);
@@ -72,6 +72,46 @@ namespace MartSystem
             LogData invoiceLog = new LogData("Log for Invoice " + id,sql);
 
             invoiceLog.ShowDialog();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string filter = "";
+            if (rndID.Checked)
+                filter = "[Invoice ID]=";
+
+            else if (rndDateCreated.Checked) filter = "[Date Created]";
+
+            if (!rndDateCreated.Checked)
+            {
+                filter += "'" + txtSearch.Text + "'";
+            }
+            else
+            {
+                string[] st = txtSearch.Text.Split('-');
+                filter += ">='" + st[0] + "' AND [Date Created] <= '" + st[1] + "'";
+            }
+
+            dtInvoiceData.DefaultView.RowFilter = filter;
+        }
+
+
+
+        private void rndDateCreated_Click(object sender, EventArgs e)
+        {
+           
+            SearchDate searchDate = new SearchDate(txtSearch);
+            searchDate.ShowDialog();
+
+            if (searchDate.DialogResult != DialogResult.Yes)
+                rndID.Checked = true;
+
+            
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            dtInvoiceData.DefaultView.RowFilter = string.Empty;
         }
     }
 }

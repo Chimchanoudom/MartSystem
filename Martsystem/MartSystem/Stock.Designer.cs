@@ -28,11 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.dtDate = new System.Windows.Forms.DateTimePicker();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -66,7 +63,6 @@
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.dtDate);
             this.panel7.Controls.Add(this.btnCancel);
             this.panel7.Controls.Add(this.btnSearch);
             this.panel7.Controls.Add(this.txtSearch);
@@ -76,17 +72,6 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(555, 32);
             this.panel7.TabIndex = 1;
-            // 
-            // dtDate
-            // 
-            this.dtDate.CustomFormat = "dd/MM/yyyy";
-            this.dtDate.Font = new System.Drawing.Font("Times New Roman", 14F);
-            this.dtDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtDate.Location = new System.Drawing.Point(0, 0);
-            this.dtDate.Name = "dtDate";
-            this.dtDate.Size = new System.Drawing.Size(300, 34);
-            this.dtDate.TabIndex = 8;
-            this.dtDate.Visible = false;
             // 
             // btnCancel
             // 
@@ -157,6 +142,7 @@
             this.rndExpiredDate.TabStop = true;
             this.rndExpiredDate.Text = "Expired Date";
             this.rndExpiredDate.UseVisualStyleBackColor = true;
+            this.rndExpiredDate.Click += new System.EventHandler(this.rndImportDate_Click);
             // 
             // rndImportDate
             // 
@@ -170,6 +156,7 @@
             this.rndImportDate.TabStop = true;
             this.rndImportDate.Text = "Import Date";
             this.rndImportDate.UseVisualStyleBackColor = true;
+            this.rndImportDate.Click += new System.EventHandler(this.rndImportDate_Click);
             // 
             // rndProductName
             // 
@@ -200,23 +187,7 @@
             this.dgvStock.AllowUserToAddRows = false;
             this.dgvStock.AllowUserToDeleteRows = false;
             this.dgvStock.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStock.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvStock.ColumnHeadersHeight = 33;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvStock.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvStock.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvStock.Location = new System.Drawing.Point(0, 0);
             this.dgvStock.MultiSelect = false;
@@ -269,6 +240,5 @@
         private System.Windows.Forms.RadioButton rndProductName;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgvStock;
-        private System.Windows.Forms.DateTimePicker dtDate;
     }
 }

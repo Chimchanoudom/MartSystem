@@ -168,6 +168,12 @@
     <Compile Include="Quantity Type.Designer.cs">
       <DependentUpon>Quantity Type.cs</DependentUpon>
     </Compile>
+    <Compile Include="SearchDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchDate.Designer.cs">
+      <DependentUpon>SearchDate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Stock.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,6 +244,9 @@
     </Compile>
     <EmbeddedResource Include="Quantity Type.resx">
       <DependentUpon>Quantity Type.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchDate.resx">
+      <DependentUpon>SearchDate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Stock.resx">
       <DependentUpon>Stock.cs</DependentUpon>

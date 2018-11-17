@@ -265,8 +265,31 @@ namespace MartSystem
 
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete selected row?","", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+            
+            
             if (dialogResult == DialogResult.No)
                 return;
+
+            dataCon.Con.Open();
+            sql = "select count(*) from invoiceDetail where proID='" + lbProductID.Text + "';";
+            dataReader = dataCon.ExecuteQry(sql);
+            dataReader.Read();
+            int countSoldProduct = dataReader.GetInt32(0);
+            dataCon.Con.Close();
+
+
+            dataCon.Con.Open();
+            sql = "select count(*) from importDetail where proID='" + lbProductID.Text + "';";
+            dataReader.Read();
+            int countImportProduct = dataReader.GetInt32(0);
+            dataCon.Con.Close();
+
+            if (countSoldProduct > 0||countImportProduct>0)
+            {
+                MessageBox.Show("Cannot delete product", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
 
             sql = "delete from product where proid='" + lbProductID.Text + "';";
 
