@@ -95,6 +95,7 @@
             this.Name = "SearchDate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SearchDate";
+            this.Load += new System.EventHandler(this.SearchDate_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

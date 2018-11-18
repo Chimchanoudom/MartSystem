@@ -32,5 +32,10 @@ namespace MartSystem
 
             DialogResult = DialogResult.Yes;
         }
+
+        private void SearchDate_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -381,6 +381,10 @@ namespace MartSystem
 
                 if(qty>(double)dr[0]["Qty"])
                     throw new FormatException();
+
+                getSubTotalAndGrandTotal(e.RowIndex,qty);
+                ShowGrandTotalAndChange();
+                showChange();
             }
             catch (FormatException)
             {
