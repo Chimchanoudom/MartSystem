@@ -36,8 +36,9 @@ namespace MartSystem
         }
 
         public static int rate { get; set; }
+        public static int daysAlmostExp { get; set; }
 
-        public static void getRate()
+        public static void getRateAndDaysAlmostExp()
         {
             if (File.Exists("Rate.avi"))
             {
@@ -57,6 +58,25 @@ namespace MartSystem
             else
             {
                 rate = 4000;
+            }
+
+            if (File.Exists("DaysAlmostExp.avi"))
+            {
+                using (StreamReader sr = new StreamReader("DaysAlmostExp.avi"))
+                {
+                    try
+                    {
+                        daysAlmostExp = int.Parse(sr.ReadLine());
+                    }
+                    catch (FormatException)
+                    {
+                        daysAlmostExp = 30;
+                    }
+                }
+            }
+            else
+            {
+                daysAlmostExp = 30;
             }
         }
 

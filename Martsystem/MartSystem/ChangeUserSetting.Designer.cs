@@ -1,6 +1,6 @@
 ﻿namespace MartSystem
 {
-    partial class ChangeRate
+    partial class ChangeUserSetting
     {
         /// <summary>
         /// Required designer variable.
@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbValue = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.txtRate = new MartSystem.Custom_Controls.NumberTextBox();
             this.SuspendLayout();
             // 
-            // label1
+            // lbValue
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 15);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Rate:";
+            this.lbValue.AutoSize = true;
+            this.lbValue.Location = new System.Drawing.Point(24, 15);
+            this.lbValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbValue.Name = "lbValue";
+            this.lbValue.Size = new System.Drawing.Size(58, 25);
+            this.lbValue.TabIndex = 0;
+            this.lbValue.Text = "Rate:";
             // 
             // btnSave
             // 
@@ -69,7 +69,7 @@
             this.ClientSize = new System.Drawing.Size(327, 98);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtRate);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbValue);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ChangeRate";
@@ -83,7 +83,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbValue;
         private Custom_Controls.NumberTextBox txtRate;
         private System.Windows.Forms.Button btnSave;
     }

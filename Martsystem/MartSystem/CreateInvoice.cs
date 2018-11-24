@@ -85,7 +85,7 @@ namespace MartSystem
         {
             if (dataRowInvoice == null)
             {
-                dataCon.getRate();
+                dataCon.getRateAndDaysAlmostExp();
                 txtRate.Text = dataCon.rate.ToString("#,##0");
 
                 dataCon.Con.Open();

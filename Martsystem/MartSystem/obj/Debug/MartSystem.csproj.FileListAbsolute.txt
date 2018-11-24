@@ -132,7 +132,7 @@ E:\Year 3\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Quantity_Type
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\bin\Debug\DevExpress.BonusSkins.v17.2.dll
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.LogData.resources
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.exe.licenses
-E:\Year 3\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.ChangeRate.resources
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.Custom_Controls.NumberTextBox.resources
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.csprojAssemblyReference.cache
 E:\Year 3\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.SearchDate.resources
+E:\Year 3\SA\MartSystem\Martsystem\MartSystem\obj\Debug\MartSystem.ChangeUserSetting.resources

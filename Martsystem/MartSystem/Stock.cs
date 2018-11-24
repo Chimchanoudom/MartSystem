@@ -24,7 +24,10 @@ namespace MartSystem
         string sql;
         private void Stock_Load(object sender, EventArgs e)
         {
-             sql = "select stockid 'Stock ID', ProName 'Product Name',importDate 'Import Date',s.Qty 'Quantity',s.UnitPrice 'Unit Price',ExpiredDate 'Expire Date' ,case when ExpiredDate<=(select convert(date,GETDATE())) then '1' else '0' end 'isExpired',case when (ExpiredDate<=(select convert(date,GETDATE()+30)) and ExpiredDate>(select convert(date,GETDATE())))  then '1' else '0' end 'isAlmostExpired' from stock s join Product p on s.ProID=p.ProID join Import i on s.ImportID=i.ImportID ;";
+            //Delete this after done testing
+            dataCon.getRateAndDaysAlmostExp();
+            //
+             sql = "select stockid 'Stock ID', ProName 'Product Name',importDate 'Import Date',s.Qty 'Quantity',s.UnitPrice 'Unit Price',ExpiredDate 'Expire Date' ,case when ExpiredDate<=(select convert(date,GETDATE())) then '1' else '0' end 'isExpired',case when (ExpiredDate<=(select convert(date,GETDATE()+"+dataCon.daysAlmostExp+")) and ExpiredDate>(select convert(date,GETDATE())))  then '1' else '0' end 'isAlmostExpired' from stock s join Product p on s.ProID=p.ProID join Import i on s.ImportID=i.ImportID ;";
 
 
             SqlDataAdapter dataAdaptor = new SqlDataAdapter(sql,dataCon.Con);
