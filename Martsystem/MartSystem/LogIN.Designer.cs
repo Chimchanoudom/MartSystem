@@ -65,10 +65,10 @@
             this.btnLogIn.IdleFillColor = System.Drawing.Color.Transparent;
             this.btnLogIn.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnLogIn.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnLogIn.Location = new System.Drawing.Point(14, 5);
-            this.btnLogIn.Margin = new System.Windows.Forms.Padding(5);
+            this.btnLogIn.Location = new System.Drawing.Point(19, 6);
+            this.btnLogIn.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.btnLogIn.Name = "btnLogIn";
-            this.btnLogIn.Size = new System.Drawing.Size(117, 50);
+            this.btnLogIn.Size = new System.Drawing.Size(156, 62);
             this.btnLogIn.TabIndex = 0;
             this.btnLogIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
@@ -93,10 +93,10 @@
             this.btnExite.IdleFillColor = System.Drawing.Color.Transparent;
             this.btnExite.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
             this.btnExite.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.btnExite.Location = new System.Drawing.Point(296, 5);
-            this.btnExite.Margin = new System.Windows.Forms.Padding(5);
+            this.btnExite.Location = new System.Drawing.Point(395, 6);
+            this.btnExite.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.btnExite.Name = "btnExite";
-            this.btnExite.Size = new System.Drawing.Size(117, 50);
+            this.btnExite.Size = new System.Drawing.Size(156, 62);
             this.btnExite.TabIndex = 1;
             this.btnExite.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnExite.Click += new System.EventHandler(this.btnExite_Click);
@@ -110,9 +110,10 @@
             this.panel1.Controls.Add(this.btnLogIn);
             this.panel1.Controls.Add(this.btnExite);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 201);
+            this.panel1.Location = new System.Drawing.Point(0, 248);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(427, 58);
+            this.panel1.Size = new System.Drawing.Size(569, 71);
             this.panel1.TabIndex = 2;
             // 
             // panel2
@@ -122,8 +123,9 @@
             this.panel2.Controls.Add(this.bunifuCustomLabel1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(427, 58);
+            this.panel2.Size = new System.Drawing.Size(569, 71);
             this.panel2.TabIndex = 3;
             // 
             // bunifuCustomLabel1
@@ -133,8 +135,9 @@
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Century Gothic", 24F);
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.Lime;
             this.bunifuCustomLabel1.Location = new System.Drawing.Point(0, 0);
+            this.bunifuCustomLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(425, 56);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(567, 69);
             this.bunifuCustomLabel1.TabIndex = 7777;
             this.bunifuCustomLabel1.Text = "Mart System";
             this.bunifuCustomLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -154,10 +157,10 @@
             this.txtuserName.LineIdleColor = System.Drawing.Color.Gray;
             this.txtuserName.LineMouseHoverColor = System.Drawing.Color.Gray;
             this.txtuserName.LineThickness = 4;
-            this.txtuserName.Location = new System.Drawing.Point(153, 72);
-            this.txtuserName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtuserName.Location = new System.Drawing.Point(204, 89);
+            this.txtuserName.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtuserName.Name = "txtuserName";
-            this.txtuserName.Size = new System.Drawing.Size(260, 33);
+            this.txtuserName.Size = new System.Drawing.Size(347, 41);
             this.txtuserName.TabIndex = 0;
             this.txtuserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -167,9 +170,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(10, 84);
+            this.label1.Location = new System.Drawing.Point(13, 103);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 21);
+            this.label1.Size = new System.Drawing.Size(117, 23);
             this.label1.TabIndex = 6;
             this.label1.Text = "User Name";
             // 
@@ -179,9 +183,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label2.ForeColor = System.Drawing.Color.Navy;
-            this.label2.Location = new System.Drawing.Point(12, 145);
+            this.label2.Location = new System.Drawing.Point(16, 178);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 21);
+            this.label2.Size = new System.Drawing.Size(103, 23);
             this.label2.TabIndex = 6;
             this.label2.Text = "Password";
             // 
@@ -190,9 +195,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label3.ForeColor = System.Drawing.Color.Navy;
-            this.label3.Location = new System.Drawing.Point(117, 84);
+            this.label3.Location = new System.Drawing.Point(156, 103);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(14, 21);
+            this.label3.Size = new System.Drawing.Size(15, 23);
             this.label3.TabIndex = 6;
             this.label3.Text = ":";
             // 
@@ -201,9 +207,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label4.ForeColor = System.Drawing.Color.Navy;
-            this.label4.Location = new System.Drawing.Point(117, 145);
+            this.label4.Location = new System.Drawing.Point(156, 178);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(14, 21);
+            this.label4.Size = new System.Drawing.Size(15, 23);
             this.label4.TabIndex = 6;
             this.label4.Text = ":";
             // 
@@ -217,9 +224,10 @@
             this.txtpass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtpass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtpass.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpass.Location = new System.Drawing.Point(153, 145);
+            this.txtpass.Location = new System.Drawing.Point(204, 178);
+            this.txtpass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtpass.Name = "txtpass";
-            this.txtpass.Size = new System.Drawing.Size(260, 20);
+            this.txtpass.Size = new System.Drawing.Size(347, 25);
             this.txtpass.TabIndex = 7;
             this.txtpass.UseSystemPasswordChar = true;
             // 
@@ -236,19 +244,19 @@
             this.jj.LineIdleColor = System.Drawing.Color.Gray;
             this.jj.LineMouseHoverColor = System.Drawing.Color.Gray;
             this.jj.LineThickness = 4;
-            this.jj.Location = new System.Drawing.Point(153, 133);
-            this.jj.Margin = new System.Windows.Forms.Padding(4);
+            this.jj.Location = new System.Drawing.Point(204, 164);
+            this.jj.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.jj.Name = "jj";
-            this.jj.Size = new System.Drawing.Size(260, 33);
+            this.jj.Size = new System.Drawing.Size(347, 41);
             this.jj.TabIndex = 1;
             this.jj.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // LogIN
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(427, 259);
+            this.ClientSize = new System.Drawing.Size(569, 319);
             this.Controls.Add(this.txtpass);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label4);
@@ -259,6 +267,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "LogIN";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

@@ -85,6 +85,8 @@ namespace MartSystem
         private void LogIN_Load(object sender, EventArgs e)
         {
             dt = Dom_SqlClass.retriveData("Employee join UserAcc on Employee.EmpID=UserAcc.EmpID", "", new string[] {"*"});
+
+
         }
 
         private void txtpass_MouseClick(object sender, MouseEventArgs e)
