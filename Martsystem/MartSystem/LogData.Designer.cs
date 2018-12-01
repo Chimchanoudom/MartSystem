@@ -31,7 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvLogData = new System.Windows.Forms.DataGridView();
+<<<<<<< HEAD
           //  this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
+=======
+            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
+>>>>>>> c813f281d5a6f805a6e98d39da34b004e6add3ac
             ((System.ComponentModel.ISupportInitialize)(this.dgvLogData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,6 +81,10 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvLogData;
+<<<<<<< HEAD
      //   private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
+=======
+        private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
+>>>>>>> c813f281d5a6f805a6e98d39da34b004e6add3ac
     }
 }

@@ -21,6 +21,11 @@ namespace MartSystem
                 Application.Run(new Form1());
             }
 
+<<<<<<< HEAD
+=======
+            Application.Run(new Product());
+
+>>>>>>> c813f281d5a6f805a6e98d39da34b004e6add3ac
         }
     }
 }
