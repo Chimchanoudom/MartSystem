@@ -41,19 +41,14 @@ namespace MartSystem
             if (rndID.Checked) filter = "[Expense ID]='" + txtSearch.Text + "'";
             else if (rndDateCreated.Checked)
             {
-                string date = dtDate.Value.Day + "-" + dtDate.Value.Month + "-" + dtDate.Value.Year;
-                filter = "[Date Created]='" + date + "'";
+                string[] st = txtSearch.Text.Split('-');
+                filter = "[Date Created]>='" + st[0] + "' AND [Date Created] <= '" + st[1] + "'";
             }
 
             dtExpense.DefaultView.RowFilter = filter;
         }
 
 
-
-        private void rndDateCreated_CheckedChanged(object sender, EventArgs e)
-        {
-            dtDate.Visible = rndDateCreated.Checked;
-        }
 
         private void dgvExpenseData_SelectionChanged(object sender, EventArgs e)
         {
@@ -114,6 +109,21 @@ namespace MartSystem
 
             if ("'".IndexOf(e.KeyChar) > -1)
                 e.KeyChar = '\0';
+        }
+
+        private void rndID_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rndDateCreated_Click(object sender, EventArgs e)
+        {
+
+            SearchDate searchDate = new SearchDate(txtSearch);
+            searchDate.ShowDialog();
+
+            if (searchDate.DialogResult != DialogResult.Yes)
+                rndID.Checked = true;
         }
     }
 }

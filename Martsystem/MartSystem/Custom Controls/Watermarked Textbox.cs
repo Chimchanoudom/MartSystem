@@ -20,6 +20,8 @@ namespace MartSystem.Custom_Contols
 
         string _watermarkedText;
 
+       
+
         public string WatermarkedText
         {
             get { return _watermarkedText; }
@@ -29,6 +31,10 @@ namespace MartSystem.Custom_Contols
                     
              }
         }
+
+        
+
+        public bool FloatNumber { get; set; }
 
         private void GetSetWatermark()
         {
@@ -57,6 +63,14 @@ namespace MartSystem.Custom_Contols
         private void Watermarked_Textbox_Leave(object sender, EventArgs e)
         {
             GetSetWatermark();
+        }
+
+        private void Watermarked_Textbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+           
+               
+            
+                
         }
     }
 }

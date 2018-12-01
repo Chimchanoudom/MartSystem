@@ -65,7 +65,10 @@ namespace MartSystem
                         Dom_SqlClass.fName = Dr["Fname"].ToString();
                         Dom_SqlClass.lName = Dr["Lname"].ToString();
                         Dom_SqlClass.position = Dr["Position"].ToString();
-                        new Import().ShowDialog();
+                        //new Import().ShowDialog();
+                        this.DialogResult = DialogResult.OK;
+                        Form1 f = new Form1();
+                        f.Show();
                         break;
                     }
                     else
@@ -85,6 +88,8 @@ namespace MartSystem
         private void LogIN_Load(object sender, EventArgs e)
         {
             dt = Dom_SqlClass.retriveData("Employee join UserAcc on Employee.EmpID=UserAcc.EmpID", "", new string[] {"*"});
+
+
         }
 
         private void txtpass_MouseClick(object sender, MouseEventArgs e)

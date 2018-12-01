@@ -37,6 +37,7 @@
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\..\..\Visual studio\PI\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.BonusSkins.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v17.2.Core, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -74,6 +75,12 @@
     <Compile Include="category.Designer.cs">
       <DependentUpon>category.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChangeUserSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeUserSetting.Designer.cs">
+      <DependentUpon>ChangeUserSetting.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClassMart\ComboboxItem.cs" />
     <Compile Include="ClassMart\dataCon.cs" />
     <Compile Include="ClassMart\dom_Design.cs" />
@@ -93,6 +100,12 @@
     <Compile Include="CreateInvoice.Designer.cs">
       <DependentUpon>CreateInvoice.cs</DependentUpon>
     </Compile>
+    <Compile Include="Custom Controls\NumberTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Custom Controls\NumberTextBox.Designer.cs">
+      <DependentUpon>NumberTextBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Custom Controls\Watermarked Textbox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -110,6 +123,12 @@
     </Compile>
     <Compile Include="ExpenseData.Designer.cs">
       <DependentUpon>ExpenseData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Import.cs">
       <SubType>Form</SubType>
@@ -129,11 +148,35 @@
     <Compile Include="InvoiceData.Designer.cs">
       <DependentUpon>InvoiceData.cs</DependentUpon>
     </Compile>
+    <Compile Include="LogData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogData.Designer.cs">
+      <DependentUpon>LogData.cs</DependentUpon>
+    </Compile>
     <Compile Include="LogIN.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LogIN.Designer.cs">
       <DependentUpon>LogIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ph1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ph1.designer.cs">
+      <DependentUpon>Ph1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ph2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ph2.designer.cs">
+      <DependentUpon>Ph2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ph3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ph3.designer.cs">
+      <DependentUpon>Ph3.cs</DependentUpon>
     </Compile>
     <Compile Include="Product.cs">
       <SubType>Form</SubType>
@@ -148,6 +191,12 @@
     </Compile>
     <Compile Include="Quantity Type.Designer.cs">
       <DependentUpon>Quantity Type.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchDate.Designer.cs">
+      <DependentUpon>SearchDate.cs</DependentUpon>
     </Compile>
     <Compile Include="Stock.cs">
       <SubType>Form</SubType>
@@ -167,11 +216,17 @@
     <EmbeddedResource Include="category.resx">
       <DependentUpon>category.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChangeUserSetting.resx">
+      <DependentUpon>ChangeUserSetting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateExpense.resx">
       <DependentUpon>CreateExpense.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreateInvoice.resx">
       <DependentUpon>CreateInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom Controls\NumberTextBox.resx">
+      <DependentUpon>NumberTextBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Custom Controls\Watermarked Textbox.resx">
       <DependentUpon>Watermarked Textbox.cs</DependentUpon>
@@ -182,6 +237,9 @@
     <EmbeddedResource Include="ExpenseData.resx">
       <DependentUpon>ExpenseData.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Import.resx">
       <DependentUpon>Import.cs</DependentUpon>
     </EmbeddedResource>
@@ -191,12 +249,16 @@
     <EmbeddedResource Include="InvoiceData.resx">
       <DependentUpon>InvoiceData.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LogData.resx">
+      <DependentUpon>LogData.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LogIN.resx">
       <DependentUpon>LogIN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Product.resx">
       <DependentUpon>Product.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -209,6 +271,9 @@
     </Compile>
     <EmbeddedResource Include="Quantity Type.resx">
       <DependentUpon>Quantity Type.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchDate.resx">
+      <DependentUpon>SearchDate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Stock.resx">
       <DependentUpon>Stock.cs</DependentUpon>
@@ -238,6 +303,7 @@
   <ItemGroup>
     <Content Include="Resources\f752abb3-1b49-4f99-b68a-7c4d77b45b40_1.39d6c524f6033c7c58bd073db1b99786.jpeg" />
     <Content Include="Resources\graphic_product_tangible.png" />
+    <None Include="Resources\logo.png" />
     <None Include="Resources\noImg1.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -105,5 +105,16 @@ namespace MartSystem
             ID = dom_Design.GenerateID(ID.Substring(indexsubstring), suffix);
             return ID;
         }
+        public static void dropdown(Panel container,int height,int num)
+        {
+            if (container.Height==height*num)
+            {
+                container.Height = height;
+            }
+            else
+            {
+                container.Height = height * num;
+            }
+        }
     }
 }

@@ -79,13 +79,13 @@ namespace MartSystem
         double total,subtotal,oldSubTotal, recieve, qtyForEndEdit;
         int id;
         DataTable dtInvoiceData;
-
+        bool error;
 
         private void CreateInvoice_Load(object sender, EventArgs e)
         {
             if (dataRowInvoice == null)
             {
-                dataCon.getRate();
+                dataCon.getRateAndDaysAlmostExp();
                 txtRate.Text = dataCon.rate.ToString("#,##0");
 
                 dataCon.Con.Open();
@@ -381,6 +381,10 @@ namespace MartSystem
 
                 if(qty>(double)dr[0]["Qty"])
                     throw new FormatException();
+
+                getSubTotalAndGrandTotal(e.RowIndex,qty);
+                ShowGrandTotalAndChange();
+                showChange();
             }
             catch (FormatException)
             {
@@ -481,6 +485,26 @@ namespace MartSystem
           
         }
 
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this invoice?","", MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+
+            if (dialogResult==DialogResult.Yes)
+            {
+                sql = "delete invoice where invid='" + txtInvoiceID.Text + "'";
+                error = false;
+                dataCon.ExecuteActionQry(sql, ref error);
+
+                if (!error)
+                {
+                    MessageBox.Show("Delete Successful", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    dataRowInvoice.Delete();
+                    Close();
+                }
+            }
+        }
+
         private void txtGrandEng_TextChanged(object sender, EventArgs e)
         {
             
@@ -519,6 +543,10 @@ namespace MartSystem
                 }
                 else
                 {
+                    sql = "insert into invoiceLog (editDate,EditBy,InvID) values('" + now + "','" + UserLoginDetail.empID + "','" + txtInvoiceID.Text + "');";
+
+                    sql += "update invoice set Total=" + total + ",recieveEng=" + recieveEng + ",recieveKh=" + recieveKh + " where invID='" + txtInvoiceID.Text + "';";
+
                     sql += "delete from invoiceDetail where invID='" + txtInvoiceID.Text + "';";
                 }
 
@@ -534,7 +562,7 @@ namespace MartSystem
 
                 sql = sql.Substring(0, sql.Length - 1) + ";";
 
-                bool error = false;
+                error = false;
                 dataCon.ExecuteActionQry(sql, ref error);
 
                 if (!error)

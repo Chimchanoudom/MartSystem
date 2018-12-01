@@ -37,7 +37,6 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.dtDate = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -82,7 +81,7 @@
             this.rndDateCreated.TabStop = true;
             this.rndDateCreated.Text = "Date Created";
             this.rndDateCreated.UseVisualStyleBackColor = true;
-            this.rndDateCreated.CheckedChanged += new System.EventHandler(this.rndDateCreated_CheckedChanged);
+            this.rndDateCreated.Click += new System.EventHandler(this.rndDateCreated_Click);
             // 
             // rndID
             // 
@@ -97,6 +96,7 @@
             this.rndID.TabStop = true;
             this.rndID.Text = "ID";
             this.rndID.UseVisualStyleBackColor = true;
+            this.rndID.CheckedChanged += new System.EventHandler(this.rndID_CheckedChanged);
             // 
             // groupBox6
             // 
@@ -118,7 +118,6 @@
             this.panel7.Controls.Add(this.btnCancel);
             this.panel7.Controls.Add(this.btnSearch);
             this.panel7.Controls.Add(this.txtSearch);
-            this.panel7.Controls.Add(this.dtDate);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(4, 138);
             this.panel7.Margin = new System.Windows.Forms.Padding(4);
@@ -169,16 +168,6 @@
             this.txtSearch.Size = new System.Drawing.Size(300, 48);
             this.txtSearch.TabIndex = 0;
             this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearch_KeyPress);
-            // 
-            // dtDate
-            // 
-            this.dtDate.CustomFormat = "dd/MM/yyyy";
-            this.dtDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtDate.Location = new System.Drawing.Point(0, 2);
-            this.dtDate.Name = "dtDate";
-            this.dtDate.Size = new System.Drawing.Size(300, 45);
-            this.dtDate.TabIndex = 8;
-            this.dtDate.Visible = false;
             // 
             // panel1
             // 
@@ -294,7 +283,6 @@
         private System.Windows.Forms.RadioButton rndID;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.DateTimePicker dtDate;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtSearch;

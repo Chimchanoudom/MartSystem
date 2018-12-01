@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,10 @@ namespace MartSystem
         string sql;
         SqlDataReader dataReader;
         bool error;
+        string fileDir = AppDomain.CurrentDomain.BaseDirectory+@"Image\Product\";
+        DirectoryInfo di;
+        string fileName;
+
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -53,7 +58,7 @@ namespace MartSystem
             if (cbBrand.SelectedIndex == -1) brand = cbBrand.SelectedItem as ComboboxItem;
             else brand = cbBrand.Items[0] as ComboboxItem;
 
-            sql="insert into product values('"+lbProductID.Text+"','"+productName+"',0,'"+qtyType+"',"+unitPrice+","+category.Value+","+brand.Value+",'"+barcode+"','"+imgPath+"')";
+            sql="insert into product values('"+lbProductID.Text+"','"+productName+"',0,'"+qtyType+"',"+unitPrice+","+category.Value+","+brand.Value+",'"+barcode+"','"+fileName+"')";
 
             error = false;
             dataCon.ExecuteActionQry(sql, ref error);
@@ -63,13 +68,28 @@ namespace MartSystem
 
                 MessageBox.Show("New product added", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-               
-
-                
+                copyImgToFolder();
 
                 proID++;
                 Clean();
+                
             }
+        }
+
+        void copyImgToFolder()
+        {
+            //Delete variable di when done testing
+            di = Directory.CreateDirectory(fileDir);
+            //
+
+            string destFile = fileDir + @"\" + fileName;
+            try
+            {
+                File.Copy(imgPath, destFile, true);
+            }
+            catch (ArgumentException) {
+            }
+            
         }
 
         void Clean()
@@ -91,6 +111,8 @@ namespace MartSystem
 
         private void Product_Load(object sender, EventArgs e)
         {
+           
+            
             sql = "select proID 'Product ID',ProName 'Description',Qty 'Quantity',qtyType 'Quantity Type',UnitPrice ,CatName 'Category',BrandName 'Brand',Barcode from Product p join Category c on p.CatID=c.CatID join Brand b on p.BrandID=b.BrandID where 1=2;";
 
             SqlDataAdapter dataAdaptor = new SqlDataAdapter(sql, dataCon.Con);
@@ -109,11 +131,13 @@ namespace MartSystem
                 Image img;
                 try
                 {
-                    img = Image.FromFile(dataReader.GetString(8));
+                    img = Image.FromFile(fileDir+dataReader.GetString(8));
+                    img.Tag = dataReader.GetString(8);
                 }
                 catch
                 {
                     img = Properties.Resources.noImg;
+                    
                 }
 
                 ComboboxItem category = new ComboboxItem(dataReader.GetString(5),dataReader.GetInt32(9)+"");
@@ -178,6 +202,10 @@ namespace MartSystem
             {
                 imgPath = fd.FileName;
                 ImageBox.Image = Image.FromFile(imgPath);
+
+                
+                fileName = fd.SafeFileName;
+                ImageBox.Image.Tag = fileName;
             }
         }
 
@@ -217,12 +245,16 @@ namespace MartSystem
                 ImageBox.Image = dgvProduct.Rows[selectedRowIndex].Cells["Image"].Value as Image;
 
                 btnAdd.Text = "Cancel";
+
+               
             }
             else
             {
                 Clean();
             }
         }
+
+
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
@@ -236,21 +268,31 @@ namespace MartSystem
             ComboboxItem category = cbCategory.SelectedItem as ComboboxItem;
             ComboboxItem brand = cbBrand.SelectedItem as ComboboxItem;
 
-            sql = "update Product set ProName='"+txtProductName.Text+"',QtyType='"+txtQtyType.Text+"',UnitPrice="+txtUnitPrice.Text+",CatID='"+category.Value+"',BrandID='"+brand.Value+"',Barcode='"+txtBarcode.Text+"',Image='"+imgPath+"' where proid='"+lbProductID.Text+"';";
+            sql = "update Product set ProName='"+txtProductName.Text+"',QtyType='"+txtQtyType.Text+"',UnitPrice="+txtUnitPrice.Text+",CatID='"+category.Value+"',BrandID='"+brand.Value+"',Barcode='"+txtBarcode.Text+"',Image='"+fileName+"' where proid='"+lbProductID.Text+"';";
 
             dataCon.ExecuteActionQry(sql,ref error);
             if (!error)
             {
                 MessageBox.Show("Edit successfull", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                sql = "select proID 'Product ID',ProName 'Description',Qty 'Quantity',qtyType 'Quantity Type',UnitPrice ,CatName,BrandName,Barcode,Image 'img',c.catId,b.BrandId from Product p join Category c on p.CatID=c.CatID join Brand b on p.BrandID=b.BrandID;";
-
                 int selectedRowIndex = dgvProduct.SelectedRows[0].Index;
+
+                copyImgToFolder();
+
+                string imgFileNameInSelectedRow = ((Image)dgvProduct.Rows[selectedRowIndex].Cells["Image"].Value).Tag+"";
+
+                
                 dgvProduct.Rows[selectedRowIndex].Cells["Description"].Value = txtProductName.Text;
                 dgvProduct.Rows[selectedRowIndex].Cells["Quantity Type"].Value = txtQtyType.Text;
                 dgvProduct.Rows[selectedRowIndex].Cells["UnitPrice"].Value = txtUnitPrice.Text;
                 dgvProduct.Rows[selectedRowIndex].Cells["Category"].Value = category;
                 dgvProduct.Rows[selectedRowIndex].Cells["Brand"].Value = brand;
+
+                ((Image)dgvProduct.Rows[selectedRowIndex].Cells["Image"].Value).Dispose();
+                if (imgFileNameInSelectedRow != "")
+                {
+                    File.Delete(fileDir + imgFileNameInSelectedRow);
+                }
+
                 dgvProduct.Rows[selectedRowIndex].Cells["Image"].Value = ImageBox.Image;
             }
         }
@@ -265,16 +307,50 @@ namespace MartSystem
 
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete selected row?","", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+            
+            
             if (dialogResult == DialogResult.No)
                 return;
+
+            dataCon.Con.Open();
+            sql = "select count(*) from invoiceDetail where proID='" + lbProductID.Text + "';";
+            dataReader = dataCon.ExecuteQry(sql);
+            dataReader.Read();
+            int countSoldProduct = dataReader.GetInt32(0);
+            dataCon.Con.Close();
+
+
+            dataCon.Con.Open();
+            sql = "select count(*) from importDetail where proID='" + lbProductID.Text + "';";
+            dataReader = dataCon.ExecuteQry(sql);
+            dataReader.Read();
+            int countImportProduct = dataReader.GetInt32(0);
+            dataCon.Con.Close();
+
+            if (countSoldProduct > 0||countImportProduct>0)
+            {
+                MessageBox.Show("Cannot delete product", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
 
             sql = "delete from product where proid='" + lbProductID.Text + "';";
 
             dataCon.ExecuteActionQry(sql, ref error);
             if (!error)
             {
-                dgvProduct.Rows.RemoveAt(dgvProduct.SelectedRows[0].Index);
+                int selectedRowIndex = dgvProduct.SelectedRows[0].Index;
 
+                string imgFileNameInSelectedRow = ((Image)dgvProduct.Rows[selectedRowIndex].Cells["Image"].Value).Tag + "";
+
+                ((Image)dgvProduct.Rows[selectedRowIndex].Cells["Image"].Value).Dispose();
+                if (imgFileNameInSelectedRow != "")
+                {
+                    File.Delete(fileDir + imgFileNameInSelectedRow);
+                }
+
+                dgvProduct.Rows.RemoveAt(selectedRowIndex);
+               
                 MessageBox.Show("Delete successfull", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 

@@ -29,16 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-
-
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-
-
-           // System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-
-           // System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -132,7 +123,7 @@
             this.panel3.Controls.Add(this.groupDataEmployee);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1914, 521);
             this.panel3.TabIndex = 5;
@@ -144,9 +135,9 @@
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox6.Location = new System.Drawing.Point(1359, 0);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox6.Size = new System.Drawing.Size(611, 519);
             this.groupBox6.TabIndex = 4;
             this.groupBox6.TabStop = false;
@@ -159,7 +150,7 @@
             this.panel7.Controls.Add(this.txtSearch);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(4, 174);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(603, 44);
             this.panel7.TabIndex = 1;
@@ -172,7 +163,7 @@
             this.btnCancel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.Location = new System.Drawing.Point(428, 0);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(128, 44);
             this.btnCancel.TabIndex = 7;
@@ -188,7 +179,7 @@
             this.btnSearch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.White;
             this.btnSearch.Location = new System.Drawing.Point(300, 0);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(128, 44);
             this.btnSearch.TabIndex = 6;
@@ -201,7 +192,7 @@
             this.txtSearch.Dock = System.Windows.Forms.DockStyle.Left;
             this.txtSearch.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(0, 0);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(300, 44);
@@ -218,9 +209,9 @@
             this.groupBox7.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox7.Location = new System.Drawing.Point(4, 29);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox7.Size = new System.Drawing.Size(603, 145);
             this.groupBox7.TabIndex = 0;
             this.groupBox7.TabStop = false;
@@ -231,7 +222,7 @@
             this.rndSearchUsername.AutoSize = true;
             this.rndSearchUsername.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rndSearchUsername.Location = new System.Drawing.Point(413, 44);
-            this.rndSearchUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rndSearchUsername.Margin = new System.Windows.Forms.Padding(4);
             this.rndSearchUsername.Name = "rndSearchUsername";
             this.rndSearchUsername.Size = new System.Drawing.Size(138, 27);
             this.rndSearchUsername.TabIndex = 0;
@@ -244,7 +235,7 @@
             this.rndSearchLname.AutoSize = true;
             this.rndSearchLname.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rndSearchLname.Location = new System.Drawing.Point(253, 44);
-            this.rndSearchLname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rndSearchLname.Margin = new System.Windows.Forms.Padding(4);
             this.rndSearchLname.Name = "rndSearchLname";
             this.rndSearchLname.Size = new System.Drawing.Size(136, 27);
             this.rndSearchLname.TabIndex = 0;
@@ -257,7 +248,7 @@
             this.rndSearchPosition.AutoSize = true;
             this.rndSearchPosition.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rndSearchPosition.Location = new System.Drawing.Point(176, 94);
-            this.rndSearchPosition.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rndSearchPosition.Margin = new System.Windows.Forms.Padding(4);
             this.rndSearchPosition.Name = "rndSearchPosition";
             this.rndSearchPosition.Size = new System.Drawing.Size(102, 27);
             this.rndSearchPosition.TabIndex = 0;
@@ -270,7 +261,7 @@
             this.rndSearchTelephone.AutoSize = true;
             this.rndSearchTelephone.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rndSearchTelephone.Location = new System.Drawing.Point(28, 94);
-            this.rndSearchTelephone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rndSearchTelephone.Margin = new System.Windows.Forms.Padding(4);
             this.rndSearchTelephone.Name = "rndSearchTelephone";
             this.rndSearchTelephone.Size = new System.Drawing.Size(134, 27);
             this.rndSearchTelephone.TabIndex = 0;
@@ -283,7 +274,7 @@
             this.rndSearchFname.AutoSize = true;
             this.rndSearchFname.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rndSearchFname.Location = new System.Drawing.Point(95, 44);
-            this.rndSearchFname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rndSearchFname.Margin = new System.Windows.Forms.Padding(4);
             this.rndSearchFname.Name = "rndSearchFname";
             this.rndSearchFname.Size = new System.Drawing.Size(132, 27);
             this.rndSearchFname.TabIndex = 0;
@@ -297,7 +288,7 @@
             this.rndSearchID.Checked = true;
             this.rndSearchID.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rndSearchID.Location = new System.Drawing.Point(28, 44);
-            this.rndSearchID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rndSearchID.Margin = new System.Windows.Forms.Padding(4);
             this.rndSearchID.Name = "rndSearchID";
             this.rndSearchID.Size = new System.Drawing.Size(51, 27);
             this.rndSearchID.TabIndex = 0;
@@ -314,9 +305,9 @@
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Navy;
             this.groupBox1.Location = new System.Drawing.Point(744, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(615, 519);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
@@ -330,7 +321,7 @@
             this.panel6.Controls.Add(this.btnAdd);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(4, 303);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(607, 59);
             this.panel6.TabIndex = 3;
@@ -343,7 +334,7 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Location = new System.Drawing.Point(459, 0);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(147, 59);
             this.btnSave.TabIndex = 8;
@@ -360,7 +351,7 @@
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.Location = new System.Drawing.Point(306, 0);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(153, 59);
             this.btnDelete.TabIndex = 7;
@@ -377,7 +368,7 @@
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.ForeColor = System.Drawing.Color.White;
             this.btnEdit.Location = new System.Drawing.Point(153, 0);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(153, 59);
             this.btnEdit.TabIndex = 6;
@@ -393,7 +384,7 @@
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Location = new System.Drawing.Point(0, 0);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(153, 59);
             this.btnAdd.TabIndex = 5;
@@ -422,7 +413,7 @@
             this.panel5.Controls.Add(this.label21);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(4, 29);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(607, 274);
             this.panel5.TabIndex = 2;
@@ -433,7 +424,7 @@
             this.CheckActive.Checked = true;
             this.CheckActive.CheckState = System.Windows.Forms.CheckState.Checked;
             this.CheckActive.Location = new System.Drawing.Point(167, 222);
-            this.CheckActive.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CheckActive.Margin = new System.Windows.Forms.Padding(4);
             this.CheckActive.Name = "CheckActive";
             this.CheckActive.Size = new System.Drawing.Size(18, 17);
             this.CheckActive.TabIndex = 8;
@@ -445,11 +436,10 @@
             this.cbxPosition.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxPosition.FormattingEnabled = true;
             this.cbxPosition.Items.AddRange(new object[] {
-            "Admin",
             "Cashire",
             "Stock Holder"});
             this.cbxPosition.Location = new System.Drawing.Point(163, 6);
-            this.cbxPosition.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxPosition.Margin = new System.Windows.Forms.Padding(4);
             this.cbxPosition.Name = "cbxPosition";
             this.cbxPosition.Size = new System.Drawing.Size(245, 31);
             this.cbxPosition.TabIndex = 4;
@@ -458,7 +448,7 @@
             // 
             this.txtSalary.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSalary.Location = new System.Drawing.Point(163, 65);
-            this.txtSalary.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSalary.Margin = new System.Windows.Forms.Padding(4);
             this.txtSalary.MaxLength = 3;
             this.txtSalary.Name = "txtSalary";
             this.txtSalary.Size = new System.Drawing.Size(245, 32);
@@ -488,7 +478,7 @@
             // 
             this.txtUserName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUserName.Location = new System.Drawing.Point(163, 116);
-            this.txtUserName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(4);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(245, 32);
             this.txtUserName.TabIndex = 6;
@@ -507,7 +497,7 @@
             // 
             this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(163, 169);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.MaxLength = 8;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(245, 32);
@@ -645,7 +635,7 @@
             this.dTHireDate.CustomFormat = "dd/MMMM/yyyy";
             this.dTHireDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dTHireDate.Location = new System.Drawing.Point(207, 74);
-            this.dTHireDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dTHireDate.Margin = new System.Windows.Forms.Padding(4);
             this.dTHireDate.Name = "dTHireDate";
             this.dTHireDate.Size = new System.Drawing.Size(311, 32);
             this.dTHireDate.TabIndex = 8;
@@ -653,7 +643,7 @@
             // txtTimeShift
             // 
             this.txtTimeShift.Location = new System.Drawing.Point(207, 127);
-            this.txtTimeShift.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTimeShift.Margin = new System.Windows.Forms.Padding(4);
             this.txtTimeShift.Mask = "90:00  -  90:00";
             this.txtTimeShift.Name = "txtTimeShift";
             this.txtTimeShift.Size = new System.Drawing.Size(149, 32);
@@ -664,7 +654,7 @@
             this.btnBrowse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBrowse.ForeColor = System.Drawing.Color.DarkCyan;
             this.btnBrowse.Location = new System.Drawing.Point(529, 271);
-            this.btnBrowse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBrowse.Margin = new System.Windows.Forms.Padding(4);
             this.btnBrowse.Name = "btnBrowse";
             this.btnBrowse.Size = new System.Drawing.Size(199, 54);
             this.btnBrowse.TabIndex = 4;
@@ -677,7 +667,7 @@
             this.ImageBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ImageBox.Image = global::MartSystem.Properties.Resources.employee;
             this.ImageBox.Location = new System.Drawing.Point(529, 76);
-            this.ImageBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ImageBox.Margin = new System.Windows.Forms.Padding(4);
             this.ImageBox.Name = "ImageBox";
             this.ImageBox.Size = new System.Drawing.Size(201, 185);
             this.ImageBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -691,7 +681,7 @@
             this.panel4.Controls.Add(this.rndMale);
             this.panel4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel4.Location = new System.Drawing.Point(207, 276);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(312, 36);
             this.panel4.TabIndex = 4;
@@ -701,7 +691,7 @@
             this.rndFemale.Dock = System.Windows.Forms.DockStyle.Left;
             this.rndFemale.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rndFemale.Location = new System.Drawing.Point(113, 0);
-            this.rndFemale.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rndFemale.Margin = new System.Windows.Forms.Padding(4);
             this.rndFemale.Name = "rndFemale";
             this.rndFemale.Size = new System.Drawing.Size(113, 36);
             this.rndFemale.TabIndex = 2;
@@ -714,7 +704,7 @@
             this.rndMale.Dock = System.Windows.Forms.DockStyle.Left;
             this.rndMale.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rndMale.Location = new System.Drawing.Point(0, 0);
-            this.rndMale.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rndMale.Margin = new System.Windows.Forms.Padding(4);
             this.rndMale.Name = "rndMale";
             this.rndMale.Size = new System.Drawing.Size(113, 36);
             this.rndMale.TabIndex = 3;
@@ -818,7 +808,7 @@
             this.dTBirthDate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dTBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dTBirthDate.Location = new System.Drawing.Point(207, 327);
-            this.dTBirthDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dTBirthDate.Margin = new System.Windows.Forms.Padding(4);
             this.dTBirthDate.Name = "dTBirthDate";
             this.dTBirthDate.Size = new System.Drawing.Size(311, 32);
             this.dTBirthDate.TabIndex = 3;
@@ -827,7 +817,7 @@
             // 
             this.txtAddress.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress.Location = new System.Drawing.Point(207, 417);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(311, 75);
             this.txtAddress.TabIndex = 3;
@@ -837,7 +827,7 @@
             // 
             this.txtPhoneNumber.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhoneNumber.Location = new System.Drawing.Point(207, 374);
-            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(311, 32);
             this.txtPhoneNumber.TabIndex = 2;
@@ -886,7 +876,7 @@
             // 
             this.txtLastName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLastName.Location = new System.Drawing.Point(207, 215);
-            this.txtLastName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLastName.Margin = new System.Windows.Forms.Padding(4);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(311, 32);
             this.txtLastName.TabIndex = 1;
@@ -915,7 +905,7 @@
             // 
             this.txtFirstName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFirstName.Location = new System.Drawing.Point(207, 172);
-            this.txtFirstName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFirstName.Margin = new System.Windows.Forms.Padding(4);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(311, 32);
             this.txtFirstName.TabIndex = 0;
@@ -966,7 +956,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 521);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1914, 166);
             this.panel1.TabIndex = 6;
@@ -978,28 +968,6 @@
             this.datasupplier.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.datasupplier.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-
-
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datasupplier.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.datasupplier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datasupplier.DefaultCellStyle = dataGridViewCellStyle2;
-
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -1009,19 +977,13 @@
             this.datasupplier.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.datasupplier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datasupplier.DefaultCellStyle = dataGridViewCellStyle1;
-
-
-
-
             this.datasupplier.Dock = System.Windows.Forms.DockStyle.Fill;
             this.datasupplier.Location = new System.Drawing.Point(0, 0);
-            this.datasupplier.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.datasupplier.Margin = new System.Windows.Forms.Padding(4);
             this.datasupplier.Name = "datasupplier";
             this.datasupplier.ReadOnly = true;
-
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
-
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -1029,24 +991,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.datasupplier.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.datasupplier.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-
-            this.datasupplier.Size = new System.Drawing.Size(1436, 134);
-
-
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datasupplier.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-
-            this.datasupplier.Size = new System.Drawing.Size(1444, 134);
-
-
             this.datasupplier.Size = new System.Drawing.Size(1914, 166);
-
             this.datasupplier.TabIndex = 2;
             this.datasupplier.SelectionChanged += new System.EventHandler(this.datasupplier_SelectionChanged);
             // 
@@ -1059,7 +1004,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Employee";
             this.Text = "Employee";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
